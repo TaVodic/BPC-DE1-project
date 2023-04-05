@@ -58,23 +58,27 @@ begin
       if (sig_en = '1') then -- every g_MAX
         
         case bin is        
-            when "00001" =>     --A ._                if sig_cnt = 0 then
+            when "00001" =>     --A .-                if sig_cnt = 0 then
             
-                if (sig_cnt = 0) then  
-                  morse <= '1';                  -- 100ms dot
-                elsif (sig_cnt = 1) then                  
-                  morse <= '0';                  -- 100ms pause
-                elsif (sig_cnt = 2) then                  
-                  morse <= '1';                  -- 300ms dash
+                if (sig_cnt < 1) then  
+                  morse <= '1';                     -- 100ms dot
+                  sig_cnt <= sig_cnt + 1;
+                elsif (sig_cnt < 2) then                  
+                  morse <= '0';                     -- 100ms pause
+                  sig_cnt <= sig_cnt + 1;
+                elsif (sig_cnt < 5) then                  
+                  morse <= '1';                     -- 300ms dash
+                  sig_cnt <= sig_cnt + 1;
                 elsif (sig_cnt = 5) then                  
-                  morse <= '0';                  
-                end if;              
+                  morse <= '0';
+                  send_en <= '0';                  
+                end if;            
 
-                sig_cnt <= sig_cnt + 1;         
+                         
           
             when "00010" =>     -- B -...
     
-              
+                
     
             when "00011" =>     -- C -.-.
     
@@ -170,7 +174,7 @@ begin
             
             when "11010" =>     -- Z --..
 
-
+              
 
             when others =>      -- Other - send nothing
 
