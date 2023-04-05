@@ -62,29 +62,22 @@ begin
         wait;                -- Process is suspended forever
     end process p_clk_gen;
     
---    p_reset_gen : process
---    begin
+    p_reset_gen : process
+    begin
     
 --        wait for 30 ns;
---        s_send <= '1';
---        wait for 10 ns;
---        s_send <= '0';
+        s_send <= '1';
 
---        wait;
---    end process p_reset_gen;
+        wait;
+    end process p_reset_gen;
 
     p_stimulus : process
     begin
         report "Stimulus process started";
         s_bin <= "00001";
-        s_send <= '1';
-        wait for 20 ns;
-        s_send <= '0';
         wait for 100ns;
         s_bin <= "10000";
-        s_send <= '1';
-        wait for 20 ns;
-        s_send <= '0';
+
       
 
         report "Stimulus process finished";

@@ -47,16 +47,14 @@ begin
       ce  => sig_en
     );
 
-  p_bin_morse_decoder : process (send, bin) is
+  p_bin_morse_decoder : process (send, bin, clk) is
 
   begin
     
-    if (rising_edge(clk)) and (send = '1') then
-      if (sig_en = '1') then -- every g_MAX
-        
+    if (rising_edge(clk)) and (send = '1')  then      
+      if (sig_en = '1') then -- every g_MAX        
         case bin is        
-            when "00001" =>     --A .-                if sig_cnt = 0 then
-            
+            when "00001" =>     --A .-                if sig_cnt = 0 then            
                 if (sig_cnt < 1) then  
                   morse <= '1';                     -- 100ms dot
                   sig_cnt <= sig_cnt + 1;
@@ -68,7 +66,7 @@ begin
                   sig_cnt <= sig_cnt + 1;
                 elsif (sig_cnt = 5) then                  
                   morse <= '0';
-                  send_en <= '0';                  
+                  send_en <= '0';                                    
                 end if;            
 
                          

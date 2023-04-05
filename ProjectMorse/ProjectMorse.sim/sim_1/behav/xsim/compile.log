@@ -1,4 +1,0 @@
-INFO: [VRFC 10-163] Analyzing VHDL file "Z:/PC-II-SummerSemester/BPC-DE1-project/ProjectMorse/ProjectMorse.srcs/sources_1/new/bin_morse.vhd" into library xil_defaultlib
-INFO: [VRFC 10-3107] analyzing entity 'bin_morse'
-INFO: [VRFC 10-163] Analyzing VHDL file "Z:/PC-II-SummerSemester/BPC-DE1-project/ProjectMorse/ProjectMorse.srcs/sim_1/new/tb_bin_morse.vhd" into library xil_defaultlib
-INFO: [VRFC 10-3107] analyzing entity 'tb_bin_morse'

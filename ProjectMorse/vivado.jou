@@ -68,3 +68,55 @@ source tb_bin_morse.tcl
 close_sim
 launch_simulation
 source tb_bin_morse.tcl
+close_sim
+launch_simulation
+source tb_bin_morse.tcl
+close_sim
+launch_simulation
+source tb_bin_morse.tcl
+close_sim
+launch_simulation
+source tb_bin_morse.tcl
+close_sim
+launch_simulation
+source tb_bin_morse.tcl
+close_sim
+launch_simulation
+source tb_bin_morse.tcl
+current_wave_config {Untitled 14}
+add_wave {{/tb_bin_morse/uut_tb_bin_morse/clk}} 
+run 30 us
+run 100 us
+run 1 us
+run 10 us
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+close_sim
+launch_simulation
+source tb_bin_morse.tcl
+close_sim
+launch_simulation
+source tb_bin_morse.tcl
+current_wave_config {Untitled 16}
+add_wave {{/tb_bin_morse/uut_tb_bin_morse/send_en}} 
+current_wave_config {Untitled 16}
+add_wave {{/tb_bin_morse/uut_tb_bin_morse/sig_en}} 
+relaunch_sim
+current_wave_config {Untitled 16}
+add_wave {{/tb_bin_morse/uut_tb_bin_morse/sig_cnt}} 
+relaunch_sim
+close_sim
