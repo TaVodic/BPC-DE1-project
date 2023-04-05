@@ -8,8 +8,8 @@ library ieee;
 
 entity bin_morse is
   port (
-    send  : in    std_logic;                    --! Display is clear if blank = 1
-    bin   : in    std_logic_vector(4 downto 0); --! Binary representation of one hexadecimal symbol   
+    send  : in    std_logic;                    --! 
+    bin   : in    std_logic_vector(4 downto 0); --!  
     clk   : in    std_logic;                    --! Main clock
     morse : out   std_logic                     --! Morse code
   );
@@ -28,8 +28,8 @@ architecture behavioral of bin_morse is
   signal sig_cnt : unsigned(4 downto 0);
 
   -- Specific values for local counter
-  constant c_DELAY_dot : unsigned(4 downto 0) := b"1_0000"; --! 4-second delay
-  constant c_DELAY_dash : unsigned(4 downto 0) := b"0_1000"; --! 2-second delay
+  constant c_DELAY_dot : unsigned(4 downto 0) := b"1_0000"; --! 100ms
+  constant c_DELAY_dash : unsigned(4 downto 0) := b"0_1000"; --! 300ms
 
 begin
 
@@ -55,127 +55,132 @@ begin
     end if;
     
     if (rising_edge(clk)) and (send_en = '1') then
-      if (sig_en = '1') then
-        case bin is
+      if (sig_en = '1') then -- every g_MAX
         
-            when "00001" => --A
-                if (sig_cnt < c_DELAY_dot) then
-                  sig_cnt <= sig_cnt + 1;
-                else
-                  -- Move to the next state
-                  sig_state <= WEST_GO;
-                  -- Reset delay counter value
-                  sig_cnt   <= (others => '0');
-                end if;       
+        case bin is        
+            when "00001" =>     --A ._                if sig_cnt = 0 then
+            
+                if (sig_cnt = 0) then  
+                  morse <= '1';                  -- 100ms dot
+                elsif (sig_cnt = 1) then                  
+                  morse <= '0';                  -- 100ms pause
+                elsif (sig_cnt = 2) then                  
+                  morse <= '1';                  -- 300ms dash
+                elsif (sig_cnt = 5) then                  
+                  morse <= '0';                  
+                end if;              
+
+                sig_cnt <= sig_cnt + 1;         
           
-            when "00010" =>
+            when "00010" =>     -- B -...
     
-              seg <= "1100000"; -- B
-    
-            when "00011" =>
-    
-              seg <= "0110001"; -- C     
               
-            when "00100" =>
     
-              seg <= "1000010"; -- D             
+            when "00011" =>     -- C -.-.
     
-            when "00101" =>
-    
-              seg <= "0110000"; -- E
               
-            when "00110" =>
+              
+            when "00100" =>     -- D -..
     
-              seg <= "0111000"; -- F
+               
+    
+            when "00101" =>     -- E .
+    
+              
+              
+            when "00110" =>     -- F ..-.
+    
+              
             
-            when "00111" =>
+            when "00111" =>     -- G --.
     
-              seg <= "0100001"; -- G
+              
             
-            when "01000" =>
+            when "01000" =>     -- H ....
     
-              seg <= "1101000"; -- H
+              
             
-            when "01001" =>
+            when "01001" =>     -- I ..
     
-              seg <= "0111011"; -- I
+              
             
-            when "01010" =>
+            when "01010" =>     -- J .---
     
-              seg <= "0100111"; -- J
+              
             
-            when "01011" =>
+            when "01011" =>     -- K -.-
     
-              seg <= "0101000"; -- K
+              
             
-            when "01100" =>
+            when "01100" =>     -- L .-..
     
-              seg <= "1110001"; -- L
+              
             
-            when "01101" =>
+            when "01101" =>     -- M --
     
-              seg <= "0101010"; -- M
+              
             
-            when "01110" =>
+            when "01110" =>     -- N -.
     
-              seg <= "1101010"; -- N
+              
             
-            when "01111" =>
+            when "01111" =>     -- O ---
     
-              seg <= "1100010"; -- O
+              
             
-            when "10000" =>
+            when "10000" =>     -- P .--.
     
-              seg <= "0011000"; -- P
+              
             
-            when "10001" =>
+            when "10001" =>     -- Q --.-
     
-              seg <= "0001100"; -- Q
+              
             
-            when "10010" =>
+            when "10010" =>     -- R .-.
     
-              seg <= "1111010"; -- R
+              
             
-            when "10011" =>
+            when "10011" =>     -- S ...
     
-              seg <= "0100101"; -- S
+              
             
-            when "10100" =>
+            when "10100" =>     -- T -
     
-              seg <= "1110000"; -- T
+              
             
-            when "10101" =>
+            when "10101" =>     -- U ..-
     
-              seg <= "1100011"; -- U
+              
             
-            when "10110" =>
+            when "10110" =>     -- V ...-
     
-              seg <= "1010101"; -- V
+              
             
-            when "10111" =>
+            when "10111" =>     -- W .--
     
-              seg <= "1010100"; -- W
+              
             
-            when "11000" =>
+            when "11000" =>     -- X -..-
     
-              seg <= "1101011"; -- X
+              
             
-            when "11001" =>
+            when "11001" =>     -- Y -.--
     
-              seg <= "1000100"; -- Y
+              
             
-            when "11010" =>
-    
-              seg <= "0010011"; -- Z       
-    
-            when others =>
-    
-              seg <= "1111111"; -- nothing
-    
+            when "11010" =>     -- Z --..
+
+
+
+            when others =>      -- Other - send nothing
+
+
+
           end case;
     
     send_en <= '0';
     end if;
+  end if;
 
   end process p_bin_morse_decoder;
 
