@@ -1,0 +1,8 @@
+# compile vhdl design source files
+vhdl xil_defaultlib  \
+"../../../../ProjectMorse.srcs/sources_1/new/clock_enable.vhd" \
+"../../../../ProjectMorse.srcs/sources_1/new/bin_morse.vhd" \
+"../../../../ProjectMorse.srcs/sim_1/new/tb_bin_morse.vhd" \
+
+# Do not sort compile order
+nosort

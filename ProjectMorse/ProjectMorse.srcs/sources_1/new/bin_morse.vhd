@@ -39,7 +39,8 @@ begin
       -- FOR IMPLEMENTATION, CALCULATE VALUE: 250 ms / (1/100 MHz)
       -- 1   @ 10 ns
       -- ??? @ 250 ms
-      g_MAX => 10000000 -- 100ms
+      -- 10000000 -- 100ms
+      g_MAX => 10 
     )
     port map (
       clk => clk,
@@ -49,12 +50,8 @@ begin
   p_bin_morse_decoder : process (send, bin) is
 
   begin
-
-    if (send = '1') then
-        send_en <= '1';
-    end if;
     
-    if (rising_edge(clk)) and (send_en = '1') then
+    if (rising_edge(clk)) and (send = '1') then
       if (sig_en = '1') then -- every g_MAX
         
         case bin is        
