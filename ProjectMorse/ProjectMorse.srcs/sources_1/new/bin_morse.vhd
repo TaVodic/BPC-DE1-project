@@ -173,14 +173,12 @@ begin
 
             when others =>      -- Other - send nothing
 
-
-
-          end case;
-    
-    send_en <= '0';
+        end case;
+        send_en <= '0';
+      else
+        sig_cnt <= 0;
+      end if;
     end if;
-  end if;
-
   end process p_bin_morse_decoder;
 
 end architecture behavioral;
