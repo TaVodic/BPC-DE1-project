@@ -25,7 +25,7 @@ architecture behavioral of bin_morse is
   signal send_en : std_logic;
 
   -- Local delay counter
-  signal sig_cnt : unsigned(4 downto 0);
+  signal sig_cnt : natural;
 
   -- Specific values for local counter
   constant c_DELAY_dot : unsigned(4 downto 0) := b"1_0000"; --! 100ms
