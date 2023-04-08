@@ -51,132 +51,134 @@ begin
 
   begin
     
-    if (rising_edge(clk)) and (send = '1')  then      
-      if (sig_en = '1') then -- every g_MAX        
-        case bin is        
-            when "00001" =>     --A .-                if sig_cnt = 0 then            
-                if (sig_cnt < 1) then  
-                  morse <= '1';                     -- 100ms dot
-                  sig_cnt <= sig_cnt + 1;
-                elsif (sig_cnt < 2) then                  
-                  morse <= '0';                     -- 100ms pause
-                  sig_cnt <= sig_cnt + 1;
-                elsif (sig_cnt < 5) then                  
-                  morse <= '1';                     -- 300ms dash
-                  sig_cnt <= sig_cnt + 1;
-                elsif (sig_cnt = 5) then                  
-                  morse <= '0';
-                  send_en <= '0';                                    
-                end if;            
+    if (rising_edge(clk)) then
+      if (send = '1') then      
+        if (sig_en = '1') then -- every g_MAX        
+          case bin is        
+          when "00001" =>     --A .-                if sig_cnt = 0 then            
+            if (sig_cnt < 1) then  
+              morse <= '1';                     -- 100ms dot
+              sig_cnt <= sig_cnt + 1;
+            elsif (sig_cnt < 2) then                  
+              morse <= '0';                     -- 100ms pause
+              sig_cnt <= sig_cnt + 1;
+            elsif (sig_cnt < 5) then                  
+              morse <= '1';                     -- 300ms dash
+              sig_cnt <= sig_cnt + 1;
+            elsif (sig_cnt = 5) then                  
+              morse <= '0';
+              send_en <= '0';                                    
+            end if;            
 
                          
           
-            when "00010" =>     -- B -...
+          when "00010" =>     -- B -...
     
                 
     
-            when "00011" =>     -- C -.-.
+          when "00011" =>     -- C -.-.
     
               
               
-            when "00100" =>     -- D -..
+          when "00100" =>     -- D -..
     
                
     
-            when "00101" =>     -- E .
+          when "00101" =>     -- E .
     
               
               
-            when "00110" =>     -- F ..-.
-    
-              
-            
-            when "00111" =>     -- G --.
+          when "00110" =>     -- F ..-.
     
               
             
-            when "01000" =>     -- H ....
+          when "00111" =>     -- G --.
     
               
             
-            when "01001" =>     -- I ..
+          when "01000" =>     -- H ....
     
               
             
-            when "01010" =>     -- J .---
+          when "01001" =>     -- I ..
     
               
             
-            when "01011" =>     -- K -.-
+          when "01010" =>     -- J .---
     
               
             
-            when "01100" =>     -- L .-..
+          when "01011" =>     -- K -.-
     
               
             
-            when "01101" =>     -- M --
+          when "01100" =>     -- L .-..
     
               
             
-            when "01110" =>     -- N -.
+          when "01101" =>     -- M --
     
               
             
-            when "01111" =>     -- O ---
+          when "01110" =>     -- N -.
     
               
             
-            when "10000" =>     -- P .--.
+          when "01111" =>     -- O ---
     
               
             
-            when "10001" =>     -- Q --.-
+          when "10000" =>     -- P .--.
     
               
             
-            when "10010" =>     -- R .-.
+          when "10001" =>     -- Q --.-
     
               
             
-            when "10011" =>     -- S ...
+          when "10010" =>     -- R .-.
     
               
             
-            when "10100" =>     -- T -
+          when "10011" =>     -- S ...
     
               
             
-            when "10101" =>     -- U ..-
+          when "10100" =>     -- T -
     
               
             
-            when "10110" =>     -- V ...-
+          when "10101" =>     -- U ..-
     
               
             
-            when "10111" =>     -- W .--
+          when "10110" =>     -- V ...-
     
               
             
-            when "11000" =>     -- X -..-
+          when "10111" =>     -- W .--
     
               
             
-            when "11001" =>     -- Y -.--
+          when "11000" =>     -- X -..-
     
               
             
-            when "11010" =>     -- Z --..
+          when "11001" =>     -- Y -.--
+    
+              
+            
+          when "11010" =>     -- Z --..
 
               
 
-            when others =>      -- Other - send nothing
+          when others =>      -- Other - send nothing
 
-        end case;
-        send_en <= '0';
-      else
-        sig_cnt <= 0;
+          end case;
+          send_en <= '0';
+        else
+          sig_cnt <= 0;
+        end if;
       end if;
     end if;
   end process p_bin_morse_decoder;
