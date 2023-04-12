@@ -1,0 +1,2045 @@
+#-----------------------------------------------------------
+# Vivado v2020.2 (64-bit)
+# SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
+# IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+# Start of session at: Wed Apr 12 13:04:24 2023
+# Process ID: 3324
+# Current directory: C:/Users/240703/PC-II-SummerSemester/BPC-DE1-project/ProjectMorse
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent10944 C:\Users\240703\PC-II-SummerSemester\BPC-DE1-project\ProjectMorse\ProjectMorse.xpr
+# Log file: C:/Users/240703/PC-II-SummerSemester/BPC-DE1-project/ProjectMorse/vivado.log
+# Journal file: C:/Users/240703/PC-II-SummerSemester/BPC-DE1-project/ProjectMorse\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/240703/PC-II-SummerSemester/BPC-DE1-project/ProjectMorse/ProjectMorse.xpr
+INFO: [Project 1-313] Project file moved from 'Z:/PC-II-SummerSemester/BPC-DE1-project/ProjectMorse' since last save.
+WARNING: [filemgmt 56-2] Default IP Output Path : Could not find the directory 'C:/Users/240703/PC-II-SummerSemester/BPC-DE1-project/ProjectMorse/ProjectMorse.gen/sources_1', nor could it be found using path 'Z:/PC-II-SummerSemester/BPC-DE1-project/ProjectMorse/ProjectMorse.gen/sources_1'.
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/appz/Xilinx/Vivado/2020.2/data/ip'.
+update_compile_order -fileset sources_1
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/240703/PC-II-SummerSemester/BPC-DE1-project/ProjectMorse/ProjectMorse.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_bin_morse' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/240703/PC-II-SummerSemester/BPC-DE1-project/ProjectMorse/ProjectMorse.sim/sim_1/behav/xsim'
+"xvhdl --incr --relax -prj tb_bin_morse_vhdl.prj"
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/240703/PC-II-SummerSemester/BPC-DE1-project/ProjectMorse/ProjectMorse.srcs/sources_1/new/clock_enable.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'clock_enable'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/240703/PC-II-SummerSemester/BPC-DE1-project/ProjectMorse/ProjectMorse.srcs/sources_1/new/bin_morse.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'bin_morse'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/240703/PC-II-SummerSemester/BPC-DE1-project/ProjectMorse/ProjectMorse.srcs/sim_1/new/tb_bin_morse.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'tb_bin_morse'
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/240703/PC-II-SummerSemester/BPC-DE1-project/ProjectMorse/ProjectMorse.sim/sim_1/behav/xsim'
+"xelab -wto 4e90e972b2734ef7838b83f1c153f186 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot tb_bin_morse_behav xil_defaultlib.tb_bin_morse -log elaborate.log"
+Vivado Simulator 2020.2
+Copyright 1986-1999, 2001-2020 Xilinx, Inc. All Rights Reserved.
+Running: C:/appz/Xilinx/Vivado/2020.2/bin/unwrapped/win64.o/xelab.exe -wto 4e90e972b2734ef7838b83f1c153f186 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot tb_bin_morse_behav xil_defaultlib.tb_bin_morse -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package std.textio
+Compiling package ieee.std_logic_1164
+Compiling package ieee.numeric_std
+Compiling architecture behavioral of entity xil_defaultlib.clock_enable [\clock_enable(g_max=10)\]
+Compiling architecture behavioral of entity xil_defaultlib.bin_morse [bin_morse_default]
+Compiling architecture behavioral of entity xil_defaultlib.tb_bin_morse
+Built simulation snapshot tb_bin_morse_behav
+
+****** Webtalk v2020.2 (64-bit)
+  **** SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
+  **** IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+    ** Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+
+source C:/Users/240703/PC-II-SummerSemester/BPC-DE1-project/ProjectMorse/ProjectMorse.sim/sim_1/behav/xsim/xsim.dir/tb_bin_morse_behav/webtalk/xsim_webtalk.tcl -notrace
+INFO: [Common 17-186] 'C:/Users/240703/PC-II-SummerSemester/BPC-DE1-project/ProjectMorse/ProjectMorse.sim/sim_1/behav/xsim/xsim.dir/tb_bin_morse_behav/webtalk/usage_statistics_ext_xsim.xml' has been successfully sent to Xilinx on Wed Apr 12 13:08:21 2023. For additional details about this file, please refer to the WebTalk help file at C:/appz/Xilinx/Vivado/2020.2/doc/webtalk_introduction.html.
+INFO: [Common 17-206] Exiting Webtalk at Wed Apr 12 13:08:21 2023...
+run_program: Time (s): cpu = 00:00:01 ; elapsed = 00:00:06 . Memory (MB): peak = 998.996 ; gain = 0.000
+INFO: [USF-XSim-69] 'elaborate' step finished in '6' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/240703/PC-II-SummerSemester/BPC-DE1-project/ProjectMorse/ProjectMorse.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "tb_bin_morse_behav -key {Behavioral:sim_1:Functional:tb_bin_morse} -tclbatch {tb_bin_morse.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2020.2
+Time resolution is 1 ps
+source tb_bin_morse.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+Note: Stimulus process started
+Time: 0 ps  Iteration: 0  Process: /tb_bin_morse/p_stimulus  File: C:/Users/240703/PC-II-SummerSemester/BPC-DE1-project/ProjectMorse/ProjectMorse.srcs/sim_1/new/tb_bin_morse.vhd
+Note: Stimulus process finished
+Time: 100 ns  Iteration: 0  Process: /tb_bin_morse/p_stimulus  File: C:/Users/240703/PC-II-SummerSemester/BPC-DE1-project/ProjectMorse/ProjectMorse.srcs/sim_1/new/tb_bin_morse.vhd
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'tb_bin_morse_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:08 ; elapsed = 00:00:12 . Memory (MB): peak = 998.996 ; gain = 0.000
+current_wave_config {Untitled 1}
+Untitled 1
+add_wave {{/tb_bin_morse/uut_tb_bin_morse/clk_en0/sig_cnt}} 
+relaunch_sim
+suspend_sim: Time (s): cpu = 00:00:01 ; elapsed = 00:00:05 . Memory (MB): peak = 998.996 ; gain = 0.000
+Command: launch_simulation -simset sim_1 -mode behavioral
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/240703/PC-II-SummerSemester/BPC-DE1-project/ProjectMorse/ProjectMorse.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_bin_morse' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/240703/PC-II-SummerSemester/BPC-DE1-project/ProjectMorse/ProjectMorse.sim/sim_1/behav/xsim'
+"xvhdl --incr --relax -prj tb_bin_morse_vhdl.prj"
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+Command: launch_simulation -simset sim_1 -mode behavioral
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/240703/PC-II-SummerSemester/BPC-DE1-project/ProjectMorse/ProjectMorse.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/240703/PC-II-SummerSemester/BPC-DE1-project/ProjectMorse/ProjectMorse.sim/sim_1/behav/xsim'
+"xelab -wto 4e90e972b2734ef7838b83f1c153f186 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot tb_bin_morse_behav xil_defaultlib.tb_bin_morse -log elaborate.log"
+Vivado Simulator 2020.2
+Copyright 1986-1999, 2001-2020 Xilinx, Inc. All Rights Reserved.
+Running: C:/appz/Xilinx/Vivado/2020.2/bin/unwrapped/win64.o/xelab.exe -wto 4e90e972b2734ef7838b83f1c153f186 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot tb_bin_morse_behav xil_defaultlib.tb_bin_morse -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+INFO: [XSIM 43-4323] No Change in HDL. Linking previously generated obj files to create kernel
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+Vivado Simulator 2020.2
+Time resolution is 1 ps
+Note: Stimulus process started
+Time: 0 ps  Iteration: 0  Process: /tb_bin_morse/p_stimulus  File: C:/Users/240703/PC-II-SummerSemester/BPC-DE1-project/ProjectMorse/ProjectMorse.srcs/sim_1/new/tb_bin_morse.vhd
+Note: Stimulus process finished
+Time: 100 ns  Iteration: 0  Process: /tb_bin_morse/p_stimulus  File: C:/Users/240703/PC-II-SummerSemester/BPC-DE1-project/ProjectMorse/ProjectMorse.srcs/sim_1/new/tb_bin_morse.vhd
+relaunch_sim: Time (s): cpu = 00:00:02 ; elapsed = 00:00:09 . Memory (MB): peak = 998.996 ; gain = 0.000
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/240703/PC-II-SummerSemester/BPC-DE1-project/ProjectMorse/ProjectMorse.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_bin_morse' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/240703/PC-II-SummerSemester/BPC-DE1-project/ProjectMorse/ProjectMorse.sim/sim_1/behav/xsim'
+"xvhdl --incr --relax -prj tb_bin_morse_vhdl.prj"
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/240703/PC-II-SummerSemester/BPC-DE1-project/ProjectMorse/ProjectMorse.srcs/sources_1/new/bin_morse.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'bin_morse'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/240703/PC-II-SummerSemester/BPC-DE1-project/ProjectMorse/ProjectMorse.srcs/sim_1/new/tb_bin_morse.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'tb_bin_morse'
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/240703/PC-II-SummerSemester/BPC-DE1-project/ProjectMorse/ProjectMorse.sim/sim_1/behav/xsim'
+"xelab -wto 4e90e972b2734ef7838b83f1c153f186 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot tb_bin_morse_behav xil_defaultlib.tb_bin_morse -log elaborate.log"
+Vivado Simulator 2020.2
+Copyright 1986-1999, 2001-2020 Xilinx, Inc. All Rights Reserved.
+Running: C:/appz/Xilinx/Vivado/2020.2/bin/unwrapped/win64.o/xelab.exe -wto 4e90e972b2734ef7838b83f1c153f186 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot tb_bin_morse_behav xil_defaultlib.tb_bin_morse -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package std.textio
+Compiling package ieee.std_logic_1164
+Compiling package ieee.numeric_std
+Compiling architecture behavioral of entity xil_defaultlib.clock_enable [\clock_enable(g_max=10)\]
+Compiling architecture behavioral of entity xil_defaultlib.bin_morse [bin_morse_default]
+Compiling architecture behavioral of entity xil_defaultlib.tb_bin_morse
+Built simulation snapshot tb_bin_morse_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/240703/PC-II-SummerSemester/BPC-DE1-project/ProjectMorse/ProjectMorse.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "tb_bin_morse_behav -key {Behavioral:sim_1:Functional:tb_bin_morse} -tclbatch {tb_bin_morse.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2020.2
+Time resolution is 1 ps
+source tb_bin_morse.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+Note: Stimulus process started
+Time: 0 ps  Iteration: 0  Process: /tb_bin_morse/p_stimulus  File: C:/Users/240703/PC-II-SummerSemester/BPC-DE1-project/ProjectMorse/ProjectMorse.srcs/sim_1/new/tb_bin_morse.vhd
+Note: Stimulus process finished
+Time: 100 ns  Iteration: 0  Process: /tb_bin_morse/p_stimulus  File: C:/Users/240703/PC-II-SummerSemester/BPC-DE1-project/ProjectMorse/ProjectMorse.srcs/sim_1/new/tb_bin_morse.vhd
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'tb_bin_morse_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:03 ; elapsed = 00:00:05 . Memory (MB): peak = 998.996 ; gain = 0.000
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/240703/PC-II-SummerSemester/BPC-DE1-project/ProjectMorse/ProjectMorse.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_bin_morse' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/240703/PC-II-SummerSemester/BPC-DE1-project/ProjectMorse/ProjectMorse.sim/sim_1/behav/xsim'
+"xvhdl --incr --relax -prj tb_bin_morse_vhdl.prj"
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/240703/PC-II-SummerSemester/BPC-DE1-project/ProjectMorse/ProjectMorse.srcs/sources_1/new/bin_morse.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'bin_morse'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/240703/PC-II-SummerSemester/BPC-DE1-project/ProjectMorse/ProjectMorse.srcs/sim_1/new/tb_bin_morse.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'tb_bin_morse'
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/240703/PC-II-SummerSemester/BPC-DE1-project/ProjectMorse/ProjectMorse.sim/sim_1/behav/xsim'
+"xelab -wto 4e90e972b2734ef7838b83f1c153f186 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot tb_bin_morse_behav xil_defaultlib.tb_bin_morse -log elaborate.log"
+Vivado Simulator 2020.2
+Copyright 1986-1999, 2001-2020 Xilinx, Inc. All Rights Reserved.
+Running: C:/appz/Xilinx/Vivado/2020.2/bin/unwrapped/win64.o/xelab.exe -wto 4e90e972b2734ef7838b83f1c153f186 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot tb_bin_morse_behav xil_defaultlib.tb_bin_morse -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package std.textio
+Compiling package ieee.std_logic_1164
+Compiling package ieee.numeric_std
+Compiling architecture behavioral of entity xil_defaultlib.clock_enable [\clock_enable(g_max=10)\]
+Compiling architecture behavioral of entity xil_defaultlib.bin_morse [bin_morse_default]
+Compiling architecture behavioral of entity xil_defaultlib.tb_bin_morse
+Built simulation snapshot tb_bin_morse_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/240703/PC-II-SummerSemester/BPC-DE1-project/ProjectMorse/ProjectMorse.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "tb_bin_morse_behav -key {Behavioral:sim_1:Functional:tb_bin_morse} -tclbatch {tb_bin_morse.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2020.2
+Time resolution is 1 ps
+source tb_bin_morse.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+Note: Stimulus process started
+Time: 0 ps  Iteration: 0  Process: /tb_bin_morse/p_stimulus  File: C:/Users/240703/PC-II-SummerSemester/BPC-DE1-project/ProjectMorse/ProjectMorse.srcs/sim_1/new/tb_bin_morse.vhd
+Note: Stimulus process finished
+Time: 100 ns  Iteration: 0  Process: /tb_bin_morse/p_stimulus  File: C:/Users/240703/PC-II-SummerSemester/BPC-DE1-project/ProjectMorse/ProjectMorse.srcs/sim_1/new/tb_bin_morse.vhd
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'tb_bin_morse_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:03 ; elapsed = 00:00:06 . Memory (MB): peak = 998.996 ; gain = 0.000
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/240703/PC-II-SummerSemester/BPC-DE1-project/ProjectMorse/ProjectMorse.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_bin_morse' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/240703/PC-II-SummerSemester/BPC-DE1-project/ProjectMorse/ProjectMorse.sim/sim_1/behav/xsim'
+"xvhdl --incr --relax -prj tb_bin_morse_vhdl.prj"
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/240703/PC-II-SummerSemester/BPC-DE1-project/ProjectMorse/ProjectMorse.srcs/sim_1/new/tb_bin_morse.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'tb_bin_morse'
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/240703/PC-II-SummerSemester/BPC-DE1-project/ProjectMorse/ProjectMorse.sim/sim_1/behav/xsim'
+"xelab -wto 4e90e972b2734ef7838b83f1c153f186 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot tb_bin_morse_behav xil_defaultlib.tb_bin_morse -log elaborate.log"
+Vivado Simulator 2020.2
+Copyright 1986-1999, 2001-2020 Xilinx, Inc. All Rights Reserved.
+Running: C:/appz/Xilinx/Vivado/2020.2/bin/unwrapped/win64.o/xelab.exe -wto 4e90e972b2734ef7838b83f1c153f186 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot tb_bin_morse_behav xil_defaultlib.tb_bin_morse -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package std.textio
+Compiling package ieee.std_logic_1164
+Compiling package ieee.numeric_std
+Compiling architecture behavioral of entity xil_defaultlib.clock_enable [\clock_enable(g_max=10)\]
+Compiling architecture behavioral of entity xil_defaultlib.bin_morse [bin_morse_default]
+Compiling architecture behavioral of entity xil_defaultlib.tb_bin_morse
+Built simulation snapshot tb_bin_morse_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/240703/PC-II-SummerSemester/BPC-DE1-project/ProjectMorse/ProjectMorse.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "tb_bin_morse_behav -key {Behavioral:sim_1:Functional:tb_bin_morse} -tclbatch {tb_bin_morse.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2020.2
+Time resolution is 1 ps
+source tb_bin_morse.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+Note: Stimulus process started
+Time: 0 ps  Iteration: 0  Process: /tb_bin_morse/p_stimulus  File: C:/Users/240703/PC-II-SummerSemester/BPC-DE1-project/ProjectMorse/ProjectMorse.srcs/sim_1/new/tb_bin_morse.vhd
+Note: Stimulus process finished
+Time: 100 ns  Iteration: 0  Process: /tb_bin_morse/p_stimulus  File: C:/Users/240703/PC-II-SummerSemester/BPC-DE1-project/ProjectMorse/ProjectMorse.srcs/sim_1/new/tb_bin_morse.vhd
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'tb_bin_morse_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/240703/PC-II-SummerSemester/BPC-DE1-project/ProjectMorse/ProjectMorse.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_bin_morse' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/240703/PC-II-SummerSemester/BPC-DE1-project/ProjectMorse/ProjectMorse.sim/sim_1/behav/xsim'
+"xvhdl --incr --relax -prj tb_bin_morse_vhdl.prj"
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/240703/PC-II-SummerSemester/BPC-DE1-project/ProjectMorse/ProjectMorse.sim/sim_1/behav/xsim'
+"xelab -wto 4e90e972b2734ef7838b83f1c153f186 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot tb_bin_morse_behav xil_defaultlib.tb_bin_morse -log elaborate.log"
+Vivado Simulator 2020.2
+Copyright 1986-1999, 2001-2020 Xilinx, Inc. All Rights Reserved.
+Running: C:/appz/Xilinx/Vivado/2020.2/bin/unwrapped/win64.o/xelab.exe -wto 4e90e972b2734ef7838b83f1c153f186 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot tb_bin_morse_behav xil_defaultlib.tb_bin_morse -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+INFO: [XSIM 43-4323] No Change in HDL. Linking previously generated obj files to create kernel
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/240703/PC-II-SummerSemester/BPC-DE1-project/ProjectMorse/ProjectMorse.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "tb_bin_morse_behav -key {Behavioral:sim_1:Functional:tb_bin_morse} -tclbatch {tb_bin_morse.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2020.2
+Time resolution is 1 ps
+source tb_bin_morse.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+Note: Stimulus process started
+Time: 0 ps  Iteration: 0  Process: /tb_bin_morse/p_stimulus  File: C:/Users/240703/PC-II-SummerSemester/BPC-DE1-project/ProjectMorse/ProjectMorse.srcs/sim_1/new/tb_bin_morse.vhd
+Note: Stimulus process finished
+Time: 100 ns  Iteration: 0  Process: /tb_bin_morse/p_stimulus  File: C:/Users/240703/PC-II-SummerSemester/BPC-DE1-project/ProjectMorse/ProjectMorse.srcs/sim_1/new/tb_bin_morse.vhd
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'tb_bin_morse_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+current_wave_config {Untitled 5}
+Untitled 5
+add_wave {{/tb_bin_morse/uut_tb_bin_morse/sig_en}} 
+relaunch_sim
+Command: launch_simulation -simset sim_1 -mode behavioral
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/240703/PC-II-SummerSemester/BPC-DE1-project/ProjectMorse/ProjectMorse.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_bin_morse' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/240703/PC-II-SummerSemester/BPC-DE1-project/ProjectMorse/ProjectMorse.sim/sim_1/behav/xsim'
+"xvhdl --incr --relax -prj tb_bin_morse_vhdl.prj"
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+Command: launch_simulation -simset sim_1 -mode behavioral
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/240703/PC-II-SummerSemester/BPC-DE1-project/ProjectMorse/ProjectMorse.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/240703/PC-II-SummerSemester/BPC-DE1-project/ProjectMorse/ProjectMorse.sim/sim_1/behav/xsim'
+"xelab -wto 4e90e972b2734ef7838b83f1c153f186 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot tb_bin_morse_behav xil_defaultlib.tb_bin_morse -log elaborate.log"
+Vivado Simulator 2020.2
+Copyright 1986-1999, 2001-2020 Xilinx, Inc. All Rights Reserved.
+Running: C:/appz/Xilinx/Vivado/2020.2/bin/unwrapped/win64.o/xelab.exe -wto 4e90e972b2734ef7838b83f1c153f186 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot tb_bin_morse_behav xil_defaultlib.tb_bin_morse -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+INFO: [XSIM 43-4323] No Change in HDL. Linking previously generated obj files to create kernel
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+Vivado Simulator 2020.2
+Time resolution is 1 ps
+Note: Stimulus process started
+Time: 0 ps  Iteration: 0  Process: /tb_bin_morse/p_stimulus  File: C:/Users/240703/PC-II-SummerSemester/BPC-DE1-project/ProjectMorse/ProjectMorse.srcs/sim_1/new/tb_bin_morse.vhd
+Note: Stimulus process finished
+Time: 100 ns  Iteration: 0  Process: /tb_bin_morse/p_stimulus  File: C:/Users/240703/PC-II-SummerSemester/BPC-DE1-project/ProjectMorse/ProjectMorse.srcs/sim_1/new/tb_bin_morse.vhd
+relaunch_sim: Time (s): cpu = 00:00:01 ; elapsed = 00:00:05 . Memory (MB): peak = 998.996 ; gain = 0.000
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/240703/PC-II-SummerSemester/BPC-DE1-project/ProjectMorse/ProjectMorse.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_bin_morse' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/240703/PC-II-SummerSemester/BPC-DE1-project/ProjectMorse/ProjectMorse.sim/sim_1/behav/xsim'
+"xvhdl --incr --relax -prj tb_bin_morse_vhdl.prj"
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/240703/PC-II-SummerSemester/BPC-DE1-project/ProjectMorse/ProjectMorse.srcs/sources_1/new/bin_morse.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'bin_morse'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/240703/PC-II-SummerSemester/BPC-DE1-project/ProjectMorse/ProjectMorse.srcs/sim_1/new/tb_bin_morse.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'tb_bin_morse'
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/240703/PC-II-SummerSemester/BPC-DE1-project/ProjectMorse/ProjectMorse.sim/sim_1/behav/xsim'
+"xelab -wto 4e90e972b2734ef7838b83f1c153f186 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot tb_bin_morse_behav xil_defaultlib.tb_bin_morse -log elaborate.log"
+Vivado Simulator 2020.2
+Copyright 1986-1999, 2001-2020 Xilinx, Inc. All Rights Reserved.
+Running: C:/appz/Xilinx/Vivado/2020.2/bin/unwrapped/win64.o/xelab.exe -wto 4e90e972b2734ef7838b83f1c153f186 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot tb_bin_morse_behav xil_defaultlib.tb_bin_morse -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package std.textio
+Compiling package ieee.std_logic_1164
+Compiling package ieee.numeric_std
+Compiling architecture behavioral of entity xil_defaultlib.clock_enable [\clock_enable(g_max=10)\]
+Compiling architecture behavioral of entity xil_defaultlib.bin_morse [bin_morse_default]
+Compiling architecture behavioral of entity xil_defaultlib.tb_bin_morse
+Built simulation snapshot tb_bin_morse_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/240703/PC-II-SummerSemester/BPC-DE1-project/ProjectMorse/ProjectMorse.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "tb_bin_morse_behav -key {Behavioral:sim_1:Functional:tb_bin_morse} -tclbatch {tb_bin_morse.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2020.2
+Time resolution is 1 ps
+source tb_bin_morse.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+Note: Stimulus process started
+Time: 0 ps  Iteration: 0  Process: /tb_bin_morse/p_stimulus  File: C:/Users/240703/PC-II-SummerSemester/BPC-DE1-project/ProjectMorse/ProjectMorse.srcs/sim_1/new/tb_bin_morse.vhd
+Note: Stimulus process finished
+Time: 100 ns  Iteration: 0  Process: /tb_bin_morse/p_stimulus  File: C:/Users/240703/PC-II-SummerSemester/BPC-DE1-project/ProjectMorse/ProjectMorse.srcs/sim_1/new/tb_bin_morse.vhd
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'tb_bin_morse_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:02 ; elapsed = 00:00:06 . Memory (MB): peak = 998.996 ; gain = 0.000
+current_wave_config {Untitled 6}
+Untitled 6
+add_wave {{/tb_bin_morse/uut_tb_bin_morse/send_en}} 
+relaunch_sim
+Command: launch_simulation -simset sim_1 -mode behavioral
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/240703/PC-II-SummerSemester/BPC-DE1-project/ProjectMorse/ProjectMorse.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_bin_morse' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/240703/PC-II-SummerSemester/BPC-DE1-project/ProjectMorse/ProjectMorse.sim/sim_1/behav/xsim'
+"xvhdl --incr --relax -prj tb_bin_morse_vhdl.prj"
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/240703/PC-II-SummerSemester/BPC-DE1-project/ProjectMorse/ProjectMorse.srcs/sources_1/new/bin_morse.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'bin_morse'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/240703/PC-II-SummerSemester/BPC-DE1-project/ProjectMorse/ProjectMorse.srcs/sim_1/new/tb_bin_morse.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'tb_bin_morse'
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+Command: launch_simulation -simset sim_1 -mode behavioral
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/240703/PC-II-SummerSemester/BPC-DE1-project/ProjectMorse/ProjectMorse.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/240703/PC-II-SummerSemester/BPC-DE1-project/ProjectMorse/ProjectMorse.sim/sim_1/behav/xsim'
+"xelab -wto 4e90e972b2734ef7838b83f1c153f186 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot tb_bin_morse_behav xil_defaultlib.tb_bin_morse -log elaborate.log"
+Vivado Simulator 2020.2
+Copyright 1986-1999, 2001-2020 Xilinx, Inc. All Rights Reserved.
+Running: C:/appz/Xilinx/Vivado/2020.2/bin/unwrapped/win64.o/xelab.exe -wto 4e90e972b2734ef7838b83f1c153f186 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot tb_bin_morse_behav xil_defaultlib.tb_bin_morse -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package std.textio
+Compiling package ieee.std_logic_1164
+Compiling package ieee.numeric_std
+Compiling architecture behavioral of entity xil_defaultlib.clock_enable [\clock_enable(g_max=10)\]
+Compiling architecture behavioral of entity xil_defaultlib.bin_morse [bin_morse_default]
+Compiling architecture behavioral of entity xil_defaultlib.tb_bin_morse
+Built simulation snapshot tb_bin_morse_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+Vivado Simulator 2020.2
+Time resolution is 1 ps
+Note: Stimulus process started
+Time: 0 ps  Iteration: 0  Process: /tb_bin_morse/p_stimulus  File: C:/Users/240703/PC-II-SummerSemester/BPC-DE1-project/ProjectMorse/ProjectMorse.srcs/sim_1/new/tb_bin_morse.vhd
+Note: Stimulus process finished
+Time: 100 ns  Iteration: 0  Process: /tb_bin_morse/p_stimulus  File: C:/Users/240703/PC-II-SummerSemester/BPC-DE1-project/ProjectMorse/ProjectMorse.srcs/sim_1/new/tb_bin_morse.vhd
+relaunch_sim: Time (s): cpu = 00:00:01 ; elapsed = 00:00:07 . Memory (MB): peak = 998.996 ; gain = 0.000
+current_wave_config {Untitled 6}
+Untitled 6
+add_wave {{/tb_bin_morse/uut_tb_bin_morse/sig_en}} 
+relaunch_sim
+Command: launch_simulation -simset sim_1 -mode behavioral
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/240703/PC-II-SummerSemester/BPC-DE1-project/ProjectMorse/ProjectMorse.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_bin_morse' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/240703/PC-II-SummerSemester/BPC-DE1-project/ProjectMorse/ProjectMorse.sim/sim_1/behav/xsim'
+"xvhdl --incr --relax -prj tb_bin_morse_vhdl.prj"
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+Command: launch_simulation -simset sim_1 -mode behavioral
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/240703/PC-II-SummerSemester/BPC-DE1-project/ProjectMorse/ProjectMorse.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/240703/PC-II-SummerSemester/BPC-DE1-project/ProjectMorse/ProjectMorse.sim/sim_1/behav/xsim'
+"xelab -wto 4e90e972b2734ef7838b83f1c153f186 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot tb_bin_morse_behav xil_defaultlib.tb_bin_morse -log elaborate.log"
+Vivado Simulator 2020.2
+Copyright 1986-1999, 2001-2020 Xilinx, Inc. All Rights Reserved.
+Running: C:/appz/Xilinx/Vivado/2020.2/bin/unwrapped/win64.o/xelab.exe -wto 4e90e972b2734ef7838b83f1c153f186 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot tb_bin_morse_behav xil_defaultlib.tb_bin_morse -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+INFO: [XSIM 43-4323] No Change in HDL. Linking previously generated obj files to create kernel
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+Vivado Simulator 2020.2
+Time resolution is 1 ps
+Note: Stimulus process started
+Time: 0 ps  Iteration: 0  Process: /tb_bin_morse/p_stimulus  File: C:/Users/240703/PC-II-SummerSemester/BPC-DE1-project/ProjectMorse/ProjectMorse.srcs/sim_1/new/tb_bin_morse.vhd
+Note: Stimulus process finished
+Time: 100 ns  Iteration: 0  Process: /tb_bin_morse/p_stimulus  File: C:/Users/240703/PC-II-SummerSemester/BPC-DE1-project/ProjectMorse/ProjectMorse.srcs/sim_1/new/tb_bin_morse.vhd
+relaunch_sim: Time (s): cpu = 00:00:01 ; elapsed = 00:00:05 . Memory (MB): peak = 998.996 ; gain = 0.000
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/240703/PC-II-SummerSemester/BPC-DE1-project/ProjectMorse/ProjectMorse.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_bin_morse' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/240703/PC-II-SummerSemester/BPC-DE1-project/ProjectMorse/ProjectMorse.sim/sim_1/behav/xsim'
+"xvhdl --incr --relax -prj tb_bin_morse_vhdl.prj"
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/240703/PC-II-SummerSemester/BPC-DE1-project/ProjectMorse/ProjectMorse.srcs/sources_1/new/bin_morse.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'bin_morse'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/240703/PC-II-SummerSemester/BPC-DE1-project/ProjectMorse/ProjectMorse.srcs/sim_1/new/tb_bin_morse.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'tb_bin_morse'
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/240703/PC-II-SummerSemester/BPC-DE1-project/ProjectMorse/ProjectMorse.sim/sim_1/behav/xsim'
+"xelab -wto 4e90e972b2734ef7838b83f1c153f186 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot tb_bin_morse_behav xil_defaultlib.tb_bin_morse -log elaborate.log"
+Vivado Simulator 2020.2
+Copyright 1986-1999, 2001-2020 Xilinx, Inc. All Rights Reserved.
+Running: C:/appz/Xilinx/Vivado/2020.2/bin/unwrapped/win64.o/xelab.exe -wto 4e90e972b2734ef7838b83f1c153f186 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot tb_bin_morse_behav xil_defaultlib.tb_bin_morse -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package std.textio
+Compiling package ieee.std_logic_1164
+Compiling package ieee.numeric_std
+Compiling architecture behavioral of entity xil_defaultlib.clock_enable [\clock_enable(g_max=10)\]
+Compiling architecture behavioral of entity xil_defaultlib.bin_morse [bin_morse_default]
+Compiling architecture behavioral of entity xil_defaultlib.tb_bin_morse
+Built simulation snapshot tb_bin_morse_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/240703/PC-II-SummerSemester/BPC-DE1-project/ProjectMorse/ProjectMorse.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "tb_bin_morse_behav -key {Behavioral:sim_1:Functional:tb_bin_morse} -tclbatch {tb_bin_morse.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2020.2
+Time resolution is 1 ps
+source tb_bin_morse.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+Note: Stimulus process started
+Time: 0 ps  Iteration: 0  Process: /tb_bin_morse/p_stimulus  File: C:/Users/240703/PC-II-SummerSemester/BPC-DE1-project/ProjectMorse/ProjectMorse.srcs/sim_1/new/tb_bin_morse.vhd
+Note: Stimulus process finished
+Time: 100 ns  Iteration: 0  Process: /tb_bin_morse/p_stimulus  File: C:/Users/240703/PC-II-SummerSemester/BPC-DE1-project/ProjectMorse/ProjectMorse.srcs/sim_1/new/tb_bin_morse.vhd
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'tb_bin_morse_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:03 ; elapsed = 00:00:06 . Memory (MB): peak = 998.996 ; gain = 0.000
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/240703/PC-II-SummerSemester/BPC-DE1-project/ProjectMorse/ProjectMorse.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_bin_morse' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/240703/PC-II-SummerSemester/BPC-DE1-project/ProjectMorse/ProjectMorse.sim/sim_1/behav/xsim'
+"xvhdl --incr --relax -prj tb_bin_morse_vhdl.prj"
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/240703/PC-II-SummerSemester/BPC-DE1-project/ProjectMorse/ProjectMorse.srcs/sim_1/new/tb_bin_morse.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'tb_bin_morse'
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/240703/PC-II-SummerSemester/BPC-DE1-project/ProjectMorse/ProjectMorse.sim/sim_1/behav/xsim'
+"xelab -wto 4e90e972b2734ef7838b83f1c153f186 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot tb_bin_morse_behav xil_defaultlib.tb_bin_morse -log elaborate.log"
+Vivado Simulator 2020.2
+Copyright 1986-1999, 2001-2020 Xilinx, Inc. All Rights Reserved.
+Running: C:/appz/Xilinx/Vivado/2020.2/bin/unwrapped/win64.o/xelab.exe -wto 4e90e972b2734ef7838b83f1c153f186 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot tb_bin_morse_behav xil_defaultlib.tb_bin_morse -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package std.textio
+Compiling package ieee.std_logic_1164
+Compiling package ieee.numeric_std
+Compiling architecture behavioral of entity xil_defaultlib.clock_enable [\clock_enable(g_max=10)\]
+Compiling architecture behavioral of entity xil_defaultlib.bin_morse [bin_morse_default]
+Compiling architecture behavioral of entity xil_defaultlib.tb_bin_morse
+Built simulation snapshot tb_bin_morse_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/240703/PC-II-SummerSemester/BPC-DE1-project/ProjectMorse/ProjectMorse.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "tb_bin_morse_behav -key {Behavioral:sim_1:Functional:tb_bin_morse} -tclbatch {tb_bin_morse.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2020.2
+Time resolution is 1 ps
+source tb_bin_morse.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+Note: Stimulus process started
+Time: 0 ps  Iteration: 0  Process: /tb_bin_morse/p_stimulus  File: C:/Users/240703/PC-II-SummerSemester/BPC-DE1-project/ProjectMorse/ProjectMorse.srcs/sim_1/new/tb_bin_morse.vhd
+Note: Stimulus process finished
+Time: 0 ps  Iteration: 0  Process: /tb_bin_morse/p_stimulus  File: C:/Users/240703/PC-II-SummerSemester/BPC-DE1-project/ProjectMorse/ProjectMorse.srcs/sim_1/new/tb_bin_morse.vhd
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'tb_bin_morse_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+current_wave_config {Untitled 8}
+Untitled 8
+add_wave {{/tb_bin_morse/uut_tb_bin_morse/sig_en}} 
+relaunch_sim
+Command: launch_simulation -simset sim_1 -mode behavioral
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/240703/PC-II-SummerSemester/BPC-DE1-project/ProjectMorse/ProjectMorse.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_bin_morse' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/240703/PC-II-SummerSemester/BPC-DE1-project/ProjectMorse/ProjectMorse.sim/sim_1/behav/xsim'
+"xvhdl --incr --relax -prj tb_bin_morse_vhdl.prj"
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+Command: launch_simulation -simset sim_1 -mode behavioral
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/240703/PC-II-SummerSemester/BPC-DE1-project/ProjectMorse/ProjectMorse.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/240703/PC-II-SummerSemester/BPC-DE1-project/ProjectMorse/ProjectMorse.sim/sim_1/behav/xsim'
+"xelab -wto 4e90e972b2734ef7838b83f1c153f186 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot tb_bin_morse_behav xil_defaultlib.tb_bin_morse -log elaborate.log"
+Vivado Simulator 2020.2
+Copyright 1986-1999, 2001-2020 Xilinx, Inc. All Rights Reserved.
+Running: C:/appz/Xilinx/Vivado/2020.2/bin/unwrapped/win64.o/xelab.exe -wto 4e90e972b2734ef7838b83f1c153f186 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot tb_bin_morse_behav xil_defaultlib.tb_bin_morse -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+INFO: [XSIM 43-4323] No Change in HDL. Linking previously generated obj files to create kernel
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+Vivado Simulator 2020.2
+Time resolution is 1 ps
+Note: Stimulus process started
+Time: 0 ps  Iteration: 0  Process: /tb_bin_morse/p_stimulus  File: C:/Users/240703/PC-II-SummerSemester/BPC-DE1-project/ProjectMorse/ProjectMorse.srcs/sim_1/new/tb_bin_morse.vhd
+Note: Stimulus process finished
+Time: 0 ps  Iteration: 0  Process: /tb_bin_morse/p_stimulus  File: C:/Users/240703/PC-II-SummerSemester/BPC-DE1-project/ProjectMorse/ProjectMorse.srcs/sim_1/new/tb_bin_morse.vhd
+relaunch_sim: Time (s): cpu = 00:00:01 ; elapsed = 00:00:05 . Memory (MB): peak = 998.996 ; gain = 0.000
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/240703/PC-II-SummerSemester/BPC-DE1-project/ProjectMorse/ProjectMorse.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_bin_morse' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/240703/PC-II-SummerSemester/BPC-DE1-project/ProjectMorse/ProjectMorse.sim/sim_1/behav/xsim'
+"xvhdl --incr --relax -prj tb_bin_morse_vhdl.prj"
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/240703/PC-II-SummerSemester/BPC-DE1-project/ProjectMorse/ProjectMorse.srcs/sources_1/new/bin_morse.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'bin_morse'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/240703/PC-II-SummerSemester/BPC-DE1-project/ProjectMorse/ProjectMorse.srcs/sim_1/new/tb_bin_morse.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'tb_bin_morse'
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/240703/PC-II-SummerSemester/BPC-DE1-project/ProjectMorse/ProjectMorse.sim/sim_1/behav/xsim'
+"xelab -wto 4e90e972b2734ef7838b83f1c153f186 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot tb_bin_morse_behav xil_defaultlib.tb_bin_morse -log elaborate.log"
+Vivado Simulator 2020.2
+Copyright 1986-1999, 2001-2020 Xilinx, Inc. All Rights Reserved.
+Running: C:/appz/Xilinx/Vivado/2020.2/bin/unwrapped/win64.o/xelab.exe -wto 4e90e972b2734ef7838b83f1c153f186 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot tb_bin_morse_behav xil_defaultlib.tb_bin_morse -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package std.textio
+Compiling package ieee.std_logic_1164
+Compiling package ieee.numeric_std
+Compiling architecture behavioral of entity xil_defaultlib.clock_enable [\clock_enable(g_max=10)\]
+Compiling architecture behavioral of entity xil_defaultlib.bin_morse [bin_morse_default]
+Compiling architecture behavioral of entity xil_defaultlib.tb_bin_morse
+Built simulation snapshot tb_bin_morse_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/240703/PC-II-SummerSemester/BPC-DE1-project/ProjectMorse/ProjectMorse.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "tb_bin_morse_behav -key {Behavioral:sim_1:Functional:tb_bin_morse} -tclbatch {tb_bin_morse.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2020.2
+Time resolution is 1 ps
+source tb_bin_morse.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+Note: Stimulus process started
+Time: 0 ps  Iteration: 0  Process: /tb_bin_morse/p_stimulus  File: C:/Users/240703/PC-II-SummerSemester/BPC-DE1-project/ProjectMorse/ProjectMorse.srcs/sim_1/new/tb_bin_morse.vhd
+Note: Stimulus process finished
+Time: 0 ps  Iteration: 0  Process: /tb_bin_morse/p_stimulus  File: C:/Users/240703/PC-II-SummerSemester/BPC-DE1-project/ProjectMorse/ProjectMorse.srcs/sim_1/new/tb_bin_morse.vhd
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'tb_bin_morse_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:02 ; elapsed = 00:00:06 . Memory (MB): peak = 998.996 ; gain = 0.000
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/240703/PC-II-SummerSemester/BPC-DE1-project/ProjectMorse/ProjectMorse.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_bin_morse' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/240703/PC-II-SummerSemester/BPC-DE1-project/ProjectMorse/ProjectMorse.sim/sim_1/behav/xsim'
+"xvhdl --incr --relax -prj tb_bin_morse_vhdl.prj"
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/240703/PC-II-SummerSemester/BPC-DE1-project/ProjectMorse/ProjectMorse.srcs/sources_1/new/bin_morse.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'bin_morse'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/240703/PC-II-SummerSemester/BPC-DE1-project/ProjectMorse/ProjectMorse.srcs/sim_1/new/tb_bin_morse.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'tb_bin_morse'
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/240703/PC-II-SummerSemester/BPC-DE1-project/ProjectMorse/ProjectMorse.sim/sim_1/behav/xsim'
+"xelab -wto 4e90e972b2734ef7838b83f1c153f186 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot tb_bin_morse_behav xil_defaultlib.tb_bin_morse -log elaborate.log"
+Vivado Simulator 2020.2
+Copyright 1986-1999, 2001-2020 Xilinx, Inc. All Rights Reserved.
+Running: C:/appz/Xilinx/Vivado/2020.2/bin/unwrapped/win64.o/xelab.exe -wto 4e90e972b2734ef7838b83f1c153f186 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot tb_bin_morse_behav xil_defaultlib.tb_bin_morse -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package std.textio
+Compiling package ieee.std_logic_1164
+Compiling package ieee.numeric_std
+Compiling architecture behavioral of entity xil_defaultlib.clock_enable [\clock_enable(g_max=10)\]
+Compiling architecture behavioral of entity xil_defaultlib.bin_morse [bin_morse_default]
+Compiling architecture behavioral of entity xil_defaultlib.tb_bin_morse
+Built simulation snapshot tb_bin_morse_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/240703/PC-II-SummerSemester/BPC-DE1-project/ProjectMorse/ProjectMorse.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "tb_bin_morse_behav -key {Behavioral:sim_1:Functional:tb_bin_morse} -tclbatch {tb_bin_morse.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2020.2
+Time resolution is 1 ps
+source tb_bin_morse.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+Note: Stimulus process started
+Time: 0 ps  Iteration: 0  Process: /tb_bin_morse/p_stimulus  File: C:/Users/240703/PC-II-SummerSemester/BPC-DE1-project/ProjectMorse/ProjectMorse.srcs/sim_1/new/tb_bin_morse.vhd
+Note: Stimulus process finished
+Time: 0 ps  Iteration: 0  Process: /tb_bin_morse/p_stimulus  File: C:/Users/240703/PC-II-SummerSemester/BPC-DE1-project/ProjectMorse/ProjectMorse.srcs/sim_1/new/tb_bin_morse.vhd
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'tb_bin_morse_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:02 ; elapsed = 00:00:06 . Memory (MB): peak = 998.996 ; gain = 0.000
+current_wave_config {Untitled 10}
+Untitled 10
+add_wave {{/tb_bin_morse/uut_tb_bin_morse/sig_en}} 
+relaunch_sim
+Command: launch_simulation -simset sim_1 -mode behavioral
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/240703/PC-II-SummerSemester/BPC-DE1-project/ProjectMorse/ProjectMorse.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_bin_morse' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/240703/PC-II-SummerSemester/BPC-DE1-project/ProjectMorse/ProjectMorse.sim/sim_1/behav/xsim'
+"xvhdl --incr --relax -prj tb_bin_morse_vhdl.prj"
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+Command: launch_simulation -simset sim_1 -mode behavioral
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/240703/PC-II-SummerSemester/BPC-DE1-project/ProjectMorse/ProjectMorse.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/240703/PC-II-SummerSemester/BPC-DE1-project/ProjectMorse/ProjectMorse.sim/sim_1/behav/xsim'
+"xelab -wto 4e90e972b2734ef7838b83f1c153f186 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot tb_bin_morse_behav xil_defaultlib.tb_bin_morse -log elaborate.log"
+Vivado Simulator 2020.2
+Copyright 1986-1999, 2001-2020 Xilinx, Inc. All Rights Reserved.
+Running: C:/appz/Xilinx/Vivado/2020.2/bin/unwrapped/win64.o/xelab.exe -wto 4e90e972b2734ef7838b83f1c153f186 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot tb_bin_morse_behav xil_defaultlib.tb_bin_morse -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+INFO: [XSIM 43-4323] No Change in HDL. Linking previously generated obj files to create kernel
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+Vivado Simulator 2020.2
+Time resolution is 1 ps
+Note: Stimulus process started
+Time: 0 ps  Iteration: 0  Process: /tb_bin_morse/p_stimulus  File: C:/Users/240703/PC-II-SummerSemester/BPC-DE1-project/ProjectMorse/ProjectMorse.srcs/sim_1/new/tb_bin_morse.vhd
+Note: Stimulus process finished
+Time: 0 ps  Iteration: 0  Process: /tb_bin_morse/p_stimulus  File: C:/Users/240703/PC-II-SummerSemester/BPC-DE1-project/ProjectMorse/ProjectMorse.srcs/sim_1/new/tb_bin_morse.vhd
+relaunch_sim: Time (s): cpu = 00:00:01 ; elapsed = 00:00:05 . Memory (MB): peak = 998.996 ; gain = 0.000
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/240703/PC-II-SummerSemester/BPC-DE1-project/ProjectMorse/ProjectMorse.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_bin_morse' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/240703/PC-II-SummerSemester/BPC-DE1-project/ProjectMorse/ProjectMorse.sim/sim_1/behav/xsim'
+"xvhdl --incr --relax -prj tb_bin_morse_vhdl.prj"
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/240703/PC-II-SummerSemester/BPC-DE1-project/ProjectMorse/ProjectMorse.srcs/sources_1/new/clock_enable.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'clock_enable'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/240703/PC-II-SummerSemester/BPC-DE1-project/ProjectMorse/ProjectMorse.srcs/sources_1/new/bin_morse.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'bin_morse'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/240703/PC-II-SummerSemester/BPC-DE1-project/ProjectMorse/ProjectMorse.srcs/sim_1/new/tb_bin_morse.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'tb_bin_morse'
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/240703/PC-II-SummerSemester/BPC-DE1-project/ProjectMorse/ProjectMorse.sim/sim_1/behav/xsim'
+"xelab -wto 4e90e972b2734ef7838b83f1c153f186 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot tb_bin_morse_behav xil_defaultlib.tb_bin_morse -log elaborate.log"
+Vivado Simulator 2020.2
+Copyright 1986-1999, 2001-2020 Xilinx, Inc. All Rights Reserved.
+Running: C:/appz/Xilinx/Vivado/2020.2/bin/unwrapped/win64.o/xelab.exe -wto 4e90e972b2734ef7838b83f1c153f186 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot tb_bin_morse_behav xil_defaultlib.tb_bin_morse -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package std.textio
+Compiling package ieee.std_logic_1164
+Compiling package ieee.numeric_std
+Compiling architecture behavioral of entity xil_defaultlib.clock_enable [\clock_enable(g_max=10)\]
+Compiling architecture behavioral of entity xil_defaultlib.bin_morse [bin_morse_default]
+Compiling architecture behavioral of entity xil_defaultlib.tb_bin_morse
+Built simulation snapshot tb_bin_morse_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/240703/PC-II-SummerSemester/BPC-DE1-project/ProjectMorse/ProjectMorse.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "tb_bin_morse_behav -key {Behavioral:sim_1:Functional:tb_bin_morse} -tclbatch {tb_bin_morse.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2020.2
+Time resolution is 1 ps
+source tb_bin_morse.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+Note: Stimulus process started
+Time: 0 ps  Iteration: 0  Process: /tb_bin_morse/p_stimulus  File: C:/Users/240703/PC-II-SummerSemester/BPC-DE1-project/ProjectMorse/ProjectMorse.srcs/sim_1/new/tb_bin_morse.vhd
+Note: Stimulus process finished
+Time: 0 ps  Iteration: 0  Process: /tb_bin_morse/p_stimulus  File: C:/Users/240703/PC-II-SummerSemester/BPC-DE1-project/ProjectMorse/ProjectMorse.srcs/sim_1/new/tb_bin_morse.vhd
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'tb_bin_morse_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:03 ; elapsed = 00:00:05 . Memory (MB): peak = 998.996 ; gain = 0.000
+current_wave_config {Untitled 11}
+Untitled 11
+add_wave {{/tb_bin_morse/uut_tb_bin_morse/sig_en}} 
+relaunch_sim
+Command: launch_simulation -simset sim_1 -mode behavioral
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/240703/PC-II-SummerSemester/BPC-DE1-project/ProjectMorse/ProjectMorse.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_bin_morse' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/240703/PC-II-SummerSemester/BPC-DE1-project/ProjectMorse/ProjectMorse.sim/sim_1/behav/xsim'
+"xvhdl --incr --relax -prj tb_bin_morse_vhdl.prj"
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+Command: launch_simulation -simset sim_1 -mode behavioral
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/240703/PC-II-SummerSemester/BPC-DE1-project/ProjectMorse/ProjectMorse.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/240703/PC-II-SummerSemester/BPC-DE1-project/ProjectMorse/ProjectMorse.sim/sim_1/behav/xsim'
+"xelab -wto 4e90e972b2734ef7838b83f1c153f186 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot tb_bin_morse_behav xil_defaultlib.tb_bin_morse -log elaborate.log"
+Vivado Simulator 2020.2
+Copyright 1986-1999, 2001-2020 Xilinx, Inc. All Rights Reserved.
+Running: C:/appz/Xilinx/Vivado/2020.2/bin/unwrapped/win64.o/xelab.exe -wto 4e90e972b2734ef7838b83f1c153f186 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot tb_bin_morse_behav xil_defaultlib.tb_bin_morse -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+INFO: [XSIM 43-4323] No Change in HDL. Linking previously generated obj files to create kernel
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+Vivado Simulator 2020.2
+Time resolution is 1 ps
+Note: Stimulus process started
+Time: 0 ps  Iteration: 0  Process: /tb_bin_morse/p_stimulus  File: C:/Users/240703/PC-II-SummerSemester/BPC-DE1-project/ProjectMorse/ProjectMorse.srcs/sim_1/new/tb_bin_morse.vhd
+Note: Stimulus process finished
+Time: 0 ps  Iteration: 0  Process: /tb_bin_morse/p_stimulus  File: C:/Users/240703/PC-II-SummerSemester/BPC-DE1-project/ProjectMorse/ProjectMorse.srcs/sim_1/new/tb_bin_morse.vhd
+relaunch_sim: Time (s): cpu = 00:00:01 ; elapsed = 00:00:05 . Memory (MB): peak = 998.996 ; gain = 0.000
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/240703/PC-II-SummerSemester/BPC-DE1-project/ProjectMorse/ProjectMorse.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_bin_morse' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/240703/PC-II-SummerSemester/BPC-DE1-project/ProjectMorse/ProjectMorse.sim/sim_1/behav/xsim'
+"xvhdl --incr --relax -prj tb_bin_morse_vhdl.prj"
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/240703/PC-II-SummerSemester/BPC-DE1-project/ProjectMorse/ProjectMorse.srcs/sources_1/new/clock_enable.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'clock_enable'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/240703/PC-II-SummerSemester/BPC-DE1-project/ProjectMorse/ProjectMorse.srcs/sources_1/new/bin_morse.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'bin_morse'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/240703/PC-II-SummerSemester/BPC-DE1-project/ProjectMorse/ProjectMorse.srcs/sim_1/new/tb_bin_morse.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'tb_bin_morse'
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/240703/PC-II-SummerSemester/BPC-DE1-project/ProjectMorse/ProjectMorse.sim/sim_1/behav/xsim'
+"xelab -wto 4e90e972b2734ef7838b83f1c153f186 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot tb_bin_morse_behav xil_defaultlib.tb_bin_morse -log elaborate.log"
+Vivado Simulator 2020.2
+Copyright 1986-1999, 2001-2020 Xilinx, Inc. All Rights Reserved.
+Running: C:/appz/Xilinx/Vivado/2020.2/bin/unwrapped/win64.o/xelab.exe -wto 4e90e972b2734ef7838b83f1c153f186 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot tb_bin_morse_behav xil_defaultlib.tb_bin_morse -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package std.textio
+Compiling package ieee.std_logic_1164
+Compiling package ieee.numeric_std
+Compiling architecture behavioral of entity xil_defaultlib.clock_enable [\clock_enable(g_max=10)\]
+Compiling architecture behavioral of entity xil_defaultlib.bin_morse [bin_morse_default]
+Compiling architecture behavioral of entity xil_defaultlib.tb_bin_morse
+Built simulation snapshot tb_bin_morse_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/240703/PC-II-SummerSemester/BPC-DE1-project/ProjectMorse/ProjectMorse.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "tb_bin_morse_behav -key {Behavioral:sim_1:Functional:tb_bin_morse} -tclbatch {tb_bin_morse.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2020.2
+Time resolution is 1 ps
+source tb_bin_morse.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+Note: Stimulus process started
+Time: 0 ps  Iteration: 0  Process: /tb_bin_morse/p_stimulus  File: C:/Users/240703/PC-II-SummerSemester/BPC-DE1-project/ProjectMorse/ProjectMorse.srcs/sim_1/new/tb_bin_morse.vhd
+Note: Stimulus process finished
+Time: 0 ps  Iteration: 0  Process: /tb_bin_morse/p_stimulus  File: C:/Users/240703/PC-II-SummerSemester/BPC-DE1-project/ProjectMorse/ProjectMorse.srcs/sim_1/new/tb_bin_morse.vhd
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'tb_bin_morse_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:02 ; elapsed = 00:00:06 . Memory (MB): peak = 998.996 ; gain = 0.000
+current_wave_config {Untitled 12}
+Untitled 12
+add_wave {{/tb_bin_morse/uut_tb_bin_morse/sig_en}} 
+relaunch_sim
+Command: launch_simulation -simset sim_1 -mode behavioral
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/240703/PC-II-SummerSemester/BPC-DE1-project/ProjectMorse/ProjectMorse.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_bin_morse' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/240703/PC-II-SummerSemester/BPC-DE1-project/ProjectMorse/ProjectMorse.sim/sim_1/behav/xsim'
+"xvhdl --incr --relax -prj tb_bin_morse_vhdl.prj"
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+Command: launch_simulation -simset sim_1 -mode behavioral
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/240703/PC-II-SummerSemester/BPC-DE1-project/ProjectMorse/ProjectMorse.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/240703/PC-II-SummerSemester/BPC-DE1-project/ProjectMorse/ProjectMorse.sim/sim_1/behav/xsim'
+"xelab -wto 4e90e972b2734ef7838b83f1c153f186 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot tb_bin_morse_behav xil_defaultlib.tb_bin_morse -log elaborate.log"
+Vivado Simulator 2020.2
+Copyright 1986-1999, 2001-2020 Xilinx, Inc. All Rights Reserved.
+Running: C:/appz/Xilinx/Vivado/2020.2/bin/unwrapped/win64.o/xelab.exe -wto 4e90e972b2734ef7838b83f1c153f186 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot tb_bin_morse_behav xil_defaultlib.tb_bin_morse -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+INFO: [XSIM 43-4323] No Change in HDL. Linking previously generated obj files to create kernel
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+Vivado Simulator 2020.2
+Time resolution is 1 ps
+Note: Stimulus process started
+Time: 0 ps  Iteration: 0  Process: /tb_bin_morse/p_stimulus  File: C:/Users/240703/PC-II-SummerSemester/BPC-DE1-project/ProjectMorse/ProjectMorse.srcs/sim_1/new/tb_bin_morse.vhd
+Note: Stimulus process finished
+Time: 0 ps  Iteration: 0  Process: /tb_bin_morse/p_stimulus  File: C:/Users/240703/PC-II-SummerSemester/BPC-DE1-project/ProjectMorse/ProjectMorse.srcs/sim_1/new/tb_bin_morse.vhd
+relaunch_sim: Time (s): cpu = 00:00:01 ; elapsed = 00:00:05 . Memory (MB): peak = 998.996 ; gain = 0.000
+open_hw_manager
+connect_hw_server -allow_non_jtag
+INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
+INFO: [Labtools 27-2222] Launching hw_server...
+INFO: [Labtools 27-2221] Launch Output:
+
+****** Xilinx hw_server v2020.2
+  **** Build date : Nov 18 2020 at 10:01:48
+    ** Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+
+
+INFO: [Labtools 27-3415] Connecting to cs_server url TCP:localhost:3042
+INFO: [Labtools 27-3417] Launching cs_server...
+INFO: [Labtools 27-2221] Launch Output:
+
+
+******** Xilinx cs_server v2020.2
+  ****** Build date   : Nov 03 2020-22:02:56
+    **** Build number : 2020.2.1604437376
+      ** Copyright 2017-2020 Xilinx, Inc. All Rights Reserved.
+
+
+
+connect_hw_server: Time (s): cpu = 00:00:00 ; elapsed = 00:00:08 . Memory (MB): peak = 998.996 ; gain = 0.000
+open_hw_target
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210292B40D94A
+open_hw_target: Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 2459.758 ; gain = 1460.762
+set_property PROGRAM.FILE {C:/Users/240703/PC-II-SummerSemester/BPC-DE1-project/ProjectMorse/ProjectMorse.runs/impl_1/top.bit} [get_hw_devices xc7a50t_0]
+current_hw_device [get_hw_devices xc7a50t_0]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7a50t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a50t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+set_property PROBES.FILE {} [get_hw_devices xc7a50t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a50t_0]
+set_property PROGRAM.FILE {C:/Users/240703/PC-II-SummerSemester/BPC-DE1-project/ProjectMorse/ProjectMorse.runs/impl_1/top.bit} [get_hw_devices xc7a50t_0]
+program_hw_devices [get_hw_devices xc7a50t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a50t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a50t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+close_hw_manager
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/240703/PC-II-SummerSemester/BPC-DE1-project/ProjectMorse/ProjectMorse.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_bin_morse' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/240703/PC-II-SummerSemester/BPC-DE1-project/ProjectMorse/ProjectMorse.sim/sim_1/behav/xsim'
+"xvhdl --incr --relax -prj tb_bin_morse_vhdl.prj"
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/240703/PC-II-SummerSemester/BPC-DE1-project/ProjectMorse/ProjectMorse.srcs/sources_1/new/clock_enable.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'clock_enable'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/240703/PC-II-SummerSemester/BPC-DE1-project/ProjectMorse/ProjectMorse.srcs/sources_1/new/bin_morse.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'bin_morse'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/240703/PC-II-SummerSemester/BPC-DE1-project/ProjectMorse/ProjectMorse.srcs/sim_1/new/tb_bin_morse.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'tb_bin_morse'
+ERROR: [VRFC 10-719] formal port/generic <sig_en> is not declared in <bin_morse> [C:/Users/240703/PC-II-SummerSemester/BPC-DE1-project/ProjectMorse/ProjectMorse.srcs/sim_1/new/tb_bin_morse.vhd:53]
+ERROR: [VRFC 10-2935] 'uut_tb_bin_morse' is already declared in this region [C:/Users/240703/PC-II-SummerSemester/BPC-DE1-project/ProjectMorse/ProjectMorse.srcs/sim_1/new/tb_bin_morse.vhd:56]
+ERROR: [VRFC 10-4982] syntax error near ')' [C:/Users/240703/PC-II-SummerSemester/BPC-DE1-project/ProjectMorse/ProjectMorse.srcs/sim_1/new/tb_bin_morse.vhd:59]
+ERROR: [VRFC 10-3353] formal port 'clk' has no actual or default value [C:/Users/240703/PC-II-SummerSemester/BPC-DE1-project/ProjectMorse/ProjectMorse.srcs/sim_1/new/tb_bin_morse.vhd:56]
+ERROR: [VRFC 10-3782] unit 'behavioral' ignored due to previous errors [C:/Users/240703/PC-II-SummerSemester/BPC-DE1-project/ProjectMorse/ProjectMorse.srcs/sim_1/new/tb_bin_morse.vhd:38]
+INFO: [VRFC 10-3070] VHDL file 'C:/Users/240703/PC-II-SummerSemester/BPC-DE1-project/ProjectMorse/ProjectMorse.srcs/sim_1/new/tb_bin_morse.vhd' ignored due to errors
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-99] Step results log file:'C:/Users/240703/PC-II-SummerSemester/BPC-DE1-project/ProjectMorse/ProjectMorse.sim/sim_1/behav/xsim/xvhdl.log'
+ERROR: [USF-XSim-62] 'compile' step failed with error(s). Please check the Tcl console output or 'C:/Users/240703/PC-II-SummerSemester/BPC-DE1-project/ProjectMorse/ProjectMorse.sim/sim_1/behav/xsim/xvhdl.log' file for more information.
+ERROR: [Vivado 12-4473] Detected error while running simulation. Please correct the issue and retry this operation.
+ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/240703/PC-II-SummerSemester/BPC-DE1-project/ProjectMorse/ProjectMorse.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_bin_morse' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/240703/PC-II-SummerSemester/BPC-DE1-project/ProjectMorse/ProjectMorse.sim/sim_1/behav/xsim'
+"xvhdl --incr --relax -prj tb_bin_morse_vhdl.prj"
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/240703/PC-II-SummerSemester/BPC-DE1-project/ProjectMorse/ProjectMorse.srcs/sources_1/new/clock_enable.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'clock_enable'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/240703/PC-II-SummerSemester/BPC-DE1-project/ProjectMorse/ProjectMorse.srcs/sources_1/new/bin_morse.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'bin_morse'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/240703/PC-II-SummerSemester/BPC-DE1-project/ProjectMorse/ProjectMorse.srcs/sim_1/new/tb_bin_morse.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'tb_bin_morse'
+ERROR: [VRFC 10-719] formal port/generic <sig_en> is not declared in <bin_morse> [C:/Users/240703/PC-II-SummerSemester/BPC-DE1-project/ProjectMorse/ProjectMorse.srcs/sim_1/new/tb_bin_morse.vhd:53]
+ERROR: [VRFC 10-2935] 'uut_tb_bin_morse' is already declared in this region [C:/Users/240703/PC-II-SummerSemester/BPC-DE1-project/ProjectMorse/ProjectMorse.srcs/sim_1/new/tb_bin_morse.vhd:56]
+ERROR: [VRFC 10-4982] syntax error near ')' [C:/Users/240703/PC-II-SummerSemester/BPC-DE1-project/ProjectMorse/ProjectMorse.srcs/sim_1/new/tb_bin_morse.vhd:59]
+ERROR: [VRFC 10-3353] formal port 'clk' has no actual or default value [C:/Users/240703/PC-II-SummerSemester/BPC-DE1-project/ProjectMorse/ProjectMorse.srcs/sim_1/new/tb_bin_morse.vhd:56]
+ERROR: [VRFC 10-3782] unit 'behavioral' ignored due to previous errors [C:/Users/240703/PC-II-SummerSemester/BPC-DE1-project/ProjectMorse/ProjectMorse.srcs/sim_1/new/tb_bin_morse.vhd:38]
+INFO: [VRFC 10-3070] VHDL file 'C:/Users/240703/PC-II-SummerSemester/BPC-DE1-project/ProjectMorse/ProjectMorse.srcs/sim_1/new/tb_bin_morse.vhd' ignored due to errors
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-99] Step results log file:'C:/Users/240703/PC-II-SummerSemester/BPC-DE1-project/ProjectMorse/ProjectMorse.sim/sim_1/behav/xsim/xvhdl.log'
+ERROR: [USF-XSim-62] 'compile' step failed with error(s). Please check the Tcl console output or 'C:/Users/240703/PC-II-SummerSemester/BPC-DE1-project/ProjectMorse/ProjectMorse.sim/sim_1/behav/xsim/xvhdl.log' file for more information.
+ERROR: [Vivado 12-4473] Detected error while running simulation. Please correct the issue and retry this operation.
+ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/240703/PC-II-SummerSemester/BPC-DE1-project/ProjectMorse/ProjectMorse.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_bin_morse' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/240703/PC-II-SummerSemester/BPC-DE1-project/ProjectMorse/ProjectMorse.sim/sim_1/behav/xsim'
+"xvhdl --incr --relax -prj tb_bin_morse_vhdl.prj"
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/240703/PC-II-SummerSemester/BPC-DE1-project/ProjectMorse/ProjectMorse.srcs/sources_1/new/clock_enable.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'clock_enable'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/240703/PC-II-SummerSemester/BPC-DE1-project/ProjectMorse/ProjectMorse.srcs/sources_1/new/bin_morse.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'bin_morse'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/240703/PC-II-SummerSemester/BPC-DE1-project/ProjectMorse/ProjectMorse.srcs/sim_1/new/tb_bin_morse.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'tb_bin_morse'
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/240703/PC-II-SummerSemester/BPC-DE1-project/ProjectMorse/ProjectMorse.sim/sim_1/behav/xsim'
+"xelab -wto 4e90e972b2734ef7838b83f1c153f186 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot tb_bin_morse_behav xil_defaultlib.tb_bin_morse -log elaborate.log"
+Vivado Simulator 2020.2
+Copyright 1986-1999, 2001-2020 Xilinx, Inc. All Rights Reserved.
+Running: C:/appz/Xilinx/Vivado/2020.2/bin/unwrapped/win64.o/xelab.exe -wto 4e90e972b2734ef7838b83f1c153f186 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot tb_bin_morse_behav xil_defaultlib.tb_bin_morse -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package std.textio
+Compiling package ieee.std_logic_1164
+Compiling package ieee.numeric_std
+Compiling architecture behavioral of entity xil_defaultlib.clock_enable [\clock_enable(g_max=10)\]
+Compiling architecture behavioral of entity xil_defaultlib.bin_morse [bin_morse_default]
+Compiling architecture behavioral of entity xil_defaultlib.tb_bin_morse
+Built simulation snapshot tb_bin_morse_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/240703/PC-II-SummerSemester/BPC-DE1-project/ProjectMorse/ProjectMorse.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "tb_bin_morse_behav -key {Behavioral:sim_1:Functional:tb_bin_morse} -tclbatch {tb_bin_morse.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2020.2
+Time resolution is 1 ps
+source tb_bin_morse.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+Note: Stimulus process started
+Time: 0 ps  Iteration: 0  Process: /tb_bin_morse/p_stimulus  File: C:/Users/240703/PC-II-SummerSemester/BPC-DE1-project/ProjectMorse/ProjectMorse.srcs/sim_1/new/tb_bin_morse.vhd
+Note: Stimulus process finished
+Time: 0 ps  Iteration: 0  Process: /tb_bin_morse/p_stimulus  File: C:/Users/240703/PC-II-SummerSemester/BPC-DE1-project/ProjectMorse/ProjectMorse.srcs/sim_1/new/tb_bin_morse.vhd
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'tb_bin_morse_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:02 ; elapsed = 00:00:05 . Memory (MB): peak = 2495.105 ; gain = 11.430
+current_wave_config {Untitled 13}
+Untitled 13
+add_wave {{/tb_bin_morse/uut_tb_bin_morse/sig_en}} 
+relaunch_sim
+Command: launch_simulation -simset sim_1 -mode behavioral
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/240703/PC-II-SummerSemester/BPC-DE1-project/ProjectMorse/ProjectMorse.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_bin_morse' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/240703/PC-II-SummerSemester/BPC-DE1-project/ProjectMorse/ProjectMorse.sim/sim_1/behav/xsim'
+"xvhdl --incr --relax -prj tb_bin_morse_vhdl.prj"
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/240703/PC-II-SummerSemester/BPC-DE1-project/ProjectMorse/ProjectMorse.srcs/sources_1/new/bin_morse.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'bin_morse'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/240703/PC-II-SummerSemester/BPC-DE1-project/ProjectMorse/ProjectMorse.srcs/sim_1/new/tb_bin_morse.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'tb_bin_morse'
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+Command: launch_simulation -simset sim_1 -mode behavioral
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/240703/PC-II-SummerSemester/BPC-DE1-project/ProjectMorse/ProjectMorse.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/240703/PC-II-SummerSemester/BPC-DE1-project/ProjectMorse/ProjectMorse.sim/sim_1/behav/xsim'
+"xelab -wto 4e90e972b2734ef7838b83f1c153f186 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot tb_bin_morse_behav xil_defaultlib.tb_bin_morse -log elaborate.log"
+Vivado Simulator 2020.2
+Copyright 1986-1999, 2001-2020 Xilinx, Inc. All Rights Reserved.
+Running: C:/appz/Xilinx/Vivado/2020.2/bin/unwrapped/win64.o/xelab.exe -wto 4e90e972b2734ef7838b83f1c153f186 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot tb_bin_morse_behav xil_defaultlib.tb_bin_morse -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package std.textio
+Compiling package ieee.std_logic_1164
+Compiling package ieee.numeric_std
+Compiling architecture behavioral of entity xil_defaultlib.clock_enable [\clock_enable(g_max=10)\]
+Compiling architecture behavioral of entity xil_defaultlib.bin_morse [bin_morse_default]
+Compiling architecture behavioral of entity xil_defaultlib.tb_bin_morse
+Built simulation snapshot tb_bin_morse_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+Vivado Simulator 2020.2
+Time resolution is 1 ps
+Note: Stimulus process started
+Time: 0 ps  Iteration: 0  Process: /tb_bin_morse/p_stimulus  File: C:/Users/240703/PC-II-SummerSemester/BPC-DE1-project/ProjectMorse/ProjectMorse.srcs/sim_1/new/tb_bin_morse.vhd
+Note: Stimulus process finished
+Time: 0 ps  Iteration: 0  Process: /tb_bin_morse/p_stimulus  File: C:/Users/240703/PC-II-SummerSemester/BPC-DE1-project/ProjectMorse/ProjectMorse.srcs/sim_1/new/tb_bin_morse.vhd
+relaunch_sim: Time (s): cpu = 00:00:01 ; elapsed = 00:00:05 . Memory (MB): peak = 2495.105 ; gain = 0.000
+relaunch_sim
+Command: launch_simulation -simset sim_1 -mode behavioral
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/240703/PC-II-SummerSemester/BPC-DE1-project/ProjectMorse/ProjectMorse.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_bin_morse' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/240703/PC-II-SummerSemester/BPC-DE1-project/ProjectMorse/ProjectMorse.sim/sim_1/behav/xsim'
+"xvhdl --incr --relax -prj tb_bin_morse_vhdl.prj"
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/240703/PC-II-SummerSemester/BPC-DE1-project/ProjectMorse/ProjectMorse.srcs/sources_1/new/clock_enable.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'clock_enable'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/240703/PC-II-SummerSemester/BPC-DE1-project/ProjectMorse/ProjectMorse.srcs/sources_1/new/bin_morse.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'bin_morse'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/240703/PC-II-SummerSemester/BPC-DE1-project/ProjectMorse/ProjectMorse.srcs/sim_1/new/tb_bin_morse.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'tb_bin_morse'
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+Command: launch_simulation -simset sim_1 -mode behavioral
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/240703/PC-II-SummerSemester/BPC-DE1-project/ProjectMorse/ProjectMorse.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/240703/PC-II-SummerSemester/BPC-DE1-project/ProjectMorse/ProjectMorse.sim/sim_1/behav/xsim'
+"xelab -wto 4e90e972b2734ef7838b83f1c153f186 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot tb_bin_morse_behav xil_defaultlib.tb_bin_morse -log elaborate.log"
+Vivado Simulator 2020.2
+Copyright 1986-1999, 2001-2020 Xilinx, Inc. All Rights Reserved.
+Running: C:/appz/Xilinx/Vivado/2020.2/bin/unwrapped/win64.o/xelab.exe -wto 4e90e972b2734ef7838b83f1c153f186 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot tb_bin_morse_behav xil_defaultlib.tb_bin_morse -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package std.textio
+Compiling package ieee.std_logic_1164
+Compiling package ieee.numeric_std
+Compiling architecture behavioral of entity xil_defaultlib.clock_enable [\clock_enable(g_max=10)\]
+Compiling architecture behavioral of entity xil_defaultlib.bin_morse [bin_morse_default]
+Compiling architecture behavioral of entity xil_defaultlib.tb_bin_morse
+Built simulation snapshot tb_bin_morse_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+Vivado Simulator 2020.2
+Time resolution is 1 ps
+Note: Stimulus process started
+Time: 0 ps  Iteration: 0  Process: /tb_bin_morse/p_stimulus  File: C:/Users/240703/PC-II-SummerSemester/BPC-DE1-project/ProjectMorse/ProjectMorse.srcs/sim_1/new/tb_bin_morse.vhd
+Note: Stimulus process finished
+Time: 0 ps  Iteration: 0  Process: /tb_bin_morse/p_stimulus  File: C:/Users/240703/PC-II-SummerSemester/BPC-DE1-project/ProjectMorse/ProjectMorse.srcs/sim_1/new/tb_bin_morse.vhd
+relaunch_sim: Time (s): cpu = 00:00:01 ; elapsed = 00:00:05 . Memory (MB): peak = 2505.094 ; gain = 0.000
+relaunch_sim
+Command: launch_simulation -simset sim_1 -mode behavioral
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/240703/PC-II-SummerSemester/BPC-DE1-project/ProjectMorse/ProjectMorse.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_bin_morse' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/240703/PC-II-SummerSemester/BPC-DE1-project/ProjectMorse/ProjectMorse.sim/sim_1/behav/xsim'
+"xvhdl --incr --relax -prj tb_bin_morse_vhdl.prj"
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/240703/PC-II-SummerSemester/BPC-DE1-project/ProjectMorse/ProjectMorse.srcs/sources_1/new/bin_morse.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'bin_morse'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/240703/PC-II-SummerSemester/BPC-DE1-project/ProjectMorse/ProjectMorse.srcs/sim_1/new/tb_bin_morse.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'tb_bin_morse'
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+Command: launch_simulation -simset sim_1 -mode behavioral
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/240703/PC-II-SummerSemester/BPC-DE1-project/ProjectMorse/ProjectMorse.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/240703/PC-II-SummerSemester/BPC-DE1-project/ProjectMorse/ProjectMorse.sim/sim_1/behav/xsim'
+"xelab -wto 4e90e972b2734ef7838b83f1c153f186 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot tb_bin_morse_behav xil_defaultlib.tb_bin_morse -log elaborate.log"
+Vivado Simulator 2020.2
+Copyright 1986-1999, 2001-2020 Xilinx, Inc. All Rights Reserved.
+Running: C:/appz/Xilinx/Vivado/2020.2/bin/unwrapped/win64.o/xelab.exe -wto 4e90e972b2734ef7838b83f1c153f186 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot tb_bin_morse_behav xil_defaultlib.tb_bin_morse -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package std.textio
+Compiling package ieee.std_logic_1164
+Compiling package ieee.numeric_std
+Compiling architecture behavioral of entity xil_defaultlib.clock_enable [\clock_enable(g_max=10)\]
+Compiling architecture behavioral of entity xil_defaultlib.bin_morse [bin_morse_default]
+Compiling architecture behavioral of entity xil_defaultlib.tb_bin_morse
+Built simulation snapshot tb_bin_morse_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+Vivado Simulator 2020.2
+Time resolution is 1 ps
+Note: Stimulus process started
+Time: 0 ps  Iteration: 0  Process: /tb_bin_morse/p_stimulus  File: C:/Users/240703/PC-II-SummerSemester/BPC-DE1-project/ProjectMorse/ProjectMorse.srcs/sim_1/new/tb_bin_morse.vhd
+Note: Stimulus process finished
+Time: 0 ps  Iteration: 0  Process: /tb_bin_morse/p_stimulus  File: C:/Users/240703/PC-II-SummerSemester/BPC-DE1-project/ProjectMorse/ProjectMorse.srcs/sim_1/new/tb_bin_morse.vhd
+relaunch_sim: Time (s): cpu = 00:00:01 ; elapsed = 00:00:08 . Memory (MB): peak = 2506.211 ; gain = 0.184
+current_wave_config {Untitled 13}
+Untitled 13
+add_wave {{/tb_bin_morse/uut_tb_bin_morse/sig_cnt}} 
+relaunch_sim
+Command: launch_simulation -simset sim_1 -mode behavioral
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/240703/PC-II-SummerSemester/BPC-DE1-project/ProjectMorse/ProjectMorse.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_bin_morse' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/240703/PC-II-SummerSemester/BPC-DE1-project/ProjectMorse/ProjectMorse.sim/sim_1/behav/xsim'
+"xvhdl --incr --relax -prj tb_bin_morse_vhdl.prj"
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/240703/PC-II-SummerSemester/BPC-DE1-project/ProjectMorse/ProjectMorse.srcs/sim_1/new/tb_bin_morse.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'tb_bin_morse'
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+Command: launch_simulation -simset sim_1 -mode behavioral
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/240703/PC-II-SummerSemester/BPC-DE1-project/ProjectMorse/ProjectMorse.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/240703/PC-II-SummerSemester/BPC-DE1-project/ProjectMorse/ProjectMorse.sim/sim_1/behav/xsim'
+"xelab -wto 4e90e972b2734ef7838b83f1c153f186 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot tb_bin_morse_behav xil_defaultlib.tb_bin_morse -log elaborate.log"
+Vivado Simulator 2020.2
+Copyright 1986-1999, 2001-2020 Xilinx, Inc. All Rights Reserved.
+Running: C:/appz/Xilinx/Vivado/2020.2/bin/unwrapped/win64.o/xelab.exe -wto 4e90e972b2734ef7838b83f1c153f186 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot tb_bin_morse_behav xil_defaultlib.tb_bin_morse -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package std.textio
+Compiling package ieee.std_logic_1164
+Compiling package ieee.numeric_std
+Compiling architecture behavioral of entity xil_defaultlib.clock_enable [\clock_enable(g_max=10)\]
+Compiling architecture behavioral of entity xil_defaultlib.bin_morse [bin_morse_default]
+Compiling architecture behavioral of entity xil_defaultlib.tb_bin_morse
+Built simulation snapshot tb_bin_morse_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+Vivado Simulator 2020.2
+Time resolution is 1 ps
+Note: Stimulus process started
+Time: 0 ps  Iteration: 0  Process: /tb_bin_morse/p_stimulus  File: C:/Users/240703/PC-II-SummerSemester/BPC-DE1-project/ProjectMorse/ProjectMorse.srcs/sim_1/new/tb_bin_morse.vhd
+Note: Stimulus process finished
+Time: 0 ps  Iteration: 0  Process: /tb_bin_morse/p_stimulus  File: C:/Users/240703/PC-II-SummerSemester/BPC-DE1-project/ProjectMorse/ProjectMorse.srcs/sim_1/new/tb_bin_morse.vhd
+relaunch_sim: Time (s): cpu = 00:00:01 ; elapsed = 00:00:05 . Memory (MB): peak = 2506.598 ; gain = 0.301
+relaunch_sim
+Command: launch_simulation -simset sim_1 -mode behavioral
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/240703/PC-II-SummerSemester/BPC-DE1-project/ProjectMorse/ProjectMorse.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_bin_morse' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/240703/PC-II-SummerSemester/BPC-DE1-project/ProjectMorse/ProjectMorse.sim/sim_1/behav/xsim'
+"xvhdl --incr --relax -prj tb_bin_morse_vhdl.prj"
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/240703/PC-II-SummerSemester/BPC-DE1-project/ProjectMorse/ProjectMorse.srcs/sources_1/new/bin_morse.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'bin_morse'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/240703/PC-II-SummerSemester/BPC-DE1-project/ProjectMorse/ProjectMorse.srcs/sim_1/new/tb_bin_morse.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'tb_bin_morse'
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+Command: launch_simulation -simset sim_1 -mode behavioral
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/240703/PC-II-SummerSemester/BPC-DE1-project/ProjectMorse/ProjectMorse.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/240703/PC-II-SummerSemester/BPC-DE1-project/ProjectMorse/ProjectMorse.sim/sim_1/behav/xsim'
+"xelab -wto 4e90e972b2734ef7838b83f1c153f186 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot tb_bin_morse_behav xil_defaultlib.tb_bin_morse -log elaborate.log"
+Vivado Simulator 2020.2
+Copyright 1986-1999, 2001-2020 Xilinx, Inc. All Rights Reserved.
+Running: C:/appz/Xilinx/Vivado/2020.2/bin/unwrapped/win64.o/xelab.exe -wto 4e90e972b2734ef7838b83f1c153f186 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot tb_bin_morse_behav xil_defaultlib.tb_bin_morse -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package std.textio
+Compiling package ieee.std_logic_1164
+Compiling package ieee.numeric_std
+Compiling architecture behavioral of entity xil_defaultlib.clock_enable [\clock_enable(g_max=10)\]
+Compiling architecture behavioral of entity xil_defaultlib.bin_morse [bin_morse_default]
+Compiling architecture behavioral of entity xil_defaultlib.tb_bin_morse
+Built simulation snapshot tb_bin_morse_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+Vivado Simulator 2020.2
+Time resolution is 1 ps
+Note: Stimulus process started
+Time: 0 ps  Iteration: 0  Process: /tb_bin_morse/p_stimulus  File: C:/Users/240703/PC-II-SummerSemester/BPC-DE1-project/ProjectMorse/ProjectMorse.srcs/sim_1/new/tb_bin_morse.vhd
+Note: Stimulus process finished
+Time: 0 ps  Iteration: 0  Process: /tb_bin_morse/p_stimulus  File: C:/Users/240703/PC-II-SummerSemester/BPC-DE1-project/ProjectMorse/ProjectMorse.srcs/sim_1/new/tb_bin_morse.vhd
+relaunch_sim: Time (s): cpu = 00:00:01 ; elapsed = 00:00:06 . Memory (MB): peak = 2506.652 ; gain = 0.055
+relaunch_sim
+Command: launch_simulation -simset sim_1 -mode behavioral
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/240703/PC-II-SummerSemester/BPC-DE1-project/ProjectMorse/ProjectMorse.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_bin_morse' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/240703/PC-II-SummerSemester/BPC-DE1-project/ProjectMorse/ProjectMorse.sim/sim_1/behav/xsim'
+"xvhdl --incr --relax -prj tb_bin_morse_vhdl.prj"
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/240703/PC-II-SummerSemester/BPC-DE1-project/ProjectMorse/ProjectMorse.srcs/sim_1/new/tb_bin_morse.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'tb_bin_morse'
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+Command: launch_simulation -simset sim_1 -mode behavioral
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/240703/PC-II-SummerSemester/BPC-DE1-project/ProjectMorse/ProjectMorse.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/240703/PC-II-SummerSemester/BPC-DE1-project/ProjectMorse/ProjectMorse.sim/sim_1/behav/xsim'
+"xelab -wto 4e90e972b2734ef7838b83f1c153f186 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot tb_bin_morse_behav xil_defaultlib.tb_bin_morse -log elaborate.log"
+Vivado Simulator 2020.2
+Copyright 1986-1999, 2001-2020 Xilinx, Inc. All Rights Reserved.
+Running: C:/appz/Xilinx/Vivado/2020.2/bin/unwrapped/win64.o/xelab.exe -wto 4e90e972b2734ef7838b83f1c153f186 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot tb_bin_morse_behav xil_defaultlib.tb_bin_morse -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package std.textio
+Compiling package ieee.std_logic_1164
+Compiling package ieee.numeric_std
+Compiling architecture behavioral of entity xil_defaultlib.clock_enable [\clock_enable(g_max=10)\]
+Compiling architecture behavioral of entity xil_defaultlib.bin_morse [bin_morse_default]
+Compiling architecture behavioral of entity xil_defaultlib.tb_bin_morse
+Built simulation snapshot tb_bin_morse_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+Vivado Simulator 2020.2
+Time resolution is 1 ps
+Note: Stimulus process started
+Time: 0 ps  Iteration: 0  Process: /tb_bin_morse/p_stimulus  File: C:/Users/240703/PC-II-SummerSemester/BPC-DE1-project/ProjectMorse/ProjectMorse.srcs/sim_1/new/tb_bin_morse.vhd
+Note: Stimulus process finished
+Time: 0 ps  Iteration: 0  Process: /tb_bin_morse/p_stimulus  File: C:/Users/240703/PC-II-SummerSemester/BPC-DE1-project/ProjectMorse/ProjectMorse.srcs/sim_1/new/tb_bin_morse.vhd
+relaunch_sim: Time (s): cpu = 00:00:01 ; elapsed = 00:00:06 . Memory (MB): peak = 2506.652 ; gain = 0.000
+relaunch_sim
+Command: launch_simulation -simset sim_1 -mode behavioral
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/240703/PC-II-SummerSemester/BPC-DE1-project/ProjectMorse/ProjectMorse.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_bin_morse' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/240703/PC-II-SummerSemester/BPC-DE1-project/ProjectMorse/ProjectMorse.sim/sim_1/behav/xsim'
+"xvhdl --incr --relax -prj tb_bin_morse_vhdl.prj"
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/240703/PC-II-SummerSemester/BPC-DE1-project/ProjectMorse/ProjectMorse.srcs/sources_1/new/bin_morse.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'bin_morse'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/240703/PC-II-SummerSemester/BPC-DE1-project/ProjectMorse/ProjectMorse.srcs/sim_1/new/tb_bin_morse.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'tb_bin_morse'
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+Command: launch_simulation -simset sim_1 -mode behavioral
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/240703/PC-II-SummerSemester/BPC-DE1-project/ProjectMorse/ProjectMorse.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/240703/PC-II-SummerSemester/BPC-DE1-project/ProjectMorse/ProjectMorse.sim/sim_1/behav/xsim'
+"xelab -wto 4e90e972b2734ef7838b83f1c153f186 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot tb_bin_morse_behav xil_defaultlib.tb_bin_morse -log elaborate.log"
+Vivado Simulator 2020.2
+Copyright 1986-1999, 2001-2020 Xilinx, Inc. All Rights Reserved.
+Running: C:/appz/Xilinx/Vivado/2020.2/bin/unwrapped/win64.o/xelab.exe -wto 4e90e972b2734ef7838b83f1c153f186 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot tb_bin_morse_behav xil_defaultlib.tb_bin_morse -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package std.textio
+Compiling package ieee.std_logic_1164
+Compiling package ieee.numeric_std
+Compiling architecture behavioral of entity xil_defaultlib.clock_enable [clock_enable_default]
+Compiling architecture behavioral of entity xil_defaultlib.bin_morse [bin_morse_default]
+Compiling architecture behavioral of entity xil_defaultlib.tb_bin_morse
+Built simulation snapshot tb_bin_morse_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+Vivado Simulator 2020.2
+Time resolution is 1 ps
+Note: Stimulus process started
+Time: 0 ps  Iteration: 0  Process: /tb_bin_morse/p_stimulus  File: C:/Users/240703/PC-II-SummerSemester/BPC-DE1-project/ProjectMorse/ProjectMorse.srcs/sim_1/new/tb_bin_morse.vhd
+Note: Stimulus process finished
+Time: 0 ps  Iteration: 0  Process: /tb_bin_morse/p_stimulus  File: C:/Users/240703/PC-II-SummerSemester/BPC-DE1-project/ProjectMorse/ProjectMorse.srcs/sim_1/new/tb_bin_morse.vhd
+relaunch_sim: Time (s): cpu = 00:00:00 ; elapsed = 00:00:05 . Memory (MB): peak = 2506.652 ; gain = 0.000
+relaunch_sim
+Command: launch_simulation -simset sim_1 -mode behavioral
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/240703/PC-II-SummerSemester/BPC-DE1-project/ProjectMorse/ProjectMorse.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_bin_morse' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/240703/PC-II-SummerSemester/BPC-DE1-project/ProjectMorse/ProjectMorse.sim/sim_1/behav/xsim'
+"xvhdl --incr --relax -prj tb_bin_morse_vhdl.prj"
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/240703/PC-II-SummerSemester/BPC-DE1-project/ProjectMorse/ProjectMorse.srcs/sources_1/new/bin_morse.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'bin_morse'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/240703/PC-II-SummerSemester/BPC-DE1-project/ProjectMorse/ProjectMorse.srcs/sim_1/new/tb_bin_morse.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'tb_bin_morse'
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+Command: launch_simulation -simset sim_1 -mode behavioral
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/240703/PC-II-SummerSemester/BPC-DE1-project/ProjectMorse/ProjectMorse.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/240703/PC-II-SummerSemester/BPC-DE1-project/ProjectMorse/ProjectMorse.sim/sim_1/behav/xsim'
+"xelab -wto 4e90e972b2734ef7838b83f1c153f186 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot tb_bin_morse_behav xil_defaultlib.tb_bin_morse -log elaborate.log"
+Vivado Simulator 2020.2
+Copyright 1986-1999, 2001-2020 Xilinx, Inc. All Rights Reserved.
+Running: C:/appz/Xilinx/Vivado/2020.2/bin/unwrapped/win64.o/xelab.exe -wto 4e90e972b2734ef7838b83f1c153f186 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot tb_bin_morse_behav xil_defaultlib.tb_bin_morse -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package std.textio
+Compiling package ieee.std_logic_1164
+Compiling package ieee.numeric_std
+Compiling architecture behavioral of entity xil_defaultlib.clock_enable [clock_enable_default]
+Compiling architecture behavioral of entity xil_defaultlib.bin_morse [bin_morse_default]
+Compiling architecture behavioral of entity xil_defaultlib.tb_bin_morse
+Built simulation snapshot tb_bin_morse_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+Vivado Simulator 2020.2
+Time resolution is 1 ps
+Note: Stimulus process started
+Time: 0 ps  Iteration: 0  Process: /tb_bin_morse/p_stimulus  File: C:/Users/240703/PC-II-SummerSemester/BPC-DE1-project/ProjectMorse/ProjectMorse.srcs/sim_1/new/tb_bin_morse.vhd
+Note: Stimulus process finished
+Time: 0 ps  Iteration: 0  Process: /tb_bin_morse/p_stimulus  File: C:/Users/240703/PC-II-SummerSemester/BPC-DE1-project/ProjectMorse/ProjectMorse.srcs/sim_1/new/tb_bin_morse.vhd
+relaunch_sim: Time (s): cpu = 00:00:01 ; elapsed = 00:00:06 . Memory (MB): peak = 2506.652 ; gain = 0.000
+current_wave_config {Untitled 13}
+Untitled 13
+add_wave {{/tb_bin_morse/uut_tb_bin_morse/send_en}} 
+relaunch_sim
+Command: launch_simulation -simset sim_1 -mode behavioral
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/240703/PC-II-SummerSemester/BPC-DE1-project/ProjectMorse/ProjectMorse.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_bin_morse' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/240703/PC-II-SummerSemester/BPC-DE1-project/ProjectMorse/ProjectMorse.sim/sim_1/behav/xsim'
+"xvhdl --incr --relax -prj tb_bin_morse_vhdl.prj"
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/240703/PC-II-SummerSemester/BPC-DE1-project/ProjectMorse/ProjectMorse.srcs/sim_1/new/tb_bin_morse.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'tb_bin_morse'
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+Command: launch_simulation -simset sim_1 -mode behavioral
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/240703/PC-II-SummerSemester/BPC-DE1-project/ProjectMorse/ProjectMorse.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/240703/PC-II-SummerSemester/BPC-DE1-project/ProjectMorse/ProjectMorse.sim/sim_1/behav/xsim'
+"xelab -wto 4e90e972b2734ef7838b83f1c153f186 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot tb_bin_morse_behav xil_defaultlib.tb_bin_morse -log elaborate.log"
+Vivado Simulator 2020.2
+Copyright 1986-1999, 2001-2020 Xilinx, Inc. All Rights Reserved.
+Running: C:/appz/Xilinx/Vivado/2020.2/bin/unwrapped/win64.o/xelab.exe -wto 4e90e972b2734ef7838b83f1c153f186 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot tb_bin_morse_behav xil_defaultlib.tb_bin_morse -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package std.textio
+Compiling package ieee.std_logic_1164
+Compiling package ieee.numeric_std
+Compiling architecture behavioral of entity xil_defaultlib.clock_enable [clock_enable_default]
+Compiling architecture behavioral of entity xil_defaultlib.bin_morse [bin_morse_default]
+Compiling architecture behavioral of entity xil_defaultlib.tb_bin_morse
+Built simulation snapshot tb_bin_morse_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+Vivado Simulator 2020.2
+Time resolution is 1 ps
+Note: Stimulus process started
+Time: 0 ps  Iteration: 0  Process: /tb_bin_morse/p_stimulus  File: C:/Users/240703/PC-II-SummerSemester/BPC-DE1-project/ProjectMorse/ProjectMorse.srcs/sim_1/new/tb_bin_morse.vhd
+Note: Stimulus process finished
+Time: 0 ps  Iteration: 0  Process: /tb_bin_morse/p_stimulus  File: C:/Users/240703/PC-II-SummerSemester/BPC-DE1-project/ProjectMorse/ProjectMorse.srcs/sim_1/new/tb_bin_morse.vhd
+relaunch_sim: Time (s): cpu = 00:00:01 ; elapsed = 00:00:06 . Memory (MB): peak = 2506.652 ; gain = 0.000
+relaunch_sim
+Command: launch_simulation -simset sim_1 -mode behavioral
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/240703/PC-II-SummerSemester/BPC-DE1-project/ProjectMorse/ProjectMorse.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_bin_morse' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/240703/PC-II-SummerSemester/BPC-DE1-project/ProjectMorse/ProjectMorse.sim/sim_1/behav/xsim'
+"xvhdl --incr --relax -prj tb_bin_morse_vhdl.prj"
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/240703/PC-II-SummerSemester/BPC-DE1-project/ProjectMorse/ProjectMorse.srcs/sources_1/new/bin_morse.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'bin_morse'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/240703/PC-II-SummerSemester/BPC-DE1-project/ProjectMorse/ProjectMorse.srcs/sim_1/new/tb_bin_morse.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'tb_bin_morse'
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+Command: launch_simulation -simset sim_1 -mode behavioral
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/240703/PC-II-SummerSemester/BPC-DE1-project/ProjectMorse/ProjectMorse.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/240703/PC-II-SummerSemester/BPC-DE1-project/ProjectMorse/ProjectMorse.sim/sim_1/behav/xsim'
+"xelab -wto 4e90e972b2734ef7838b83f1c153f186 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot tb_bin_morse_behav xil_defaultlib.tb_bin_morse -log elaborate.log"
+Vivado Simulator 2020.2
+Copyright 1986-1999, 2001-2020 Xilinx, Inc. All Rights Reserved.
+Running: C:/appz/Xilinx/Vivado/2020.2/bin/unwrapped/win64.o/xelab.exe -wto 4e90e972b2734ef7838b83f1c153f186 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot tb_bin_morse_behav xil_defaultlib.tb_bin_morse -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package std.textio
+Compiling package ieee.std_logic_1164
+Compiling package ieee.numeric_std
+Compiling architecture behavioral of entity xil_defaultlib.clock_enable [clock_enable_default]
+Compiling architecture behavioral of entity xil_defaultlib.bin_morse [bin_morse_default]
+Compiling architecture behavioral of entity xil_defaultlib.tb_bin_morse
+Built simulation snapshot tb_bin_morse_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+Vivado Simulator 2020.2
+Time resolution is 1 ps
+Note: Stimulus process started
+Time: 0 ps  Iteration: 0  Process: /tb_bin_morse/p_stimulus  File: C:/Users/240703/PC-II-SummerSemester/BPC-DE1-project/ProjectMorse/ProjectMorse.srcs/sim_1/new/tb_bin_morse.vhd
+Note: Stimulus process finished
+Time: 0 ps  Iteration: 0  Process: /tb_bin_morse/p_stimulus  File: C:/Users/240703/PC-II-SummerSemester/BPC-DE1-project/ProjectMorse/ProjectMorse.srcs/sim_1/new/tb_bin_morse.vhd
+relaunch_sim: Time (s): cpu = 00:00:00 ; elapsed = 00:00:05 . Memory (MB): peak = 2506.652 ; gain = 0.000
+relaunch_sim
+Command: launch_simulation -simset sim_1 -mode behavioral
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/240703/PC-II-SummerSemester/BPC-DE1-project/ProjectMorse/ProjectMorse.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_bin_morse' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/240703/PC-II-SummerSemester/BPC-DE1-project/ProjectMorse/ProjectMorse.sim/sim_1/behav/xsim'
+"xvhdl --incr --relax -prj tb_bin_morse_vhdl.prj"
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/240703/PC-II-SummerSemester/BPC-DE1-project/ProjectMorse/ProjectMorse.srcs/sources_1/new/bin_morse.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'bin_morse'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/240703/PC-II-SummerSemester/BPC-DE1-project/ProjectMorse/ProjectMorse.srcs/sim_1/new/tb_bin_morse.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'tb_bin_morse'
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+Command: launch_simulation -simset sim_1 -mode behavioral
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/240703/PC-II-SummerSemester/BPC-DE1-project/ProjectMorse/ProjectMorse.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/240703/PC-II-SummerSemester/BPC-DE1-project/ProjectMorse/ProjectMorse.sim/sim_1/behav/xsim'
+"xelab -wto 4e90e972b2734ef7838b83f1c153f186 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot tb_bin_morse_behav xil_defaultlib.tb_bin_morse -log elaborate.log"
+Vivado Simulator 2020.2
+Copyright 1986-1999, 2001-2020 Xilinx, Inc. All Rights Reserved.
+Running: C:/appz/Xilinx/Vivado/2020.2/bin/unwrapped/win64.o/xelab.exe -wto 4e90e972b2734ef7838b83f1c153f186 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot tb_bin_morse_behav xil_defaultlib.tb_bin_morse -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package std.textio
+Compiling package ieee.std_logic_1164
+Compiling package ieee.numeric_std
+Compiling architecture behavioral of entity xil_defaultlib.clock_enable [clock_enable_default]
+Compiling architecture behavioral of entity xil_defaultlib.bin_morse [bin_morse_default]
+Compiling architecture behavioral of entity xil_defaultlib.tb_bin_morse
+Built simulation snapshot tb_bin_morse_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+Vivado Simulator 2020.2
+Time resolution is 1 ps
+Note: Stimulus process started
+Time: 0 ps  Iteration: 0  Process: /tb_bin_morse/p_stimulus  File: C:/Users/240703/PC-II-SummerSemester/BPC-DE1-project/ProjectMorse/ProjectMorse.srcs/sim_1/new/tb_bin_morse.vhd
+Note: Stimulus process finished
+Time: 0 ps  Iteration: 0  Process: /tb_bin_morse/p_stimulus  File: C:/Users/240703/PC-II-SummerSemester/BPC-DE1-project/ProjectMorse/ProjectMorse.srcs/sim_1/new/tb_bin_morse.vhd
+relaunch_sim: Time (s): cpu = 00:00:01 ; elapsed = 00:00:07 . Memory (MB): peak = 2506.859 ; gain = 0.000
+relaunch_sim
+Command: launch_simulation -simset sim_1 -mode behavioral
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/240703/PC-II-SummerSemester/BPC-DE1-project/ProjectMorse/ProjectMorse.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_bin_morse' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/240703/PC-II-SummerSemester/BPC-DE1-project/ProjectMorse/ProjectMorse.sim/sim_1/behav/xsim'
+"xvhdl --incr --relax -prj tb_bin_morse_vhdl.prj"
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/240703/PC-II-SummerSemester/BPC-DE1-project/ProjectMorse/ProjectMorse.srcs/sources_1/new/bin_morse.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'bin_morse'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/240703/PC-II-SummerSemester/BPC-DE1-project/ProjectMorse/ProjectMorse.srcs/sim_1/new/tb_bin_morse.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'tb_bin_morse'
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+Command: launch_simulation -simset sim_1 -mode behavioral
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/240703/PC-II-SummerSemester/BPC-DE1-project/ProjectMorse/ProjectMorse.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/240703/PC-II-SummerSemester/BPC-DE1-project/ProjectMorse/ProjectMorse.sim/sim_1/behav/xsim'
+"xelab -wto 4e90e972b2734ef7838b83f1c153f186 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot tb_bin_morse_behav xil_defaultlib.tb_bin_morse -log elaborate.log"
+Vivado Simulator 2020.2
+Copyright 1986-1999, 2001-2020 Xilinx, Inc. All Rights Reserved.
+Running: C:/appz/Xilinx/Vivado/2020.2/bin/unwrapped/win64.o/xelab.exe -wto 4e90e972b2734ef7838b83f1c153f186 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot tb_bin_morse_behav xil_defaultlib.tb_bin_morse -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package std.textio
+Compiling package ieee.std_logic_1164
+Compiling package ieee.numeric_std
+Compiling architecture behavioral of entity xil_defaultlib.clock_enable [clock_enable_default]
+Compiling architecture behavioral of entity xil_defaultlib.bin_morse [bin_morse_default]
+Compiling architecture behavioral of entity xil_defaultlib.tb_bin_morse
+Built simulation snapshot tb_bin_morse_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+Vivado Simulator 2020.2
+Time resolution is 1 ps
+Note: Stimulus process started
+Time: 0 ps  Iteration: 0  Process: /tb_bin_morse/p_stimulus  File: C:/Users/240703/PC-II-SummerSemester/BPC-DE1-project/ProjectMorse/ProjectMorse.srcs/sim_1/new/tb_bin_morse.vhd
+Note: Stimulus process finished
+Time: 0 ps  Iteration: 0  Process: /tb_bin_morse/p_stimulus  File: C:/Users/240703/PC-II-SummerSemester/BPC-DE1-project/ProjectMorse/ProjectMorse.srcs/sim_1/new/tb_bin_morse.vhd
+relaunch_sim: Time (s): cpu = 00:00:01 ; elapsed = 00:00:06 . Memory (MB): peak = 2506.859 ; gain = 0.000
+relaunch_sim
+Command: launch_simulation -simset sim_1 -mode behavioral
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/240703/PC-II-SummerSemester/BPC-DE1-project/ProjectMorse/ProjectMorse.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_bin_morse' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/240703/PC-II-SummerSemester/BPC-DE1-project/ProjectMorse/ProjectMorse.sim/sim_1/behav/xsim'
+"xvhdl --incr --relax -prj tb_bin_morse_vhdl.prj"
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/240703/PC-II-SummerSemester/BPC-DE1-project/ProjectMorse/ProjectMorse.srcs/sim_1/new/tb_bin_morse.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'tb_bin_morse'
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+Command: launch_simulation -simset sim_1 -mode behavioral
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/240703/PC-II-SummerSemester/BPC-DE1-project/ProjectMorse/ProjectMorse.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/240703/PC-II-SummerSemester/BPC-DE1-project/ProjectMorse/ProjectMorse.sim/sim_1/behav/xsim'
+"xelab -wto 4e90e972b2734ef7838b83f1c153f186 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot tb_bin_morse_behav xil_defaultlib.tb_bin_morse -log elaborate.log"
+Vivado Simulator 2020.2
+Copyright 1986-1999, 2001-2020 Xilinx, Inc. All Rights Reserved.
+Running: C:/appz/Xilinx/Vivado/2020.2/bin/unwrapped/win64.o/xelab.exe -wto 4e90e972b2734ef7838b83f1c153f186 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot tb_bin_morse_behav xil_defaultlib.tb_bin_morse -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package std.textio
+Compiling package ieee.std_logic_1164
+Compiling package ieee.numeric_std
+Compiling architecture behavioral of entity xil_defaultlib.clock_enable [clock_enable_default]
+Compiling architecture behavioral of entity xil_defaultlib.bin_morse [bin_morse_default]
+Compiling architecture behavioral of entity xil_defaultlib.tb_bin_morse
+Built simulation snapshot tb_bin_morse_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+Vivado Simulator 2020.2
+Time resolution is 1 ps
+Note: Stimulus process started
+Time: 0 ps  Iteration: 0  Process: /tb_bin_morse/p_stimulus  File: C:/Users/240703/PC-II-SummerSemester/BPC-DE1-project/ProjectMorse/ProjectMorse.srcs/sim_1/new/tb_bin_morse.vhd
+Note: Stimulus process finished
+Time: 0 ps  Iteration: 0  Process: /tb_bin_morse/p_stimulus  File: C:/Users/240703/PC-II-SummerSemester/BPC-DE1-project/ProjectMorse/ProjectMorse.srcs/sim_1/new/tb_bin_morse.vhd
+relaunch_sim: Time (s): cpu = 00:00:02 ; elapsed = 00:00:07 . Memory (MB): peak = 2506.938 ; gain = 0.078
+relaunch_sim
+Command: launch_simulation -simset sim_1 -mode behavioral
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/240703/PC-II-SummerSemester/BPC-DE1-project/ProjectMorse/ProjectMorse.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_bin_morse' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/240703/PC-II-SummerSemester/BPC-DE1-project/ProjectMorse/ProjectMorse.sim/sim_1/behav/xsim'
+"xvhdl --incr --relax -prj tb_bin_morse_vhdl.prj"
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/240703/PC-II-SummerSemester/BPC-DE1-project/ProjectMorse/ProjectMorse.srcs/sim_1/new/tb_bin_morse.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'tb_bin_morse'
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+Command: launch_simulation -simset sim_1 -mode behavioral
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/240703/PC-II-SummerSemester/BPC-DE1-project/ProjectMorse/ProjectMorse.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/240703/PC-II-SummerSemester/BPC-DE1-project/ProjectMorse/ProjectMorse.sim/sim_1/behav/xsim'
+"xelab -wto 4e90e972b2734ef7838b83f1c153f186 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot tb_bin_morse_behav xil_defaultlib.tb_bin_morse -log elaborate.log"
+Vivado Simulator 2020.2
+Copyright 1986-1999, 2001-2020 Xilinx, Inc. All Rights Reserved.
+Running: C:/appz/Xilinx/Vivado/2020.2/bin/unwrapped/win64.o/xelab.exe -wto 4e90e972b2734ef7838b83f1c153f186 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot tb_bin_morse_behav xil_defaultlib.tb_bin_morse -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package std.textio
+Compiling package ieee.std_logic_1164
+Compiling package ieee.numeric_std
+Compiling architecture behavioral of entity xil_defaultlib.clock_enable [clock_enable_default]
+Compiling architecture behavioral of entity xil_defaultlib.bin_morse [bin_morse_default]
+Compiling architecture behavioral of entity xil_defaultlib.tb_bin_morse
+Built simulation snapshot tb_bin_morse_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+Vivado Simulator 2020.2
+Time resolution is 1 ps
+Note: Stimulus process started
+Time: 0 ps  Iteration: 0  Process: /tb_bin_morse/p_stimulus  File: C:/Users/240703/PC-II-SummerSemester/BPC-DE1-project/ProjectMorse/ProjectMorse.srcs/sim_1/new/tb_bin_morse.vhd
+Note: Stimulus process finished
+Time: 0 ps  Iteration: 0  Process: /tb_bin_morse/p_stimulus  File: C:/Users/240703/PC-II-SummerSemester/BPC-DE1-project/ProjectMorse/ProjectMorse.srcs/sim_1/new/tb_bin_morse.vhd
+relaunch_sim: Time (s): cpu = 00:00:00 ; elapsed = 00:00:06 . Memory (MB): peak = 2506.938 ; gain = 0.000
+relaunch_sim
+Command: launch_simulation -simset sim_1 -mode behavioral
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/240703/PC-II-SummerSemester/BPC-DE1-project/ProjectMorse/ProjectMorse.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_bin_morse' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/240703/PC-II-SummerSemester/BPC-DE1-project/ProjectMorse/ProjectMorse.sim/sim_1/behav/xsim'
+"xvhdl --incr --relax -prj tb_bin_morse_vhdl.prj"
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/240703/PC-II-SummerSemester/BPC-DE1-project/ProjectMorse/ProjectMorse.srcs/sources_1/new/clock_enable.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'clock_enable'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/240703/PC-II-SummerSemester/BPC-DE1-project/ProjectMorse/ProjectMorse.srcs/sources_1/new/bin_morse.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'bin_morse'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/240703/PC-II-SummerSemester/BPC-DE1-project/ProjectMorse/ProjectMorse.srcs/sim_1/new/tb_bin_morse.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'tb_bin_morse'
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+Command: launch_simulation -simset sim_1 -mode behavioral
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/240703/PC-II-SummerSemester/BPC-DE1-project/ProjectMorse/ProjectMorse.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/240703/PC-II-SummerSemester/BPC-DE1-project/ProjectMorse/ProjectMorse.sim/sim_1/behav/xsim'
+"xelab -wto 4e90e972b2734ef7838b83f1c153f186 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot tb_bin_morse_behav xil_defaultlib.tb_bin_morse -log elaborate.log"
+Vivado Simulator 2020.2
+Copyright 1986-1999, 2001-2020 Xilinx, Inc. All Rights Reserved.
+Running: C:/appz/Xilinx/Vivado/2020.2/bin/unwrapped/win64.o/xelab.exe -wto 4e90e972b2734ef7838b83f1c153f186 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot tb_bin_morse_behav xil_defaultlib.tb_bin_morse -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package std.textio
+Compiling package ieee.std_logic_1164
+Compiling package ieee.numeric_std
+Compiling architecture behavioral of entity xil_defaultlib.clock_enable [clock_enable_default]
+Compiling architecture behavioral of entity xil_defaultlib.bin_morse [bin_morse_default]
+Compiling architecture behavioral of entity xil_defaultlib.tb_bin_morse
+Built simulation snapshot tb_bin_morse_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+Vivado Simulator 2020.2
+Time resolution is 1 ps
+Note: Stimulus process started
+Time: 0 ps  Iteration: 0  Process: /tb_bin_morse/p_stimulus  File: C:/Users/240703/PC-II-SummerSemester/BPC-DE1-project/ProjectMorse/ProjectMorse.srcs/sim_1/new/tb_bin_morse.vhd
+Note: Stimulus process finished
+Time: 0 ps  Iteration: 0  Process: /tb_bin_morse/p_stimulus  File: C:/Users/240703/PC-II-SummerSemester/BPC-DE1-project/ProjectMorse/ProjectMorse.srcs/sim_1/new/tb_bin_morse.vhd
+relaunch_sim: Time (s): cpu = 00:00:00 ; elapsed = 00:00:07 . Memory (MB): peak = 2506.938 ; gain = 0.000
+relaunch_sim
+Command: launch_simulation -simset sim_1 -mode behavioral
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/240703/PC-II-SummerSemester/BPC-DE1-project/ProjectMorse/ProjectMorse.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_bin_morse' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/240703/PC-II-SummerSemester/BPC-DE1-project/ProjectMorse/ProjectMorse.sim/sim_1/behav/xsim'
+"xvhdl --incr --relax -prj tb_bin_morse_vhdl.prj"
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/240703/PC-II-SummerSemester/BPC-DE1-project/ProjectMorse/ProjectMorse.srcs/sources_1/new/clock_enable.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'clock_enable'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/240703/PC-II-SummerSemester/BPC-DE1-project/ProjectMorse/ProjectMorse.srcs/sources_1/new/bin_morse.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'bin_morse'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/240703/PC-II-SummerSemester/BPC-DE1-project/ProjectMorse/ProjectMorse.srcs/sim_1/new/tb_bin_morse.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'tb_bin_morse'
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+Command: launch_simulation -simset sim_1 -mode behavioral
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/240703/PC-II-SummerSemester/BPC-DE1-project/ProjectMorse/ProjectMorse.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/240703/PC-II-SummerSemester/BPC-DE1-project/ProjectMorse/ProjectMorse.sim/sim_1/behav/xsim'
+"xelab -wto 4e90e972b2734ef7838b83f1c153f186 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot tb_bin_morse_behav xil_defaultlib.tb_bin_morse -log elaborate.log"
+Vivado Simulator 2020.2
+Copyright 1986-1999, 2001-2020 Xilinx, Inc. All Rights Reserved.
+Running: C:/appz/Xilinx/Vivado/2020.2/bin/unwrapped/win64.o/xelab.exe -wto 4e90e972b2734ef7838b83f1c153f186 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot tb_bin_morse_behav xil_defaultlib.tb_bin_morse -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package std.textio
+Compiling package ieee.std_logic_1164
+Compiling package ieee.numeric_std
+Compiling architecture behavioral of entity xil_defaultlib.clock_enable [\clock_enable(g_max=10)\]
+Compiling architecture behavioral of entity xil_defaultlib.bin_morse [bin_morse_default]
+Compiling architecture behavioral of entity xil_defaultlib.tb_bin_morse
+Built simulation snapshot tb_bin_morse_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+Vivado Simulator 2020.2
+Time resolution is 1 ps
+Note: Stimulus process started
+Time: 0 ps  Iteration: 0  Process: /tb_bin_morse/p_stimulus  File: C:/Users/240703/PC-II-SummerSemester/BPC-DE1-project/ProjectMorse/ProjectMorse.srcs/sim_1/new/tb_bin_morse.vhd
+Note: Stimulus process finished
+Time: 0 ps  Iteration: 0  Process: /tb_bin_morse/p_stimulus  File: C:/Users/240703/PC-II-SummerSemester/BPC-DE1-project/ProjectMorse/ProjectMorse.srcs/sim_1/new/tb_bin_morse.vhd
+relaunch_sim: Time (s): cpu = 00:00:01 ; elapsed = 00:00:07 . Memory (MB): peak = 2506.938 ; gain = 0.000
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+set_property top top [current_fileset]
+update_compile_order -fileset sources_1
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 2
+[Wed Apr 12 14:32:51 2023] Launched synth_1...
+Run output will be captured here: C:/Users/240703/PC-II-SummerSemester/BPC-DE1-project/ProjectMorse/ProjectMorse.runs/synth_1/runme.log
+[Wed Apr 12 14:32:51 2023] Launched impl_1...
+Run output will be captured here: C:/Users/240703/PC-II-SummerSemester/BPC-DE1-project/ProjectMorse/ProjectMorse.runs/impl_1/runme.log
+open_hw_manager
+connect_hw_server -allow_non_jtag
+INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
+INFO: [Labtools 27-2222] Launching hw_server...
+INFO: [Labtools 27-2221] Launch Output:
+
+****** Xilinx hw_server v2020.2
+  **** Build date : Nov 18 2020 at 10:01:48
+    ** Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+
+
+INFO: [Labtools 27-3415] Connecting to cs_server url TCP:localhost:3042
+INFO: [Labtools 27-3417] Launching cs_server...
+INFO: [Labtools 27-2221] Launch Output:
+
+
+******** Xilinx cs_server v2020.2
+  ****** Build date   : Nov 03 2020-22:02:56
+    **** Build number : 2020.2.1604437376
+      ** Copyright 2017-2020 Xilinx, Inc. All Rights Reserved.
+
+
+
+connect_hw_server: Time (s): cpu = 00:00:01 ; elapsed = 00:00:08 . Memory (MB): peak = 2506.938 ; gain = 0.000
+open_hw_target
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210292B40D94A
+set_property PROGRAM.FILE {C:/Users/240703/PC-II-SummerSemester/BPC-DE1-project/ProjectMorse/ProjectMorse.runs/impl_1/top.bit} [get_hw_devices xc7a50t_0]
+current_hw_device [get_hw_devices xc7a50t_0]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7a50t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a50t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+set_property PROBES.FILE {} [get_hw_devices xc7a50t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a50t_0]
+set_property PROGRAM.FILE {C:/Users/240703/PC-II-SummerSemester/BPC-DE1-project/ProjectMorse/ProjectMorse.runs/impl_1/top.bit} [get_hw_devices xc7a50t_0]
+program_hw_devices [get_hw_devices xc7a50t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a50t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a50t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 2
+[Wed Apr 12 14:38:48 2023] Launched synth_1...
+Run output will be captured here: C:/Users/240703/PC-II-SummerSemester/BPC-DE1-project/ProjectMorse/ProjectMorse.runs/synth_1/runme.log
+[Wed Apr 12 14:38:48 2023] Launched impl_1...
+Run output will be captured here: C:/Users/240703/PC-II-SummerSemester/BPC-DE1-project/ProjectMorse/ProjectMorse.runs/impl_1/runme.log
+open_run impl_1
+INFO: [Device 21-403] Loading part xc7a50ticsg324-1L
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 2798.332 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 24 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2020.2
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Timing 38-478] Restoring timing data from binary archive.
+INFO: [Common 17-41] Interrupt caught. Command should exit soon.
+INFO: [Timing 38-479] Binary timing data restore complete.
+INFO: [Project 1-856] Restoring constraints from binary archive.
+INFO: [Project 1-853] Binary constraint restore complete.
+Reading XDEF placement.
+Reading placer database...
+Reading XDEF routing.
+Restored from archive | CPU: 0.000000 secs | Memory: 0.000000 MB |
+Finished XDEF File Restore: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.013 . Memory (MB): peak = 3456.270 ; gain = 0.000
+open_run: Time (s): cpu = 00:00:18 ; elapsed = 00:00:21 . Memory (MB): peak = 3456.270 ; gain = 935.375
+INFO: [Common 17-344] 'open_run' was cancelled
+set_property PROBES.FILE {} [get_hw_devices xc7a50t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a50t_0]
+set_property PROGRAM.FILE {C:/Users/240703/PC-II-SummerSemester/BPC-DE1-project/ProjectMorse/ProjectMorse.runs/impl_1/top.bit} [get_hw_devices xc7a50t_0]
+program_hw_devices [get_hw_devices xc7a50t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a50t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a50t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 2
+[Wed Apr 12 14:44:06 2023] Launched synth_1...
+Run output will be captured here: C:/Users/240703/PC-II-SummerSemester/BPC-DE1-project/ProjectMorse/ProjectMorse.runs/synth_1/runme.log
+[Wed Apr 12 14:44:06 2023] Launched impl_1...
+Run output will be captured here: C:/Users/240703/PC-II-SummerSemester/BPC-DE1-project/ProjectMorse/ProjectMorse.runs/impl_1/runme.log
+set_property PROBES.FILE {} [get_hw_devices xc7a50t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a50t_0]
+set_property PROGRAM.FILE {C:/Users/240703/PC-II-SummerSemester/BPC-DE1-project/ProjectMorse/ProjectMorse.runs/impl_1/top.bit} [get_hw_devices xc7a50t_0]
+program_hw_devices [get_hw_devices xc7a50t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a50t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a50t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 2
+[Wed Apr 12 14:48:55 2023] Launched synth_1...
+Run output will be captured here: C:/Users/240703/PC-II-SummerSemester/BPC-DE1-project/ProjectMorse/ProjectMorse.runs/synth_1/runme.log
+[Wed Apr 12 14:48:55 2023] Launched impl_1...
+Run output will be captured here: C:/Users/240703/PC-II-SummerSemester/BPC-DE1-project/ProjectMorse/ProjectMorse.runs/impl_1/runme.log
+set_property PROBES.FILE {} [get_hw_devices xc7a50t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a50t_0]
+set_property PROGRAM.FILE {C:/Users/240703/PC-II-SummerSemester/BPC-DE1-project/ProjectMorse/ProjectMorse.runs/impl_1/top.bit} [get_hw_devices xc7a50t_0]
+program_hw_devices [get_hw_devices xc7a50t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a50t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a50t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.

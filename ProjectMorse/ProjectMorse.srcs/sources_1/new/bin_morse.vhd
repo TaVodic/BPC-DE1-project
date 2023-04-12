@@ -106,95 +106,550 @@ begin
                 
     
           when "00011" =>     -- C -.-.
-    
+                if (sig_cnt < 3) then  
+                  morse <= '1';                     -- 300ms dash
+                  sig_cnt <= sig_cnt + 1;
+                elsif (sig_cnt < 4) then                  
+                  morse <= '0';                     -- 100ms pause
+                  sig_cnt <= sig_cnt + 1;
+                elsif (sig_cnt < 5) then                  
+                  morse <= '1';                     -- 100ms dot
+                  sig_cnt <= sig_cnt + 1;
+                elsif (sig_cnt < 6) then                  
+                  morse <= '0';                     -- 100ms pause
+                  sig_cnt <= sig_cnt + 1;
+                elsif (sig_cnt < 9) then                  
+                  morse <= '1';                     -- 300ms dash
+                  sig_cnt <= sig_cnt + 1;
+                elsif (sig_cnt < 10) then                  
+                  morse <= '0';                     -- 100ms pause
+                  sig_cnt <= sig_cnt + 1;    
+                elsif (sig_cnt < 11) then                  
+                  morse <= '1';                     -- 100ms dot
+                  sig_cnt <= sig_cnt + 1;
+                elsif (sig_cnt = 11) then                  
+                  morse <= '0';
+                  send_en <= '0';
+                  sig_cnt <= 0;                                    
+                end if;         
               
               
           when "00100" =>     -- D -..
-    
+                if (sig_cnt < 3) then  
+                  morse <= '1';                     -- 300ms dash
+                  sig_cnt <= sig_cnt + 1;
+                elsif (sig_cnt < 4) then                  
+                  morse <= '0';                     -- 100ms pause
+                  sig_cnt <= sig_cnt + 1;
+                elsif (sig_cnt < 5) then                  
+                  morse <= '1';                     -- 100ms dot
+                  sig_cnt <= sig_cnt + 1;
+                elsif (sig_cnt < 6) then                  
+                  morse <= '0';                     -- 100ms pause
+                  sig_cnt <= sig_cnt + 1;
+                elsif (sig_cnt < 7) then                  
+                  morse <= '1';                     -- 100ms dot
+                  sig_cnt <= sig_cnt + 1;
+                elsif (sig_cnt = 7) then                  
+                  morse <= '0';
+                  send_en <= '0';
+                  sig_cnt <= 0;                                    
+                end if;  
                
     
           when "00101" =>     -- E .
-    
+                if (sig_cnt < 1) then                  
+                  morse <= '1';                     -- 100ms dot
+                  sig_cnt <= sig_cnt + 1;
+                elsif (sig_cnt = 1) then                  
+                  morse <= '0';
+                  send_en <= '0';
+                  sig_cnt <= 0;                                    
+                end if; 
               
               
           when "00110" =>     -- F ..-.
-    
+                if (sig_cnt < 1) then  
+                  morse <= '1';                     -- 100ms dot
+                  sig_cnt <= sig_cnt + 1;
+                elsif (sig_cnt < 2) then                  
+                  morse <= '0';                     -- 100ms pause
+                  sig_cnt <= sig_cnt + 1;
+                elsif (sig_cnt < 3) then                  
+                  morse <= '1';                     -- 100ms dot
+                  sig_cnt <= sig_cnt + 1;
+                elsif (sig_cnt < 4) then                  
+                  morse <= '0';                     -- 100ms pause
+                  sig_cnt <= sig_cnt + 1;
+                elsif (sig_cnt < 7) then                  
+                  morse <= '1';                     -- 300ms dash
+                  sig_cnt <= sig_cnt + 1;
+                elsif (sig_cnt < 8) then                  
+                  morse <= '0';                     -- 100ms pause
+                  sig_cnt <= sig_cnt + 1;    
+                elsif (sig_cnt < 9) then                  
+                  morse <= '1';                     -- 100ms dot
+                  sig_cnt <= sig_cnt + 1;
+                elsif (sig_cnt = 9) then                  
+                  morse <= '0';
+                  send_en <= '0';
+                  sig_cnt <= 0;                                    
+                end if; 
               
             
           when "00111" =>     -- G --.
-    
+                if (sig_cnt < 3) then  
+                  morse <= '1';                     -- 300ms dash
+                  sig_cnt <= sig_cnt + 1;
+                elsif (sig_cnt < 4) then                  
+                  morse <= '0';                     -- 100ms pause
+                  sig_cnt <= sig_cnt + 1;
+                elsif (sig_cnt < 7) then                  
+                  morse <= '1';                     -- 300ms dash
+                  sig_cnt <= sig_cnt + 1;
+                elsif (sig_cnt < 8) then                  
+                  morse <= '0';                     -- 100ms pause
+                  sig_cnt <= sig_cnt + 1;
+                elsif (sig_cnt < 9) then                  
+                  morse <= '1';                     -- 100ms dot
+                  sig_cnt <= sig_cnt + 1;
+                elsif (sig_cnt = 9) then                  
+                  morse <= '0';
+                  send_en <= '0';
+                  sig_cnt <= 0;                                    
+                end if; 
               
             
           when "01000" =>     -- H ....
-    
+                if (sig_cnt < 1) then  
+                  morse <= '1';                     -- 100ms dot
+                  sig_cnt <= sig_cnt + 1;
+                elsif (sig_cnt < 2) then                  
+                  morse <= '0';                     -- 100ms pause
+                  sig_cnt <= sig_cnt + 1;
+                elsif (sig_cnt < 3) then                  
+                  morse <= '1';                     -- 100ms dot
+                  sig_cnt <= sig_cnt + 1;
+                elsif (sig_cnt < 4) then                  
+                  morse <= '0';                     -- 100ms pause
+                  sig_cnt <= sig_cnt + 1;
+                elsif (sig_cnt < 5) then                  
+                  morse <= '1';                     -- 100ms dot
+                  sig_cnt <= sig_cnt + 1;
+                elsif (sig_cnt < 6) then                  
+                  morse <= '0';                     -- 100ms pause
+                  sig_cnt <= sig_cnt + 1;    
+                elsif (sig_cnt < 7) then                  
+                  morse <= '1';                     -- 100ms dot
+                  sig_cnt <= sig_cnt + 1;
+                elsif (sig_cnt = 8) then                  
+                  morse <= '0';
+                  send_en <= '0';
+                  sig_cnt <= 0;                                    
+                end if;
               
             
           when "01001" =>     -- I ..
-    
+                if (sig_cnt < 1) then  
+                  morse <= '1';                     -- 100ms dot
+                  sig_cnt <= sig_cnt + 1;
+                elsif (sig_cnt < 2) then                  
+                  morse <= '0';                     -- 100ms pause
+                  sig_cnt <= sig_cnt + 1;
+                elsif (sig_cnt < 3) then                  
+                  morse <= '1';                     -- 100ms dot
+                  sig_cnt <= sig_cnt + 1;
+                elsif (sig_cnt = 3) then                  
+                  morse <= '0';
+                  send_en <= '0';
+                  sig_cnt <= 0;                                    
+                end if;
               
             
           when "01010" =>     -- J .---
-    
+                if (sig_cnt < 1) then  
+                  morse <= '1';                     -- 100ms dot
+                  sig_cnt <= sig_cnt + 1;
+                elsif (sig_cnt < 2) then                  
+                  morse <= '0';                     -- 100ms pause
+                  sig_cnt <= sig_cnt + 1;
+                elsif (sig_cnt < 5) then                  
+                  morse <= '1';                     -- 300ms dash
+                  sig_cnt <= sig_cnt + 1;
+                elsif (sig_cnt < 6) then                  
+                  morse <= '0';                     -- 100ms pause
+                  sig_cnt <= sig_cnt + 1;
+                elsif (sig_cnt < 9) then                  
+                  morse <= '1';                     -- 300ms dash
+                  sig_cnt <= sig_cnt + 1;
+                elsif (sig_cnt < 10) then                  
+                  morse <= '0';                     -- 100ms pause
+                  sig_cnt <= sig_cnt + 1;    
+                elsif (sig_cnt < 13) then                  
+                  morse <= '1';                     -- 300ms dash
+                  sig_cnt <= sig_cnt + 1;
+                elsif (sig_cnt = 13) then                  
+                  morse <= '0';
+                  send_en <= '0';
+                  sig_cnt <= 0;                                    
+                end if;
               
             
           when "01011" =>     -- K -.-
-    
+                if (sig_cnt < 3) then  
+                  morse <= '1';                     -- 300ms dash
+                  sig_cnt <= sig_cnt + 1;
+                elsif (sig_cnt < 4) then                  
+                  morse <= '0';                     -- 100ms pause
+                  sig_cnt <= sig_cnt + 1;
+                elsif (sig_cnt < 5) then                  
+                  morse <= '1';                     -- 100ms dot
+                  sig_cnt <= sig_cnt + 1;
+                elsif (sig_cnt < 6) then                  
+                  morse <= '0';                     -- 100ms pause
+                  sig_cnt <= sig_cnt + 1;
+                elsif (sig_cnt < 9) then                  
+                  morse <= '1';                     -- 300ms dash
+                  sig_cnt <= sig_cnt + 1;
+                elsif (sig_cnt = 9) then                  
+                  morse <= '0';
+                  send_en <= '0';
+                  sig_cnt <= 0;                                    
+                end if; 
               
             
           when "01100" =>     -- L .-..
-    
+                if (sig_cnt < 1) then  
+                  morse <= '1';                     -- 100ms dot
+                  sig_cnt <= sig_cnt + 1;
+                elsif (sig_cnt < 2) then                  
+                  morse <= '0';                     -- 100ms pause
+                  sig_cnt <= sig_cnt + 1;
+                elsif (sig_cnt < 5) then                  
+                  morse <= '1';                     -- 300ms dash
+                  sig_cnt <= sig_cnt + 1;
+                elsif (sig_cnt < 6) then                  
+                  morse <= '0';                     -- 100ms pause
+                  sig_cnt <= sig_cnt + 1;
+                elsif (sig_cnt < 7) then                  
+                  morse <= '1';                     -- 100ms dot
+                  sig_cnt <= sig_cnt + 1;
+                elsif (sig_cnt < 8) then                  
+                  morse <= '0';                     -- 100ms pause
+                  sig_cnt <= sig_cnt + 1;    
+                elsif (sig_cnt < 9) then                  
+                  morse <= '1';                     -- 100ms dot
+                  sig_cnt <= sig_cnt + 1;
+                elsif (sig_cnt = 9) then                  
+                  morse <= '0';
+                  send_en <= '0';
+                  sig_cnt <= 0;                                    
+                end if;
               
             
           when "01101" =>     -- M --
-    
+                if (sig_cnt < 3) then  
+                  morse <= '1';                     -- 300ms dash
+                  sig_cnt <= sig_cnt + 1;
+                elsif (sig_cnt < 4) then                  
+                  morse <= '0';                     -- 100ms pause
+                  sig_cnt <= sig_cnt + 1;
+                elsif (sig_cnt < 7) then                  
+                  morse <= '1';                     -- 300ms dash
+                  sig_cnt <= sig_cnt + 1;
+                elsif (sig_cnt = 7) then                  
+                  morse <= '0';
+                  send_en <= '0';
+                  sig_cnt <= 0;                                    
+                end if;
               
             
           when "01110" =>     -- N -.
-    
+                if (sig_cnt < 3) then  
+                  morse <= '1';                     -- 300ms dash
+                  sig_cnt <= sig_cnt + 1;
+                elsif (sig_cnt < 4) then                  
+                  morse <= '0';                     -- 100ms pause
+                  sig_cnt <= sig_cnt + 1;
+                elsif (sig_cnt < 5) then                  
+                  morse <= '1';                     -- 100ms dot
+                  sig_cnt <= sig_cnt + 1;
+                elsif (sig_cnt = 5) then                  
+                  morse <= '0';
+                  send_en <= '0';
+                  sig_cnt <= 0;                                    
+                end if;
               
             
           when "01111" =>     -- O ---
-    
+                if (sig_cnt < 3) then  
+                  morse <= '1';                     -- 300ms dash
+                  sig_cnt <= sig_cnt + 1;
+                elsif (sig_cnt < 4) then                  
+                  morse <= '0';                     -- 100ms pause
+                  sig_cnt <= sig_cnt + 1;
+                elsif (sig_cnt < 7) then                  
+                  morse <= '1';                     -- 300ms dash
+                  sig_cnt <= sig_cnt + 1;
+                elsif (sig_cnt < 8) then                  
+                  morse <= '0';                     -- 100ms pause
+                  sig_cnt <= sig_cnt + 1;
+                elsif (sig_cnt < 11) then                  
+                  morse <= '1';                     -- 300ms dash
+                  sig_cnt <= sig_cnt + 1;
+                elsif (sig_cnt = 11) then                  
+                  morse <= '0';
+                  send_en <= '0';
+                  sig_cnt <= 0;                                    
+                end if;
               
             
           when "10000" =>     -- P .--.
-    
+                if (sig_cnt < 1) then  
+                  morse <= '1';                     -- 100ms dot
+                  sig_cnt <= sig_cnt + 1;
+                elsif (sig_cnt < 2) then                  
+                  morse <= '0';                     -- 100ms pause
+                  sig_cnt <= sig_cnt + 1;
+                elsif (sig_cnt < 5) then                  
+                  morse <= '1';                     -- 300ms dash
+                  sig_cnt <= sig_cnt + 1;
+                elsif (sig_cnt < 6) then                  
+                  morse <= '0';                     -- 100ms pause
+                  sig_cnt <= sig_cnt + 1;
+                elsif (sig_cnt < 9) then                  
+                  morse <= '1';                     -- 300ms dash
+                  sig_cnt <= sig_cnt + 1;
+                elsif (sig_cnt < 10) then                  
+                  morse <= '0';                     -- 100ms pause
+                  sig_cnt <= sig_cnt + 1;    
+                elsif (sig_cnt < 11) then                  
+                  morse <= '1';                     -- 100ms dot
+                  sig_cnt <= sig_cnt + 1;
+                elsif (sig_cnt = 11) then                  
+                  morse <= '0';
+                  send_en <= '0';
+                  sig_cnt <= 0;                                    
+                end if;
               
             
           when "10001" =>     -- Q --.-
-    
+                if (sig_cnt < 3) then  
+                  morse <= '1';                     -- 300ms dash
+                  sig_cnt <= sig_cnt + 1;
+                elsif (sig_cnt < 4) then                  
+                  morse <= '0';                     -- 100ms pause
+                  sig_cnt <= sig_cnt + 1;
+                elsif (sig_cnt < 7) then                  
+                  morse <= '1';                     -- 300ms dash
+                  sig_cnt <= sig_cnt + 1;
+                elsif (sig_cnt < 8) then                  
+                  morse <= '0';                     -- 100ms pause
+                  sig_cnt <= sig_cnt + 1;
+                elsif (sig_cnt < 9) then                  
+                  morse <= '1';                     -- 100ms dot
+                  sig_cnt <= sig_cnt + 1;
+                elsif (sig_cnt < 10) then                  
+                  morse <= '0';                     -- 100ms pause
+                  sig_cnt <= sig_cnt + 1;    
+                elsif (sig_cnt < 13) then                  
+                  morse <= '1';                     -- 300ms dash
+                  sig_cnt <= sig_cnt + 1;
+                elsif (sig_cnt = 13) then                  
+                  morse <= '0';
+                  send_en <= '0';
+                  sig_cnt <= 0;                                    
+                end if;
               
             
           when "10010" =>     -- R .-.
-    
+                if (sig_cnt < 3) then  
+                  morse <= '1';                     -- 100ms dot
+                  sig_cnt <= sig_cnt + 1;
+                elsif (sig_cnt < 4) then                  
+                  morse <= '0';                     -- 100ms pause
+                  sig_cnt <= sig_cnt + 1;
+                elsif (sig_cnt < 7) then                  
+                  morse <= '1';                     -- 300ms dash
+                  sig_cnt <= sig_cnt + 1;
+                elsif (sig_cnt < 8) then                  
+                  morse <= '0';                     -- 100ms pause
+                  sig_cnt <= sig_cnt + 1;
+                elsif (sig_cnt < 11) then                  
+                  morse <= '1';                     -- 100ms dot
+                  sig_cnt <= sig_cnt + 1;
+                elsif (sig_cnt = 11) then                  
+                  morse <= '0';
+                  send_en <= '0';
+                  sig_cnt <= 0;                                    
+                end if;
               
             
           when "10011" =>     -- S ...
-    
+                if (sig_cnt < 1) then  
+                  morse <= '1';                     -- 100ms dot
+                  sig_cnt <= sig_cnt + 1;
+                elsif (sig_cnt < 2) then                  
+                  morse <= '0';                     -- 100ms pause
+                  sig_cnt <= sig_cnt + 1;
+                elsif (sig_cnt < 3) then                  
+                  morse <= '1';                     -- 100ms dot
+                  sig_cnt <= sig_cnt + 1;
+                elsif (sig_cnt < 4) then                  
+                  morse <= '0';                     -- 100ms pause
+                  sig_cnt <= sig_cnt + 1;
+                elsif (sig_cnt < 5) then                  
+                  morse <= '1';                     -- 100ms dot
+                  sig_cnt <= sig_cnt + 1;
+                elsif (sig_cnt = 5) then                  
+                  morse <= '0';
+                  send_en <= '0';
+                  sig_cnt <= 0;                                    
+                end if;
               
             
           when "10100" =>     -- T -
-    
+                if (sig_cnt < 3) then                  
+                  morse <= '1';                     -- 300ms dash
+                  sig_cnt <= sig_cnt + 1;
+                elsif (sig_cnt = 3) then                  
+                  morse <= '0';
+                  send_en <= '0';
+                  sig_cnt <= 0;                                    
+                end if; 
               
             
           when "10101" =>     -- U ..-
-    
+                if (sig_cnt < 1) then  
+                  morse <= '1';                     -- 100ms dot
+                  sig_cnt <= sig_cnt + 1;
+                elsif (sig_cnt < 2) then                  
+                  morse <= '0';                     -- 100ms pause
+                  sig_cnt <= sig_cnt + 1;
+                elsif (sig_cnt < 3) then                  
+                  morse <= '1';                     -- 100ms dot
+                  sig_cnt <= sig_cnt + 1;
+                elsif (sig_cnt < 4) then                  
+                  morse <= '0';                     -- 100ms pause
+                  sig_cnt <= sig_cnt + 1;
+                elsif (sig_cnt < 7) then                  
+                  morse <= '1';                     -- 300ms dash
+                  sig_cnt <= sig_cnt + 1;
+                elsif (sig_cnt = 7) then                  
+                  morse <= '0';
+                  send_en <= '0';
+                  sig_cnt <= 0;                                    
+                end if;
               
             
           when "10110" =>     -- V ...-
-    
+                if (sig_cnt < 1) then  
+                  morse <= '1';                     -- 100ms dot
+                  sig_cnt <= sig_cnt + 1;
+                elsif (sig_cnt < 2) then                  
+                  morse <= '0';                     -- 100ms pause
+                  sig_cnt <= sig_cnt + 1;
+                elsif (sig_cnt < 3) then                  
+                  morse <= '1';                     -- 100ms dot
+                  sig_cnt <= sig_cnt + 1;
+                elsif (sig_cnt < 4) then                  
+                  morse <= '0';                     -- 100ms pause
+                  sig_cnt <= sig_cnt + 1;
+                elsif (sig_cnt < 5) then                  
+                  morse <= '1';                     -- 100ms dot
+                  sig_cnt <= sig_cnt + 1;
+                elsif (sig_cnt < 6) then                  
+                  morse <= '0';                     -- 100ms pause
+                  sig_cnt <= sig_cnt + 1;    
+                elsif (sig_cnt < 9) then                  
+                  morse <= '1';                     -- 300ms dash
+                  sig_cnt <= sig_cnt + 1;
+                elsif (sig_cnt = 9) then                  
+                  morse <= '0';
+                  send_en <= '0';
+                  sig_cnt <= 0;                                    
+                end if;
               
             
           when "10111" =>     -- W .--
-    
+                if (sig_cnt < 1) then  
+                  morse <= '1';                     -- 100ms dot
+                  sig_cnt <= sig_cnt + 1;
+                elsif (sig_cnt < 2) then                  
+                  morse <= '0';                     -- 100ms pause
+                  sig_cnt <= sig_cnt + 1;
+                elsif (sig_cnt < 5) then                  
+                  morse <= '1';                     -- 300ms dash
+                  sig_cnt <= sig_cnt + 1;
+                elsif (sig_cnt < 6) then                  
+                  morse <= '0';                     -- 100ms pause
+                  sig_cnt <= sig_cnt + 1;
+                elsif (sig_cnt < 9) then                  
+                  morse <= '1';                     -- 300ms dash
+                  sig_cnt <= sig_cnt + 1;
+                elsif (sig_cnt = 9) then                  
+                  morse <= '0';
+                  send_en <= '0';
+                  sig_cnt <= 0;                                    
+                end if;
               
             
           when "11000" =>     -- X -..-
-    
+                if (sig_cnt < 3) then  
+                  morse <= '1';                     -- 300ms dash
+                  sig_cnt <= sig_cnt + 1;
+                elsif (sig_cnt < 4) then                  
+                  morse <= '0';                     -- 100ms pause
+                  sig_cnt <= sig_cnt + 1;
+                elsif (sig_cnt < 5) then                  
+                  morse <= '1';                     -- 100ms dot
+                  sig_cnt <= sig_cnt + 1;
+                elsif (sig_cnt < 6) then                  
+                  morse <= '0';                     -- 100ms pause
+                  sig_cnt <= sig_cnt + 1;
+                elsif (sig_cnt < 7) then                  
+                  morse <= '1';                     -- 100ms dot
+                  sig_cnt <= sig_cnt + 1;
+                elsif (sig_cnt < 8) then                  
+                  morse <= '0';                     -- 100ms pause
+                  sig_cnt <= sig_cnt + 1;    
+                elsif (sig_cnt < 11) then                  
+                  morse <= '1';                     -- 300ms dash
+                  sig_cnt <= sig_cnt + 1;
+                elsif (sig_cnt = 11) then                  
+                  morse <= '0';
+                  send_en <= '0';
+                  sig_cnt <= 0;                                    
+                end if;
               
             
           when "11001" =>     -- Y -.--
-    
+                if (sig_cnt < 3) then  
+                  morse <= '1';                     -- 300ms dash
+                  sig_cnt <= sig_cnt + 1;
+                elsif (sig_cnt < 4) then                  
+                  morse <= '0';                     -- 100ms pause
+                  sig_cnt <= sig_cnt + 1;
+                elsif (sig_cnt < 5) then                  
+                  morse <= '1';                     -- 100ms dot
+                  sig_cnt <= sig_cnt + 1;
+                elsif (sig_cnt < 6) then                  
+                  morse <= '0';                     -- 100ms pause
+                  sig_cnt <= sig_cnt + 1;
+                elsif (sig_cnt < 7) then                  
+                  morse <= '1';                     -- 100ms dot
+                  sig_cnt <= sig_cnt + 1;
+                elsif (sig_cnt < 8) then                  
+                  morse <= '0';                     -- 100ms pause
+                  sig_cnt <= sig_cnt + 1;    
+                elsif (sig_cnt < 11) then                  
+                  morse <= '1';                     -- 300ms dash
+                  sig_cnt <= sig_cnt + 1;
+                elsif (sig_cnt = 11) then                  
+                  morse <= '0';
+                  send_en <= '0';
+                  sig_cnt <= 0;                                    
+                end if;
               
             
           when "11010" =>     -- Z --..
