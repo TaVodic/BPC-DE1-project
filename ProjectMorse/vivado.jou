@@ -11,3 +11,102 @@
 #-----------------------------------------------------------
 start_gui
 open_project C:/Users/240703/PC-II-SummerSemester/BPC-DE1-project/ProjectMorse/ProjectMorse.xpr
+update_compile_order -fileset sources_1
+launch_simulation
+source tb_bin_morse.tcl
+current_wave_config {Untitled 1}
+add_wave {{/tb_bin_morse/uut_tb_bin_morse/clk_en0/sig_cnt}} 
+relaunch_sim
+close_sim
+launch_simulation
+source tb_bin_morse.tcl
+close_sim
+launch_simulation
+source tb_bin_morse.tcl
+close_sim
+launch_simulation
+source tb_bin_morse.tcl
+close_sim
+launch_simulation
+source tb_bin_morse.tcl
+current_wave_config {Untitled 5}
+add_wave {{/tb_bin_morse/uut_tb_bin_morse/sig_en}} 
+relaunch_sim
+close_sim
+launch_simulation
+source tb_bin_morse.tcl
+current_wave_config {Untitled 6}
+add_wave {{/tb_bin_morse/uut_tb_bin_morse/send_en}} 
+relaunch_sim
+current_wave_config {Untitled 6}
+add_wave {{/tb_bin_morse/uut_tb_bin_morse/sig_en}} 
+relaunch_sim
+close_sim
+launch_simulation
+source tb_bin_morse.tcl
+close_sim
+launch_simulation
+source tb_bin_morse.tcl
+current_wave_config {Untitled 8}
+add_wave {{/tb_bin_morse/uut_tb_bin_morse/sig_en}} 
+relaunch_sim
+close_sim
+launch_simulation
+source tb_bin_morse.tcl
+close_sim
+launch_simulation
+source tb_bin_morse.tcl
+current_wave_config {Untitled 10}
+add_wave {{/tb_bin_morse/uut_tb_bin_morse/sig_en}} 
+relaunch_sim
+close_sim
+launch_simulation
+source tb_bin_morse.tcl
+current_wave_config {Untitled 11}
+add_wave {{/tb_bin_morse/uut_tb_bin_morse/sig_en}} 
+relaunch_sim
+close_sim
+launch_simulation
+source tb_bin_morse.tcl
+current_wave_config {Untitled 12}
+add_wave {{/tb_bin_morse/uut_tb_bin_morse/sig_en}} 
+relaunch_sim
+open_hw_manager
+connect_hw_server -allow_non_jtag
+open_hw_target
+set_property PROGRAM.FILE {C:/Users/240703/PC-II-SummerSemester/BPC-DE1-project/ProjectMorse/ProjectMorse.runs/impl_1/top.bit} [get_hw_devices xc7a50t_0]
+current_hw_device [get_hw_devices xc7a50t_0]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7a50t_0] 0]
+set_property PROBES.FILE {} [get_hw_devices xc7a50t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a50t_0]
+set_property PROGRAM.FILE {C:/Users/240703/PC-II-SummerSemester/BPC-DE1-project/ProjectMorse/ProjectMorse.runs/impl_1/top.bit} [get_hw_devices xc7a50t_0]
+program_hw_devices [get_hw_devices xc7a50t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a50t_0] 0]
+close_hw_manager
+close_sim
+launch_simulation
+launch_simulation
+launch_simulation
+source tb_bin_morse.tcl
+current_wave_config {Untitled 13}
+add_wave {{/tb_bin_morse/uut_tb_bin_morse/sig_en}} 
+relaunch_sim
+relaunch_sim
+relaunch_sim
+current_wave_config {Untitled 13}
+add_wave {{/tb_bin_morse/uut_tb_bin_morse/sig_cnt}} 
+relaunch_sim
+relaunch_sim
+relaunch_sim
+relaunch_sim
+relaunch_sim
+current_wave_config {Untitled 13}
+add_wave {{/tb_bin_morse/uut_tb_bin_morse/send_en}} 
+relaunch_sim
+relaunch_sim
+relaunch_sim
+relaunch_sim
+relaunch_sim
+relaunch_sim
+relaunch_sim
+relaunch_sim
