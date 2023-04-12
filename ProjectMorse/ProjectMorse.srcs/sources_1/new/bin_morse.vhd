@@ -77,26 +77,26 @@ begin
                 end if;           
                       
           when "00010" =>     -- B -...
-                if (sig_cnt < 1) then  
-                  morse <= '1';                     -- 100ms dot
+                if (sig_cnt < 3) then  
+                  morse <= '1';                     -- 300ms dash
                   sig_cnt <= sig_cnt + 1;
                 elsif (sig_cnt < 4) then                  
                   morse <= '0';                     -- 100ms pause
                   sig_cnt <= sig_cnt + 1;
                 elsif (sig_cnt < 5) then                  
-                  morse <= '1';                     -- 100ms pause
+                  morse <= '1';                     -- 100ms dot
                   sig_cnt <= sig_cnt + 1;
-                elsif (sig_cnt < 1) then                  
+                elsif (sig_cnt < 6) then                  
                   morse <= '0';                     -- 100ms pause
                   sig_cnt <= sig_cnt + 1;
                 elsif (sig_cnt < 7) then                  
-                  morse <= '1';                     -- 100ms pause
+                  morse <= '1';                     -- 100ms dot
                   sig_cnt <= sig_cnt + 1;
                 elsif (sig_cnt < 8) then                  
                   morse <= '0';                     -- 100ms pause
                   sig_cnt <= sig_cnt + 1;    
                 elsif (sig_cnt < 9) then                  
-                  morse <= '1';                     -- 300ms dash
+                  morse <= '1';                     -- 100ms dot
                   sig_cnt <= sig_cnt + 1;
                 elsif (sig_cnt = 9) then                  
                   morse <= '0';
