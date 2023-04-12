@@ -40,6 +40,7 @@ entity top is
            CE : out STD_LOGIC;
            CF : out STD_LOGIC;
            CG : out STD_LOGIC;
+           DP : out STD_LOGIC;
            AN : out STD_LOGIC_VECTOR (7 downto 0);
            BTNC : in STD_LOGIC;
            BTND : in STD_LOGIC;
@@ -63,13 +64,14 @@ begin
     port map (
       blank  => BTNC,
       bin    => SW,
-      seg(6) => CA,
-      seg(5) => CB,
-      seg(4) => CC,
-      seg(3) => CD,
-      seg(2) => CE,
-      seg(1) => CF,
-      seg(0) => CG
+      seg(7) => CA,
+      seg(6) => CB,
+      seg(5) => CC,
+      seg(4) => CD,
+      seg(3) => CE,
+      seg(2) => CF,
+      seg(1) => CG,
+      seg(0) => DP
     );
     
     bin2morse : entity work.bin_morse

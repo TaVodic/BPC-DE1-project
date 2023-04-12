@@ -26,7 +26,7 @@ entity bin_7seg is
   port (
     blank : in    std_logic;                    --! Display is clear if blank = 1
     bin   : in    std_logic_vector(4 downto 0); --! Binary representation of one hexadecimal symbol
-    seg   : out   std_logic_vector(6 downto 0)  --! Seven active-low segments in the order: a, b, ..., g
+    seg   : out   std_logic_vector(7 downto 0)  --! Seven active-low segments in the order: a, b, ..., g
   );
 end entity bin_7seg;
 
@@ -43,118 +43,118 @@ begin
   begin
 
     if (blank = '1') then
-      seg <= "1111111";     -- Blanking display
+      seg <= "11111111";     -- Blanking display
     else
 
       case bin is
     
         when "00001" =>
 
-          seg <= "0001000"; -- A          
+          seg <= "00010001"; -- A          
       
         when "00010" =>
 
-          seg <= "1100000"; -- B
+          seg <= "11000001"; -- B
 
         when "00011" =>
 
-          seg <= "0110001"; -- C     
+          seg <= "01100011"; -- C     
           
         when "00100" =>
 
-          seg <= "1000010"; -- D             
+          seg <= "10000101"; -- D             
 
         when "00101" =>
 
-          seg <= "0110000"; -- E
+          seg <= "01100001"; -- E
           
         when "00110" =>
 
-          seg <= "0111000"; -- F
+          seg <= "01110001"; -- F
         
         when "00111" =>
 
-          seg <= "0100001"; -- G
+          seg <= "01000011"; -- G
         
         when "01000" =>
 
-          seg <= "1101000"; -- H
+          seg <= "11010001"; -- H
         
         when "01001" =>
 
-          seg <= "0111011"; -- I
+          seg <= "01110111"; -- I
         
         when "01010" =>
 
-          seg <= "0100111"; -- J
+          seg <= "01001111"; -- J
         
         when "01011" =>
 
-          seg <= "0101000"; -- K
+          seg <= "01010001"; -- K
         
         when "01100" =>
 
-          seg <= "1110001"; -- L
+          seg <= "11100011"; -- L
         
         when "01101" =>
 
-          seg <= "0101010"; -- M
+          seg <= "01010101"; -- M
         
         when "01110" =>
 
-          seg <= "1101010"; -- N
+          seg <= "11010101"; -- N
         
         when "01111" =>
 
-          seg <= "1100010"; -- O
+          seg <= "11000101"; -- O
         
         when "10000" =>
 
-          seg <= "0011000"; -- P
+          seg <= "00110001"; -- P
         
         when "10001" =>
 
-          seg <= "0001100"; -- Q
+          seg <= "00011001"; -- Q
         
         when "10010" =>
 
-          seg <= "1111010"; -- R
+          seg <= "11110101"; -- R
         
         when "10011" =>
 
-          seg <= "0100101"; -- S
+          seg <= "01001011"; -- S
         
         when "10100" =>
 
-          seg <= "1110000"; -- T
+          seg <= "11100001"; -- T
         
         when "10101" =>
 
-          seg <= "1100011"; -- U
+          seg <= "11000111"; -- U
         
         when "10110" =>
 
-          seg <= "1010101"; -- V
+          seg <= "10101011"; -- V
         
         when "10111" =>
 
-          seg <= "1010100"; -- W
+          seg <= "10101001"; -- W
         
         when "11000" =>
 
-          seg <= "1101011"; -- X
+          seg <= "11010111"; -- X
         
         when "11001" =>
 
-          seg <= "1000100"; -- Y
+          seg <= "10001001"; -- Y
         
         when "11010" =>
 
-          seg <= "0010011"; -- Z       
+          seg <= "00100111"; -- Z       
 
         when others =>
 
-          seg <= "1111111"; -- nothing
+          seg <= "11111111"; -- nothing
 
       end case;
 
