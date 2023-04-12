@@ -41,7 +41,10 @@ entity top is
            CF : out STD_LOGIC;
            CG : out STD_LOGIC;
            AN : out STD_LOGIC_VECTOR (7 downto 0);
-           BTNC : in STD_LOGIC);
+           BTNC : in STD_LOGIC;
+           BTND : in STD_LOGIC;
+           CLK100MHZ : in STD_LOGIC;
+           LED : out STD_LOGIC);
 end top;
 
 ------------------------------------------------------------
@@ -68,7 +71,15 @@ begin
       seg(1) => CF,
       seg(0) => CG
     );
-
+    
+    bin2morse : entity work.bin_morse
+    port map (
+      morse => LED,
+      send => BTND,
+      bin => SW,
+      clk => CLK100MHZ
+    );
+      
   -- Connect one common anode to 3.3V
   AN <= b"1111_1110";
 

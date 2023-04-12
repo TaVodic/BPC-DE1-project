@@ -40,7 +40,7 @@ begin
       -- 1   @ 10 ns
       -- ??? @ 250 ms
       -- 10000000 -- 100ms
-      g_MAX => 10
+      g_MAX => 10000000
     )
     port map (
       clk => clk,
@@ -77,7 +77,32 @@ begin
                 end if;           
                       
           when "00010" =>     -- B -...
-    
+                if (sig_cnt < 1) then  
+                  morse <= '1';                     -- 100ms dot
+                  sig_cnt <= sig_cnt + 1;
+                elsif (sig_cnt < 4) then                  
+                  morse <= '0';                     -- 100ms pause
+                  sig_cnt <= sig_cnt + 1;
+                elsif (sig_cnt < 5) then                  
+                  morse <= '1';                     -- 100ms pause
+                  sig_cnt <= sig_cnt + 1;
+                elsif (sig_cnt < 1) then                  
+                  morse <= '0';                     -- 100ms pause
+                  sig_cnt <= sig_cnt + 1;
+                elsif (sig_cnt < 7) then                  
+                  morse <= '1';                     -- 100ms pause
+                  sig_cnt <= sig_cnt + 1;
+                elsif (sig_cnt < 8) then                  
+                  morse <= '0';                     -- 100ms pause
+                  sig_cnt <= sig_cnt + 1;    
+                elsif (sig_cnt < 9) then                  
+                  morse <= '1';                     -- 300ms dash
+                  sig_cnt <= sig_cnt + 1;
+                elsif (sig_cnt = 9) then                  
+                  morse <= '0';
+                  send_en <= '0';
+                  sig_cnt <= 0;                                    
+                end if;           
                 
     
           when "00011" =>     -- C -.-.
@@ -177,7 +202,7 @@ begin
               
 
           when others =>      -- Other - send nothing
-
+            send_en <= '0';
           end case;
         end if;
       end if;

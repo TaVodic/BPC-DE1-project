@@ -2,11 +2,11 @@
 # Vivado v2020.2 (64-bit)
 # SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
 # IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
-# Start of session at: Wed Apr  5 14:14:37 2023
-# Process ID: 6684
-# Current directory: V:/Windows User Profile.V6/PC-II-SummerSemester/digital-electronics-1/Project/ProjectMorse/ProjectMorse.runs/impl_1
+# Start of session at: Wed Apr 12 14:49:36 2023
+# Process ID: 9376
+# Current directory: C:/Users/240703/PC-II-SummerSemester/BPC-DE1-project/ProjectMorse/ProjectMorse.runs/impl_1
 # Command line: vivado.exe -log top.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source top.tcl -notrace
-# Log file: V:/Windows User Profile.V6/PC-II-SummerSemester/digital-electronics-1/Project/ProjectMorse/ProjectMorse.runs/impl_1/top.vdi
-# Journal file: V:/Windows User Profile.V6/PC-II-SummerSemester/digital-electronics-1/Project/ProjectMorse/ProjectMorse.runs/impl_1\vivado.jou
+# Log file: C:/Users/240703/PC-II-SummerSemester/BPC-DE1-project/ProjectMorse/ProjectMorse.runs/impl_1/top.vdi
+# Journal file: C:/Users/240703/PC-II-SummerSemester/BPC-DE1-project/ProjectMorse/ProjectMorse.runs/impl_1\vivado.jou
 #-----------------------------------------------------------
 source top.tcl -notrace
