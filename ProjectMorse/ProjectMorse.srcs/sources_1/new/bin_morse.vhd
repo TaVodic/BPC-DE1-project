@@ -40,38 +40,42 @@ begin
       -- 1   @ 10 ns
       -- ??? @ 250 ms
       -- 10000000 -- 100ms
-      g_MAX => 10 
+      g_MAX => 10
     )
     port map (
       clk => clk,
       ce  => sig_en
     );
 
-  p_bin_morse_decoder : process (send, bin, clk) is
+  p_bin_morse_decoder : process (clk) is
 
   begin
+      
+    if (rising_edge(clk)) then    
     
-    if (rising_edge(clk)) then
-      if (send = '1') then      
-        if (sig_en = '1') then -- every g_MAX        
+    if (send = '1') then
+        send_en <= '1';
+    end if;
+    
+      if (send_en = '1') then     
+        if (sig_en = '1') then -- every g_MAX
           case bin is        
-          when "00001" =>     --A .-                if sig_cnt = 0 then            
-            if (sig_cnt < 1) then  
-              morse <= '1';                     -- 100ms dot
-              sig_cnt <= sig_cnt + 1;
-            elsif (sig_cnt < 2) then                  
-              morse <= '0';                     -- 100ms pause
-              sig_cnt <= sig_cnt + 1;
-            elsif (sig_cnt < 5) then                  
-              morse <= '1';                     -- 300ms dash
-              sig_cnt <= sig_cnt + 1;
-            elsif (sig_cnt = 5) then                  
-              morse <= '0';
-              send_en <= '0';                                    
-            end if;            
-
-                         
-          
+            when "00001" =>     --A .-                if sig_cnt = 0 then                          
+                if (sig_cnt < 1) then  
+                  morse <= '1';                     -- 100ms dot
+                  sig_cnt <= sig_cnt + 1;
+                elsif (sig_cnt < 2) then                  
+                  morse <= '0';                     -- 100ms pause
+                  sig_cnt <= sig_cnt + 1;
+                elsif (sig_cnt < 5) then                  
+                  morse <= '1';                     -- 300ms dash
+                  sig_cnt <= sig_cnt + 1;
+                elsif (sig_cnt = 5) then                  
+                  morse <= '0';
+                  send_en <= '0';
+                  sig_cnt <= 0;                                    
+                end if;           
+                      
           when "00010" =>     -- B -...
     
                 
@@ -175,9 +179,6 @@ begin
           when others =>      -- Other - send nothing
 
           end case;
-          send_en <= '0';
-        else
-          sig_cnt <= 0;
         end if;
       end if;
     end if;
