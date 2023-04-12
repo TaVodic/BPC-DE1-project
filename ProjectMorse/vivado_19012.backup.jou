@@ -1,0 +1,14 @@
+#-----------------------------------------------------------
+# Vivado v2020.2 (64-bit)
+# SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
+# IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+# Start of session at: Wed Apr 12 18:41:04 2023
+# Process ID: 19012
+# Current directory: C:/Users/42070/Documents/DE1/BPC-DE1-project/ProjectMorse
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent6748 C:\Users\42070\Documents\DE1\BPC-DE1-project\ProjectMorse\ProjectMorse.xpr
+# Log file: C:/Users/42070/Documents/DE1/BPC-DE1-project/ProjectMorse/vivado.log
+# Journal file: C:/Users/42070/Documents/DE1/BPC-DE1-project/ProjectMorse\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/42070/Documents/DE1/BPC-DE1-project/ProjectMorse/ProjectMorse.xpr
+update_compile_order -fileset sources_1

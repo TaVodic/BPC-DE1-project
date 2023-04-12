@@ -54,7 +54,7 @@ begin
     
     p_clk_gen : process
     begin
-        while now < 1000 ns loop -- 20 periods of 100MHz clock
+        while now < 2000 ns loop -- 20 periods of 100MHz clock
             s_clk_100MHz <= '0';
             wait for c_CLK_100MHZ_PERIOD / 2;
             s_clk_100MHz <= '1';
@@ -81,7 +81,7 @@ begin
     p_stimulus : process
     begin
         report "Stimulus process started";
-        s_bin <= "00001";
+        s_bin <= "11010";
       
 
         report "Stimulus process finished";

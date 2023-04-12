@@ -2,13 +2,69 @@
 # Vivado v2020.2 (64-bit)
 # SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
 # IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
-# Start of session at: Wed Apr 12 18:41:04 2023
-# Process ID: 19012
+# Start of session at: Wed Apr 12 20:15:01 2023
+# Process ID: 9504
 # Current directory: C:/Users/42070/Documents/DE1/BPC-DE1-project/ProjectMorse
-# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent6748 C:\Users\42070\Documents\DE1\BPC-DE1-project\ProjectMorse\ProjectMorse.xpr
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent11184 C:\Users\42070\Documents\DE1\BPC-DE1-project\ProjectMorse\ProjectMorse.xpr
 # Log file: C:/Users/42070/Documents/DE1/BPC-DE1-project/ProjectMorse/vivado.log
 # Journal file: C:/Users/42070/Documents/DE1/BPC-DE1-project/ProjectMorse\vivado.jou
 #-----------------------------------------------------------
 start_gui
 open_project C:/Users/42070/Documents/DE1/BPC-DE1-project/ProjectMorse/ProjectMorse.xpr
 update_compile_order -fileset sources_1
+launch_simulation
+source tb_bin_morse.tcl
+close_sim
+launch_simulation
+source tb_bin_morse.tcl
+close_sim
+launch_simulation
+source tb_bin_morse.tcl
+relaunch_sim
+close_sim
+launch_simulation
+source tb_bin_morse.tcl
+close_sim
+set_property -name {xsim.simulate.runtime} -value {2000ns} -objects [get_filesets sim_1]
+launch_simulation
+source tb_bin_morse.tcl
+set_property -name {xsim.simulate.runtime} -value {1000ns} -objects [get_filesets sim_1]
+close_sim
+launch_simulation
+source tb_bin_morse.tcl
+close_sim
+launch_simulation
+source tb_bin_morse.tcl
+close_sim
+launch_simulation
+source tb_bin_morse.tcl
+relaunch_sim
+close_sim
+launch_simulation
+source tb_bin_morse.tcl
+relaunch_sim
+relaunch_sim
+relaunch_sim
+relaunch_sim
+relaunch_sim
+relaunch_sim
+relaunch_sim
+relaunch_sim
+relaunch_sim
+relaunch_sim
+relaunch_sim
+relaunch_sim
+relaunch_sim
+relaunch_sim
+relaunch_sim
+relaunch_sim
+relaunch_sim
+relaunch_sim
+relaunch_sim
+relaunch_sim
+relaunch_sim
+relaunch_sim
+relaunch_sim
+relaunch_sim
+relaunch_sim
+close_sim

@@ -40,7 +40,7 @@ begin
       -- 1   @ 10 ns
       -- ??? @ 250 ms
       -- 10000000 -- 100ms
-      g_MAX => 10000000
+      g_MAX => 5
     )
     port map (
       clk => clk,
@@ -242,7 +242,7 @@ begin
                 elsif (sig_cnt < 7) then                  
                   morse <= '1';                     -- 100ms dot
                   sig_cnt <= sig_cnt + 1;
-                elsif (sig_cnt = 8) then                  
+                elsif (sig_cnt = 7) then                  
                   morse <= '0';
                   send_en <= '0';
                   sig_cnt <= 0;                                    
@@ -463,22 +463,22 @@ begin
               
             
           when "10010" =>     -- R .-.
-                if (sig_cnt < 3) then  
+                if (sig_cnt < 1) then  
                   morse <= '1';                     -- 100ms dot
                   sig_cnt <= sig_cnt + 1;
-                elsif (sig_cnt < 4) then                  
+                elsif (sig_cnt < 2) then                  
+                  morse <= '0';                     -- 100ms pause
+                  sig_cnt <= sig_cnt + 1;
+                elsif (sig_cnt < 5) then                  
+                  morse <= '1';                     -- 300ms dash
+                  sig_cnt <= sig_cnt + 1;
+                elsif (sig_cnt < 6) then                  
                   morse <= '0';                     -- 100ms pause
                   sig_cnt <= sig_cnt + 1;
                 elsif (sig_cnt < 7) then                  
-                  morse <= '1';                     -- 300ms dash
-                  sig_cnt <= sig_cnt + 1;
-                elsif (sig_cnt < 8) then                  
-                  morse <= '0';                     -- 100ms pause
-                  sig_cnt <= sig_cnt + 1;
-                elsif (sig_cnt < 11) then                  
                   morse <= '1';                     -- 100ms dot
                   sig_cnt <= sig_cnt + 1;
-                elsif (sig_cnt = 11) then                  
+                elsif (sig_cnt = 7) then                  
                   morse <= '0';
                   send_en <= '0';
                   sig_cnt <= 0;                                    
@@ -636,16 +636,16 @@ begin
                 elsif (sig_cnt < 6) then                  
                   morse <= '0';                     -- 100ms pause
                   sig_cnt <= sig_cnt + 1;
-                elsif (sig_cnt < 7) then                  
-                  morse <= '1';                     -- 100ms dot
-                  sig_cnt <= sig_cnt + 1;
-                elsif (sig_cnt < 8) then                  
-                  morse <= '0';                     -- 100ms pause
-                  sig_cnt <= sig_cnt + 1;    
-                elsif (sig_cnt < 11) then                  
+                elsif (sig_cnt < 9) then                  
                   morse <= '1';                     -- 300ms dash
                   sig_cnt <= sig_cnt + 1;
-                elsif (sig_cnt = 11) then                  
+                elsif (sig_cnt < 10) then                  
+                  morse <= '0';                     -- 100ms pause
+                  sig_cnt <= sig_cnt + 1;    
+                elsif (sig_cnt < 13) then                  
+                  morse <= '1';                     -- 300ms dash
+                  sig_cnt <= sig_cnt + 1;
+                elsif (sig_cnt = 13) then                  
                   morse <= '0';
                   send_en <= '0';
                   sig_cnt <= 0;                                    
@@ -653,7 +653,32 @@ begin
               
             
           when "11010" =>     -- Z --..
-
+                if (sig_cnt < 3) then  
+                  morse <= '1';                     -- 300ms dash
+                  sig_cnt <= sig_cnt + 1;
+                elsif (sig_cnt < 4) then                  
+                  morse <= '0';                     -- 100ms pause
+                  sig_cnt <= sig_cnt + 1;
+                elsif (sig_cnt < 7) then                  
+                  morse <= '1';                     -- 300ms dash
+                  sig_cnt <= sig_cnt + 1;
+                elsif (sig_cnt < 8) then                  
+                  morse <= '0';                     -- 100ms pause
+                  sig_cnt <= sig_cnt + 1;
+                elsif (sig_cnt < 9) then                  
+                  morse <= '1';                     -- 100ms dot
+                  sig_cnt <= sig_cnt + 1;
+                elsif (sig_cnt < 10) then                  
+                  morse <= '0';                     -- 100ms pause
+                  sig_cnt <= sig_cnt + 1;    
+                elsif (sig_cnt < 11) then                  
+                  morse <= '1';                     -- 100ms dot
+                  sig_cnt <= sig_cnt + 1;
+                elsif (sig_cnt = 11) then                  
+                  morse <= '0';
+                  send_en <= '0';
+                  sig_cnt <= 0;                                    
+                end if;
               
 
           when others =>      -- Other - send nothing

@@ -1,6 +1,6 @@
 Vivado Simulator 2020.2
 Time resolution is 1 ps
 Note: Stimulus process started
-Time: 0 ps  Iteration: 0  Process: /tb_bin_morse/p_stimulus  File: C:/Users/240703/PC-II-SummerSemester/BPC-DE1-project/ProjectMorse/ProjectMorse.srcs/sim_1/new/tb_bin_morse.vhd
+Time: 0 ps  Iteration: 0  Process: /tb_bin_morse/p_stimulus  File: C:/Users/42070/Documents/DE1/BPC-DE1-project/ProjectMorse/ProjectMorse.srcs/sim_1/new/tb_bin_morse.vhd
 Note: Stimulus process finished
-Time: 0 ps  Iteration: 0  Process: /tb_bin_morse/p_stimulus  File: C:/Users/240703/PC-II-SummerSemester/BPC-DE1-project/ProjectMorse/ProjectMorse.srcs/sim_1/new/tb_bin_morse.vhd
+Time: 0 ps  Iteration: 0  Process: /tb_bin_morse/p_stimulus  File: C:/Users/42070/Documents/DE1/BPC-DE1-project/ProjectMorse/ProjectMorse.srcs/sim_1/new/tb_bin_morse.vhd
