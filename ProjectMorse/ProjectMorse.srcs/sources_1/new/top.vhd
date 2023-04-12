@@ -45,7 +45,9 @@ entity top is
            BTNC : in STD_LOGIC;
            BTND : in STD_LOGIC;
            CLK100MHZ : in STD_LOGIC;
-           LED : out STD_LOGIC);
+           LED : out STD_LOGIC;
+           JA  : out STD_LOGIC_VECTOR (10 downto 1)
+           );
 end top;
 
 ------------------------------------------------------------
@@ -80,6 +82,12 @@ begin
       send => BTND,
       bin => SW,
       clk => CLK100MHZ
+    );
+    
+    buzzer : entity work.buzzer
+    port map (
+        clk => CLK100MHZ,
+        buzz => JA(1)
     );
       
   -- Connect one common anode to 3.3V
