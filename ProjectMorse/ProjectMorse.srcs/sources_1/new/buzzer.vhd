@@ -38,8 +38,7 @@ begin
         sig_cnt <= sig_cnt + 1;
       else 
         buzz <= '0';
-      end if 
-    end if
+      end if;
+    end if;
   end process p_buzzer
-
 end Behavioral;
