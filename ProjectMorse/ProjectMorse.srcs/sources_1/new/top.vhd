@@ -82,12 +82,7 @@ begin
       send => BTND,
       bin => SW,
       clk => CLK100MHZ
-    );
-    
-    buzzer : entity work.buzzer
-    port map (
-        clk => CLK100MHZ,
-        buzz => JA(1)
+      buzzer => JA(1)
     );
       
   -- Connect one common anode to 3.3V

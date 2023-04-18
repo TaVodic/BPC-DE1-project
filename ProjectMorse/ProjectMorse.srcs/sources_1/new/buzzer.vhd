@@ -1,35 +1,5 @@
-----------------------------------------------------------------------------------
--- Company: 
--- Engineer: 
--- 
--- Create Date: 04/12/2023 07:33:51 PM
--- Design Name: 
--- Module Name: buzzer - Behavioral
--- Project Name: 
--- Target Devices: 
--- Tool Versions: 
--- Description: 
--- 
--- Dependencies: 
--- 
--- Revision:
--- Revision 0.01 - File Created
--- Additional Comments:
--- 
-----------------------------------------------------------------------------------
-
-
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
-
--- Uncomment the following library declaration if using
--- arithmetic functions with Signed or Unsigned values
---use IEEE.NUMERIC_STD.ALL;
-
--- Uncomment the following library declaration if instantiating
--- any Xilinx leaf cells in this code.
---library UNISIM;
---use UNISIM.VComponents.all;
 
 entity buzzer is
     Port ( buzz   : out STD_LOGIC;
@@ -39,9 +9,10 @@ end buzzer;
 architecture Behavioral of buzzer is
 
 signal sig_en : std_logic;
+signal sig_cnt : natural;
 
 begin
-clk_en0 : entity work.clock_enable
+  clk_en0 : entity work.clock_enable
     generic map (
       -- FOR SIMULATION, KEEP THIS VALUE TO 1
       -- FOR IMPLEMENTATION, CALCULATE VALUE: 250 ms / (1/100 MHz)
@@ -54,7 +25,20 @@ clk_en0 : entity work.clock_enable
       clk => clk,
       ce  => sig_en
     );
+  
+  p_buzzer : procces(clk) is 
     
-    buzz <= sig_en; --Sends PWM off 1kHz
+    if (sig_cnt  => 500) then
+      sig_cnt <= 0;
+    end if
 
+    if (rising_edge(clock)) then
+      if (sig_en = '1') then
+        buzz <= '1';
+        sig_cnt <= sig_cnt + 1;
+      else 
+        buzz <= '0';
+      end if;
+    end if;
+  end process p_buzzer
 end Behavioral;
