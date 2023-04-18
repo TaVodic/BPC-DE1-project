@@ -2,11 +2,11 @@
 # Webtalk v2020.2 (64-bit)
 # SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
 # IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
-# Start of session at: Wed Apr  5 22:36:49 2023
-# Process ID: 5356
+# Start of session at: Tue Apr 18 22:18:13 2023
+# Process ID: 20168
 # Current directory: Z:/PC-II-SummerSemester/BPC-DE1-project/ProjectMorse/ProjectMorse.sim/sim_1/behav/xsim
-# Command line: wbtcv.exe -mode batch -source Z:/PC-II-SummerSemester/BPC-DE1-project/ProjectMorse/ProjectMorse.sim/sim_1/behav/xsim/xsim.dir/top_behav/webtalk/xsim_webtalk.tcl -notrace
+# Command line: wbtcv.exe -mode batch -source Z:/PC-II-SummerSemester/BPC-DE1-project/ProjectMorse/ProjectMorse.sim/sim_1/behav/xsim/xsim.dir/tb_bin_morse_behav/webtalk/xsim_webtalk.tcl -notrace
 # Log file: Z:/PC-II-SummerSemester/BPC-DE1-project/ProjectMorse/ProjectMorse.sim/sim_1/behav/xsim/webtalk.log
 # Journal file: Z:/PC-II-SummerSemester/BPC-DE1-project/ProjectMorse/ProjectMorse.sim/sim_1/behav/xsim\webtalk.jou
 #-----------------------------------------------------------
-source Z:/PC-II-SummerSemester/BPC-DE1-project/ProjectMorse/ProjectMorse.sim/sim_1/behav/xsim/xsim.dir/top_behav/webtalk/xsim_webtalk.tcl -notrace
+source Z:/PC-II-SummerSemester/BPC-DE1-project/ProjectMorse/ProjectMorse.sim/sim_1/behav/xsim/xsim.dir/tb_bin_morse_behav/webtalk/xsim_webtalk.tcl -notrace

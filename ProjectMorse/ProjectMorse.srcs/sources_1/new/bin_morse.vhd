@@ -8,8 +8,8 @@ library ieee;
 
 entity bin_morse is
   port (
-    send  : in    std_logic;                    --! 
-    bin   : in    std_logic_vector(4 downto 0); --!  
+    send  : in    std_logic;                    --! Send button
+    bin   : in    std_logic_vector(4 downto 0); --! Switches input 
     clk   : in    std_logic;                    --! Main clock
     morse : out   std_logic                     --! Morse code
   );
@@ -20,8 +20,10 @@ end entity bin_morse;
 ------------------------------------------------------------
 
 architecture behavioral of bin_morse is
-
+  
+  -- signal from prescaler (clock_enable)
   signal sig_en : std_logic;
+  -- hold siganl for sending 
   signal send_en : std_logic;
 
   -- Local delay counter
@@ -36,10 +38,11 @@ begin
   clk_en0 : entity work.clock_enable
     generic map (
       -- FOR SIMULATION, KEEP THIS VALUE TO 1
-      -- FOR IMPLEMENTATION, CALCULATE VALUE: 250 ms / (1/100 MHz)
+      -- FOR IMPLEMENTATION, CALCULATE VALUE: 250 ms / (1/100 MHz) aka 250ms*100MHz
       -- 1   @ 10 ns
       -- ??? @ 250 ms
       -- 10000000 -- 100ms
+      -- 5 -- 50ns
       g_MAX => 5
     )
     port map (
@@ -53,7 +56,8 @@ begin
       
     if (rising_edge(clk)) then    
     
-    if (send = '1') then
+    -- set hold signal 
+    if (send = '1') then 
         send_en <= '1';
     end if;
     
