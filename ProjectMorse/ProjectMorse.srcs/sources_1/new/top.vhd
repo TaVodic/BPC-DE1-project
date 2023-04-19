@@ -46,6 +46,7 @@ entity top is
            BTND : in STD_LOGIC;
            CLK100MHZ : in STD_LOGIC;
            LED : out STD_LOGIC;
+           IRLED : out STD_LOGIC;
            JA  : out STD_LOGIC_VECTOR (10 downto 1)
            );
 end top;
@@ -79,6 +80,7 @@ begin
     bin2morse : entity work.bin_morse
     port map (
       morse => LED,
+      morse => IRLED,
       send => BTND,
       bin => SW,
       clk => CLK100MHZ
