@@ -1,6 +1,6 @@
-webtalk_init -webtalk_dir V:/Windows User Profile.V6/PC-II-SummerSemester/BPC-DE1-project/ProjectMorse/ProjectMorse.sim/sim_1/behav/xsim/xsim.dir/tb_bin_morse_behav/webtalk/
+webtalk_init -webtalk_dir V:/Windows User Profile.V6/PC-II-SummerSemester/BPC-DE1-project/ProjectMorse/ProjectMorse.sim/sim_1/behav/xsim/xsim.dir/tb_morse_bin_behav/webtalk/
 webtalk_register_client -client project
-webtalk_add_data -client project -key date_generated -value "Wed Apr 19 13:08:47 2023" -context "software_version_and_target_device"
+webtalk_add_data -client project -key date_generated -value "Wed Apr 19 14:51:47 2023" -context "software_version_and_target_device"
 webtalk_add_data -client project -key product_version -value "XSIM v2020.2 (64-bit)" -context "software_version_and_target_device"
 webtalk_add_data -client project -key build_version -value "3064766" -context "software_version_and_target_device"
 webtalk_add_data -client project -key os_platform -value "WIN64" -context "software_version_and_target_device"
@@ -14,7 +14,7 @@ webtalk_add_data -client project -key target_package -value "not_applicable" -co
 webtalk_add_data -client project -key target_speed -value "not_applicable" -context "software_version_and_target_device"
 webtalk_add_data -client project -key random_id -value "80d557a4-652b-4d77-93c4-02d371843db1" -context "software_version_and_target_device"
 webtalk_add_data -client project -key project_id -value "4e90e972b2734ef7838b83f1c153f186" -context "software_version_and_target_device"
-webtalk_add_data -client project -key project_iteration -value "174" -context "software_version_and_target_device"
+webtalk_add_data -client project -key project_iteration -value "16" -context "software_version_and_target_device"
 webtalk_add_data -client project -key os_name -value "Windows Server 2016 or Windows 10" -context "user_environment"
 webtalk_add_data -client project -key os_release -value "major release  (build 9200)" -context "user_environment"
 webtalk_add_data -client project -key cpu_name -value "Intel(R) Core(TM) i3-9100 CPU @ 3.60GHz" -context "user_environment"
@@ -24,9 +24,9 @@ webtalk_add_data -client project -key system_ram -value "8.000 GB" -context "use
 webtalk_register_client -client xsim
 webtalk_add_data -client xsim -key Command -value "xsim" -context "xsim\\command_line_options"
 webtalk_add_data -client xsim -key trace_waveform -value "true" -context "xsim\\usage"
-webtalk_add_data -client xsim -key runtime -value "1 us" -context "xsim\\usage"
-webtalk_add_data -client xsim -key iteration -value "2" -context "xsim\\usage"
-webtalk_add_data -client xsim -key Simulation_Time -value "0.08_sec" -context "xsim\\usage"
-webtalk_add_data -client xsim -key Simulation_Memory -value "6700_KB" -context "xsim\\usage"
-webtalk_transmit -clientid 4117115691 -regid "" -xml V:/Windows User Profile.V6/PC-II-SummerSemester/BPC-DE1-project/ProjectMorse/ProjectMorse.sim/sim_1/behav/xsim/xsim.dir/tb_bin_morse_behav/webtalk/usage_statistics_ext_xsim.xml -html V:/Windows User Profile.V6/PC-II-SummerSemester/BPC-DE1-project/ProjectMorse/ProjectMorse.sim/sim_1/behav/xsim/xsim.dir/tb_bin_morse_behav/webtalk/usage_statistics_ext_xsim.html -wdm V:/Windows User Profile.V6/PC-II-SummerSemester/BPC-DE1-project/ProjectMorse/ProjectMorse.sim/sim_1/behav/xsim/xsim.dir/tb_bin_morse_behav/webtalk/usage_statistics_ext_xsim.wdm -intro "<H3>XSIM Usage Report</H3><BR>"
+webtalk_add_data -client xsim -key runtime -value "2 us" -context "xsim\\usage"
+webtalk_add_data -client xsim -key iteration -value "1" -context "xsim\\usage"
+webtalk_add_data -client xsim -key Simulation_Time -value "0.01_sec" -context "xsim\\usage"
+webtalk_add_data -client xsim -key Simulation_Memory -value "6916_KB" -context "xsim\\usage"
+webtalk_transmit -clientid 3240310117 -regid "" -xml V:/Windows User Profile.V6/PC-II-SummerSemester/BPC-DE1-project/ProjectMorse/ProjectMorse.sim/sim_1/behav/xsim/xsim.dir/tb_morse_bin_behav/webtalk/usage_statistics_ext_xsim.xml -html V:/Windows User Profile.V6/PC-II-SummerSemester/BPC-DE1-project/ProjectMorse/ProjectMorse.sim/sim_1/behav/xsim/xsim.dir/tb_morse_bin_behav/webtalk/usage_statistics_ext_xsim.html -wdm V:/Windows User Profile.V6/PC-II-SummerSemester/BPC-DE1-project/ProjectMorse/ProjectMorse.sim/sim_1/behav/xsim/xsim.dir/tb_morse_bin_behav/webtalk/usage_statistics_ext_xsim.wdm -intro "<H3>XSIM Usage Report</H3><BR>"
 webtalk_terminate

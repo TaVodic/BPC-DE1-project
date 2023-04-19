@@ -2,32 +2,51 @@
 # Vivado v2020.2 (64-bit)
 # SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
 # IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
-# Start of session at: Tue Apr 18 22:13:51 2023
-# Process ID: 13772
-# Current directory: Z:/PC-II-SummerSemester/BPC-DE1-project/ProjectMorse
-# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent19504 Z:\PC-II-SummerSemester\BPC-DE1-project\ProjectMorse\ProjectMorse.xpr
-# Log file: Z:/PC-II-SummerSemester/BPC-DE1-project/ProjectMorse/vivado.log
-# Journal file: Z:/PC-II-SummerSemester/BPC-DE1-project/ProjectMorse\vivado.jou
+# Start of session at: Wed Apr 19 13:04:10 2023
+# Process ID: 972
+# Current directory: V:/Windows User Profile.V6/PC-II-SummerSemester/BPC-DE1-project/ProjectMorse
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent10156 V:\Windows User Profile.V6\PC-II-SummerSemester\BPC-DE1-project\ProjectMorse\ProjectMorse.xpr
+# Log file: V:/Windows User Profile.V6/PC-II-SummerSemester/BPC-DE1-project/ProjectMorse/vivado.log
+# Journal file: V:/Windows User Profile.V6/PC-II-SummerSemester/BPC-DE1-project/ProjectMorse\vivado.jou
 #-----------------------------------------------------------
 start_gui
-open_project Z:/PC-II-SummerSemester/BPC-DE1-project/ProjectMorse/ProjectMorse.xpr
-update_compile_order -fileset sources_1
-add_files -norecurse Z:/PC-II-SummerSemester/BPC-DE1-project/ProjectMorse/ProjectMorse.srcs/sources_1/new/buzzer.vhd
+open_project {V:/Windows User Profile.V6/PC-II-SummerSemester/BPC-DE1-project/ProjectMorse/ProjectMorse.xpr}
 update_compile_order -fileset sources_1
 launch_simulation
 source tb_bin_morse.tcl
 close_sim
+set_property SOURCE_SET sources_1 [get_filesets sim_1]
+close [ open {V:/Windows User Profile.V6/PC-II-SummerSemester/BPC-DE1-project/ProjectMorse/ProjectMorse.srcs/sim_1/new/tb_morse_bin.vhd} w ]
+add_files -fileset sim_1 {{V:/Windows User Profile.V6/PC-II-SummerSemester/BPC-DE1-project/ProjectMorse/ProjectMorse.srcs/sim_1/new/tb_morse_bin.vhd}}
+update_compile_order -fileset sim_1
+# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
+set_property source_mgmt_mode None [current_project]
+set_property top tb_morse_bin [get_filesets sim_1]
+set_property top_lib xil_defaultlib [get_filesets sim_1]
+# Re-enabling previously disabled source management mode.
+set_property source_mgmt_mode All [current_project]
+update_compile_order -fileset sim_1
 launch_simulation
-source tb_bin_morse.tcl
+launch_simulation
+launch_simulation
+launch_simulation
+launch_simulation
+source tb_morse_bin.tcl
 current_wave_config {Untitled 2}
-add_wave {{/tb_bin_morse/uut_tb_bin_morse/clk_en0/ce}} 
+add_wave {{/tb_morse_bin/uut_tb_morse_bin/pulse_cnt}} 
+current_wave_config {Untitled 2}
+add_wave {{/tb_morse_bin/uut_tb_morse_bin/sig_en}} 
+relaunch_sim
+relaunch_sim
+relaunch_sim
+relaunch_sim
+set_property -name {xsim.simulate.runtime} -value {2s} -objects [get_filesets sim_1]
+close_sim
+launch_simulation
+source tb_morse_bin.tcl
+set_property -name {xsim.simulate.runtime} -value {2000 ns} -objects [get_filesets sim_1]
+close_sim
+launch_simulation
+source tb_morse_bin.tcl
 relaunch_sim
 close_sim
-close [ open Z:/PC-II-SummerSemester/BPC-DE1-project/ProjectMorse/ProjectMorse.srcs/sources_1/new/morse_bin.vhd w ]
-add_files Z:/PC-II-SummerSemester/BPC-DE1-project/ProjectMorse/ProjectMorse.srcs/sources_1/new/morse_bin.vhd
-update_compile_order -fileset sources_1
-close [ open Z:/PC-II-SummerSemester/BPC-DE1-project/ProjectMorse/ProjectMorse.srcs/sources_1/new/top_receiver.vhd w ]
-add_files Z:/PC-II-SummerSemester/BPC-DE1-project/ProjectMorse/ProjectMorse.srcs/sources_1/new/top_receiver.vhd
-update_compile_order -fileset sources_1
-export_ip_user_files -of_objects  [get_files Z:/PC-II-SummerSemester/BPC-DE1-project/ProjectMorse/ProjectMorse.srcs/sources_1/new/top_receiver.vhd] -no_script -reset -force -quiet
-remove_files  Z:/PC-II-SummerSemester/BPC-DE1-project/ProjectMorse/ProjectMorse.srcs/sources_1/new/top_receiver.vhd

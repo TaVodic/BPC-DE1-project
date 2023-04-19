@@ -81,7 +81,7 @@ begin
       morse => LED,
       send => BTND,
       bin => SW,
-      clk => CLK100MHZ
+      clk => CLK100MHZ,
       buzzer => JA(1)
     );
       

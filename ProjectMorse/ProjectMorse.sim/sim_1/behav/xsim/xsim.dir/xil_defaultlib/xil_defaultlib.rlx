@@ -2,6 +2,8 @@
 2020.2
 Nov 18 2020
 09:47:47
-Z:/PC-II-SummerSemester/BPC-DE1-project/ProjectMorse/ProjectMorse.srcs/sim_1/new/tb_bin_morse.vhd,1681325136,vhdl,,,,tb_bin_morse,,,,,,,,
-Z:/PC-II-SummerSemester/BPC-DE1-project/ProjectMorse/ProjectMorse.srcs/sources_1/new/bin_morse.vhd,1681852308,vhdl,Z:/PC-II-SummerSemester/BPC-DE1-project/ProjectMorse/ProjectMorse.srcs/sim_1/new/tb_bin_morse.vhd,,,bin_morse,,,,,,,,
-Z:/PC-II-SummerSemester/BPC-DE1-project/ProjectMorse/ProjectMorse.srcs/sources_1/new/clock_enable.vhd,1681302019,vhdl,Z:/PC-II-SummerSemester/BPC-DE1-project/ProjectMorse/ProjectMorse.srcs/sources_1/new/bin_morse.vhd,,,clock_enable,,,,,,,,
+V:/Windows User Profile.V6/PC-II-SummerSemester/BPC-DE1-project/ProjectMorse/ProjectMorse.srcs/sim_1/new/tb_bin_morse.vhd,1681325136,vhdl,,,,tb_bin_morse,,,,,,,,
+V:/Windows User Profile.V6/PC-II-SummerSemester/BPC-DE1-project/ProjectMorse/ProjectMorse.srcs/sim_1/new/tb_morse_bin.vhd,1681908436,vhdl,,,,tb_morse_bin,,,,,,,,
+V:/Windows User Profile.V6/PC-II-SummerSemester/BPC-DE1-project/ProjectMorse/ProjectMorse.srcs/sources_1/new/bin_morse.vhd,1681857223,vhdl,V:/Windows User Profile.V6/PC-II-SummerSemester/BPC-DE1-project/ProjectMorse/ProjectMorse.srcs/sim_1/new/tb_bin_morse.vhd,,,bin_morse,,,,,,,,
+V:/Windows User Profile.V6/PC-II-SummerSemester/BPC-DE1-project/ProjectMorse/ProjectMorse.srcs/sources_1/new/clock_enable.vhd,1681302019,vhdl,V:/Windows User Profile.V6/PC-II-SummerSemester/BPC-DE1-project/ProjectMorse/ProjectMorse.srcs/sources_1/new/morse_bin.vhd,,,clock_enable,,,,,,,,
+V:/Windows User Profile.V6/PC-II-SummerSemester/BPC-DE1-project/ProjectMorse/ProjectMorse.srcs/sources_1/new/morse_bin.vhd,1681908384,vhdl,V:/Windows User Profile.V6/PC-II-SummerSemester/BPC-DE1-project/ProjectMorse/ProjectMorse.srcs/sim_1/new/tb_morse_bin.vhd,,,morse_bin,,,,,,,,

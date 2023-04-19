@@ -42,6 +42,12 @@ architecture Behavioral of morse_bin is
 
 -- signal from prescaler (clock_enable)
 signal sig_en : std_logic;
+signal buff : string(1 to 4);
+signal pulse_cnt : natural;
+
+constant c_dot : unsigned(18 downto 0) := b"001_1000_0110_1010_0000";
+constant c_dash : unsigned(18 downto 0) := b"001_1000_0110_1010_0000";
+constant c_pause : unsigned(18 downto 0) := b"001_1000_0110_1010_0000";
 
 begin
   clk_en0 : entity work.clock_enable
@@ -52,7 +58,9 @@ begin
       -- ??? @ 250 ms
       -- 10000000 -- 100ms
       -- 5 -- 50ns
-      g_MAX => 5
+      -- 100000 -- 1ms      
+      -- 500 -- 5us
+      g_MAX => 500
     )
     port map (
       clk => clk,
@@ -62,6 +70,22 @@ begin
     p_morse_bin_decoder : process (clk) is
     
     begin
+    
+        if (rising_edge(clk)) then
+            
+            if (sig_en = '1') then
+                if (morse = '1') then
+                    pulse_cnt <= pulse_cnt + 1;
+                end if;
+                
+                if (morse = '0' and pulse_cnt /= 0) then
+                    if ( pulse_cnt = c_dot) then
+                        -- buff <= buff & "0";
+                    end if;
+                    pulse_cnt <= 0;                   
+                end if;    
+            end if;
+        end if;
         
     end process p_morse_bin_decoder;
 
