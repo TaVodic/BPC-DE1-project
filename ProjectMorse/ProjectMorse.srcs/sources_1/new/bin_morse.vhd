@@ -26,6 +26,10 @@ architecture behavioral of bin_morse is
   signal sig_en : std_logic;
   -- hold siganl for sending 
   signal send_en : std_logic;
+  -- buffer for sending letter
+  signal bin_current : std_logic_vector(4 downto 0); 
+  -- sending latch
+  signal latch : std_logic;
   
   --Buzzer signal
 --  signal buzz : std_logic;
@@ -47,7 +51,7 @@ begin
       -- ??? @ 250 ms
       -- 10000000 -- 100ms
       -- 5 -- 50ns
-      g_MAX => 5
+      g_MAX => 10000000
     )
     port map (
       clk => clk,
@@ -67,8 +71,13 @@ begin
     if (rising_edge(clk)) then    
     
     -- set hold signal 
-    if (send = '1') then 
+    if (send = '1' and latch = '0') then 
         send_en <= '1';
+        bin_current <= bin;
+        latch <= '1';
+    end if;
+    if (send = '0') then
+        latch <= '0';
     end if;
 
   --  if (morse = '1') then
@@ -79,7 +88,7 @@ begin
     
       if (send_en = '1') then     
         if (sig_en = '1') then -- every g_MAX
-          case bin is        
+          case bin_current is        
             when "00001" =>     --A .-                if sig_cnt = 0 then                          
                 if (sig_cnt < 1) then  
                   morse <= '1';                     -- 100ms dot
@@ -93,7 +102,8 @@ begin
                 elsif (sig_cnt = 5) then                  
                   morse <= '0';
                   send_en <= '0';
-                  sig_cnt <= 0;                                    
+                  sig_cnt <= 0;
+                  bin_current <= "00000";                                    
                 end if;           
                       
           when "00010" =>     -- B -...
@@ -121,7 +131,8 @@ begin
                 elsif (sig_cnt = 9) then                  
                   morse <= '0';
                   send_en <= '0';
-                  sig_cnt <= 0;                                    
+                  sig_cnt <= 0;
+                  bin_current <= "00000";                                     
                 end if;           
                 
     
@@ -150,7 +161,8 @@ begin
                 elsif (sig_cnt = 11) then                  
                   morse <= '0';
                   send_en <= '0';
-                  sig_cnt <= 0;                                    
+                  sig_cnt <= 0;
+                  bin_current <= "00000";                                     
                 end if;         
               
               
@@ -173,7 +185,8 @@ begin
                 elsif (sig_cnt = 7) then                  
                   morse <= '0';
                   send_en <= '0';
-                  sig_cnt <= 0;                                    
+                  sig_cnt <= 0;
+                  bin_current <= "00000";                                     
                 end if;  
                
     
@@ -184,7 +197,8 @@ begin
                 elsif (sig_cnt = 1) then                  
                   morse <= '0';
                   send_en <= '0';
-                  sig_cnt <= 0;                                    
+                  sig_cnt <= 0;
+                  bin_current <= "00000";                                     
                 end if; 
               
               
@@ -213,7 +227,8 @@ begin
                 elsif (sig_cnt = 9) then                  
                   morse <= '0';
                   send_en <= '0';
-                  sig_cnt <= 0;                                    
+                  sig_cnt <= 0;
+                  bin_current <= "00000";                                     
                 end if; 
               
             
@@ -236,7 +251,8 @@ begin
                 elsif (sig_cnt = 9) then                  
                   morse <= '0';
                   send_en <= '0';
-                  sig_cnt <= 0;                                    
+                  sig_cnt <= 0;
+                  bin_current <= "00000";                                     
                 end if; 
               
             
@@ -265,7 +281,8 @@ begin
                 elsif (sig_cnt = 7) then                  
                   morse <= '0';
                   send_en <= '0';
-                  sig_cnt <= 0;                                    
+                  sig_cnt <= 0;
+                  bin_current <= "00000";                                     
                 end if;
               
             
@@ -282,7 +299,8 @@ begin
                 elsif (sig_cnt = 3) then                  
                   morse <= '0';
                   send_en <= '0';
-                  sig_cnt <= 0;                                    
+                  sig_cnt <= 0;
+                  bin_current <= "00000";                                     
                 end if;
               
             
@@ -311,7 +329,8 @@ begin
                 elsif (sig_cnt = 13) then                  
                   morse <= '0';
                   send_en <= '0';
-                  sig_cnt <= 0;                                    
+                  sig_cnt <= 0;
+                  bin_current <= "00000";                                     
                 end if;
               
             
@@ -334,7 +353,8 @@ begin
                 elsif (sig_cnt = 9) then                  
                   morse <= '0';
                   send_en <= '0';
-                  sig_cnt <= 0;                                    
+                  sig_cnt <= 0;
+                  bin_current <= "00000";                                     
                 end if; 
               
             
@@ -363,7 +383,8 @@ begin
                 elsif (sig_cnt = 9) then                  
                   morse <= '0';
                   send_en <= '0';
-                  sig_cnt <= 0;                                    
+                  sig_cnt <= 0;
+                  bin_current <= "00000";                                     
                 end if;
               
             
@@ -380,7 +401,8 @@ begin
                 elsif (sig_cnt = 7) then                  
                   morse <= '0';
                   send_en <= '0';
-                  sig_cnt <= 0;                                    
+                  sig_cnt <= 0;
+                  bin_current <= "00000";                                     
                 end if;
               
             
@@ -397,7 +419,8 @@ begin
                 elsif (sig_cnt = 5) then                  
                   morse <= '0';
                   send_en <= '0';
-                  sig_cnt <= 0;                                    
+                  sig_cnt <= 0;
+                  bin_current <= "00000";                                     
                 end if;
               
             
@@ -420,7 +443,8 @@ begin
                 elsif (sig_cnt = 11) then                  
                   morse <= '0';
                   send_en <= '0';
-                  sig_cnt <= 0;                                    
+                  sig_cnt <= 0;
+                  bin_current <= "00000";                                     
                 end if;
               
             
@@ -449,7 +473,8 @@ begin
                 elsif (sig_cnt = 11) then                  
                   morse <= '0';
                   send_en <= '0';
-                  sig_cnt <= 0;                                    
+                  sig_cnt <= 0;
+                  bin_current <= "00000";                                     
                 end if;
               
             
@@ -478,7 +503,8 @@ begin
                 elsif (sig_cnt = 13) then                  
                   morse <= '0';
                   send_en <= '0';
-                  sig_cnt <= 0;                                    
+                  sig_cnt <= 0;
+                  bin_current <= "00000";                                     
                 end if;
               
             
@@ -501,7 +527,8 @@ begin
                 elsif (sig_cnt = 7) then                  
                   morse <= '0';
                   send_en <= '0';
-                  sig_cnt <= 0;                                    
+                  sig_cnt <= 0;
+                  bin_current <= "00000";                                     
                 end if;
               
             
@@ -524,7 +551,8 @@ begin
                 elsif (sig_cnt = 5) then                  
                   morse <= '0';
                   send_en <= '0';
-                  sig_cnt <= 0;                                    
+                  sig_cnt <= 0;
+                  bin_current <= "00000";                                     
                 end if;
               
             
@@ -535,7 +563,8 @@ begin
                 elsif (sig_cnt = 3) then                  
                   morse <= '0';
                   send_en <= '0';
-                  sig_cnt <= 0;                                    
+                  sig_cnt <= 0;
+                  bin_current <= "00000";                                     
                 end if; 
               
             
@@ -558,7 +587,8 @@ begin
                 elsif (sig_cnt = 7) then                  
                   morse <= '0';
                   send_en <= '0';
-                  sig_cnt <= 0;                                    
+                  sig_cnt <= 0;
+                  bin_current <= "00000";                                     
                 end if;
               
             
@@ -587,7 +617,8 @@ begin
                 elsif (sig_cnt = 9) then                  
                   morse <= '0';
                   send_en <= '0';
-                  sig_cnt <= 0;                                    
+                  sig_cnt <= 0;
+                  bin_current <= "00000";                                     
                 end if;
               
             
@@ -610,7 +641,8 @@ begin
                 elsif (sig_cnt = 9) then                  
                   morse <= '0';
                   send_en <= '0';
-                  sig_cnt <= 0;                                    
+                  sig_cnt <= 0;
+                  bin_current <= "00000";                                     
                 end if;
               
             
@@ -639,7 +671,8 @@ begin
                 elsif (sig_cnt = 11) then                  
                   morse <= '0';
                   send_en <= '0';
-                  sig_cnt <= 0;                                    
+                  sig_cnt <= 0;
+                  bin_current <= "00000";                                     
                 end if;
               
             
@@ -668,7 +701,8 @@ begin
                 elsif (sig_cnt = 13) then                  
                   morse <= '0';
                   send_en <= '0';
-                  sig_cnt <= 0;                                    
+                  sig_cnt <= 0;
+                  bin_current <= "00000";                                     
                 end if;
               
             
@@ -697,7 +731,8 @@ begin
                 elsif (sig_cnt = 11) then                  
                   morse <= '0';
                   send_en <= '0';
-                  sig_cnt <= 0;                                    
+                  sig_cnt <= 0;
+                  bin_current <= "00000";                                     
                 end if;
               
 

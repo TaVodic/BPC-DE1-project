@@ -46,8 +46,7 @@ entity top is
            BTND : in STD_LOGIC;
            CLK100MHZ : in STD_LOGIC;
            LED : out STD_LOGIC;
-           IRLED : out STD_LOGIC;
-           JA  : out STD_LOGIC_VECTOR (10 downto 1)
+           IRLED : out STD_LOGIC
            );
 end top;
 
@@ -56,6 +55,8 @@ end top;
 ------------------------------------------------------------
 
 architecture behavioral of top is
+
+signal temp_irled : std_logic; 
 
 begin
 
@@ -79,15 +80,12 @@ begin
     
     bin2morse : entity work.bin_morse
     port map (
-      morse => LED,
       morse => IRLED,
       send => BTND,
       bin => SW,
       clk => CLK100MHZ
-      buzzer => JA(1)
     );
-      
+   
   -- Connect one common anode to 3.3V
   AN <= b"1111_1110";
-
 end architecture behavioral;
