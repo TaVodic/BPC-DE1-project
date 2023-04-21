@@ -83,12 +83,7 @@ begin
       morse => IRLED,
       send => BTND,
       bin => SW,
-<<<<<<< HEAD
-      clk => CLK100MHZ,
-      buzzer => JA(1)
-=======
       clk => CLK100MHZ
->>>>>>> d60bc9fe005b0f8e542e049352ce2525a5faeb35
     );
    
   -- Connect one common anode to 3.3V
