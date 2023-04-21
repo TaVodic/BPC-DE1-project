@@ -4,12 +4,13 @@ use IEEE.STD_LOGIC_1164.ALL;
 entity buzzer is
     Port ( buzz   : out STD_LOGIC;
            clk    : in STD_LOGIC);
-end buzzer;
+end entity buzzer;
 
-architecture Behavioral of buzzer is
+architecture behavioral of buzzer is
 
 signal sig_en : std_logic;
 signal sig_cnt : natural;
+signal latch : std_logic;
 
 begin
   clk_en0 : entity work.clock_enable
@@ -26,19 +27,21 @@ begin
       ce  => sig_en
     );
   
-  p_buzzer : procces(clk) is 
-    
-    if (sig_cnt  => 500) then
-      sig_cnt <= 0;
-    end if
+  p_buzzer : process (clk) is
+  begin 
 
     if (rising_edge(clock)) then
       if (sig_en = '1') then
+        latch <= '1';
+      end if;
+      if (sig_cnt < 500 and latch = '1')
         buzz <= '1';
         sig_cnt <= sig_cnt + 1;
-      else 
+      else
+        latch = '0'; 
         buzz <= '0';
+        sig_cnt <= '0';
       end if;
     end if;
-  end process p_buzzer
-end Behavioral;
+  end process p_buzzer;
+end architecture behavioral;
