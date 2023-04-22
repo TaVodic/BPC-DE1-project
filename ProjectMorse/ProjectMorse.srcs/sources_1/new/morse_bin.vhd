@@ -109,7 +109,7 @@ begin
                     -- buff variable represents received morse letter
                     -- dot is 0, dash is 1 (be carefull, bits of morse are reversed)
                     -- always use 5 bits of buff
-                    -- the length of incoming morse letter determine with index value
+                    -- the length of incoming morse letter is determine with index value
                     -- bin is output value to hex7seg module
                     
                     -- ._ A   => bin 00001
@@ -121,10 +121,127 @@ begin
                     if (buff = "00001" and index = 4) then 
                         bin <= "00010";
                     end if; 
+
+                    -- -.-. C => bin 00011
+                    if (buff = "00101" and index = 4) then 
+                        bin <= "00011";
+                    end if; 
+
+                    -- -.. D => bin 00100
+                    if (buff = "00001" and index = 3) then 
+                        bin <= "00100";
+                    end if; 
+
+                    -- . E => bin 00101
+                    if (buff = "00000" and index = 1) then 
+                        bin <= "00101";
+                    end if; 
+
+                    -- ..-. F => bin 00110
+                    if (buff = "00100" and index = 4) then 
+                        bin <= "00110";
+                    end if; 
+
+                    -- --. G => bin 00111
+                    if (buff = "00011" and index = 3) then 
+                        bin <= "00111";
+                    end if; 
+
+                    -- .... H => bin 01000
+                    if (buff = "00000" and index = 4) then 
+                        bin <= "01000";
+                    end if; 
                     
-                                   
-                    -- TODO: implement all letters
-                    
+                    -- .. I => bin 01001
+                    if (buff = "00000" and index = 2) then 
+                        bin <= "01001";
+                    end if; 
+
+                    -- .--- J => bin 01010
+                    if (buff = "01110" and index = 4) then 
+                        bin <= "01010";
+                    end if; 
+
+                    -- -.- K => bin 01011
+                    if (buff = "00101" and index = 3) then 
+                        bin <= "01011";
+                    end if; 
+
+                    -- .-.. L => bin 01100
+                    if (buff = "00010" and index = 4) then 
+                        bin <= "01100";
+                    end if; 
+
+                    -- -- M => bin 01101
+                    if (buff = "00011" and index = 2) then 
+                        bin <= "01101";
+                    end if; 
+
+                    -- -. N => bin 01110
+                    if (buff = "00001" and index = 2) then 
+                        bin <= "01110";
+                    end if; 
+
+                    -- --- O => bin 01111
+                    if (buff = "00111" and index = 3) then 
+                        bin <= "01111";
+                    end if; 
+
+                    -- .--. P => bin 10000
+                    if (buff = "00110" and index = 4) then 
+                        bin <= "10000";
+                    end if; 
+
+                    -- --.- Q => bin 10001
+                    if (buff = "01101" and index = 4) then 
+                        bin <= "10001";
+                    end if; 
+
+                    -- .-. R => bin 10010
+                    if (buff = "00010" and index = 3) then 
+                        bin <= "10010";
+                    end if; 
+
+                    -- ... S => bin 10011
+                    if (buff = "00000" and index = 3) then 
+                        bin <= "10011";
+                    end if; 
+
+                    -- - T => bin 10100
+                    if (buff = "00001" and index = 1) then 
+                        bin <= "10100";
+                    end if; 
+
+                    -- ..- U => bin 10101
+                    if (buff = "00100" and index = 3) then 
+                        bin <= "10101";
+                    end if; 
+
+                    -- ...- V => bin 10110
+                    if (buff = "01000" and index = 4) then 
+                        bin <= "10110";
+                    end if; 
+
+                    -- .-- W => bin 10111
+                    if (buff = "00110" and index = 3) then 
+                        bin <= "10111";
+                    end if; 
+
+                    -- -..- X => bin 11000
+                    if (buff = "01001" and index = 4) then 
+                        bin <= "11000";
+                    end if; 
+
+                    -- -.-- Y => bin 11001
+                    if (buff = "01101" and index = 4) then 
+                        bin <= "11001";
+                    end if; 
+
+                    -- --.. Z => bin 11010
+                    if (buff = "00011" and index = 4) then 
+                        bin <= "11010";
+                    end if; 
+
                     
                     index <= 0;
                     buff <= (others => '0');                   
