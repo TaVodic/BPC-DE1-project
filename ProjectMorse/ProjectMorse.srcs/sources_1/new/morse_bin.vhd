@@ -42,12 +42,18 @@ architecture Behavioral of morse_bin is
 
 -- signal from prescaler (clock_enable)
 signal sig_en : std_logic;
-signal buff : string(1 to 4);
+signal buff : std_logic_vector(4 downto 0);
 signal pulse_cnt : natural;
+signal pulse_cnt_pause : natural;
+signal index : natural;
 
-constant c_dot : unsigned(18 downto 0) := b"001_1000_0110_1010_0000";
-constant c_dash : unsigned(18 downto 0) := b"001_1000_0110_1010_0000";
-constant c_pause : unsigned(18 downto 0) := b"001_1000_0110_1010_0000";
+--constant c_dot : unsigned(18 downto 0) := b"001_1000_0110_1010_0000";
+--constant c_dash : unsigned(18 downto 0) := b"001_1000_0110_1010_0000";
+--constant c_pause : unsigned(18 downto 0) := b"001_1000_0110_1010_0000";
+
+constant c_dot : unsigned(4 downto 0) := b"0_0101";
+constant c_dash : unsigned(4 downto 0) := b"0_1111";
+constant c_pause : unsigned(4 downto 0) := b"0_1010";
 
 begin
   clk_en0 : entity work.clock_enable
@@ -60,7 +66,7 @@ begin
       -- 5 -- 50ns
       -- 100000 -- 1ms      
       -- 500 -- 5us
-      g_MAX => 500
+      g_MAX => 1
     )
     port map (
       clk => clk,
@@ -74,16 +80,36 @@ begin
         if (rising_edge(clk)) then
             
             if (sig_en = '1') then
-                if (morse = '1') then
+                if (morse = '1') then -- increment counter for high level
                     pulse_cnt <= pulse_cnt + 1;
+                    pulse_cnt_pause <= 0;
+                end if;
+                if (morse = '0') then -- increment counter for low level
+                    pulse_cnt_pause <= pulse_cnt_pause + 1;
                 end if;
                 
-                if (morse = '0' and pulse_cnt /= 0) then
-                    if ( pulse_cnt = c_dot) then
-                        -- buff <= buff & "0";
+                if (morse = '0' and pulse_cnt /= 0) then -- find falling edge of morse
+                    if ( pulse_cnt = c_dot) then -- save dot
+                        buff(index) <= '0';
+                        index <= index + 1; 
                     end if;
-                    pulse_cnt <= 0;                   
-                end if;    
+                    if ( pulse_cnt = c_dash) then -- save dash
+                        buff(index) <= '1';
+                        index <= index + 1; 
+                    end if;
+                    pulse_cnt <= 0;                  
+                end if;               
+                
+                if (pulse_cnt_pause = c_pause) then -- end of letter, set bin output
+                    index <= 0;
+                    
+                    --if (buff = "1000X") then -- -... B => bin 00010
+                        --bin <= "00010";
+                    --end if;
+                    
+                    
+                    buff <= (others => '0');
+                end if;        
             end if;
         end if;
         

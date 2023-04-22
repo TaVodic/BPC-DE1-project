@@ -41,7 +41,6 @@ architecture Behavioral of tb_morse_bin is
     signal s_clk_100MHz : std_logic;
     signal s_bin        : std_logic_vector(4 downto 0);
     signal s_morse      : std_logic;
-    signal s_buff       : string(1 to 4);
 begin
     uut_tb_morse_bin : entity work.morse_bin
     port map(
@@ -66,10 +65,28 @@ begin
         report "Stimulus process started";
         
         s_morse <= '0';
-        wait for 100 ns;
+        wait for 100 ns; -- start
+        s_morse <= '1'; 
+        wait for 150 ns; -- 1
+        s_morse <= '0';
+        wait for 50 ns;
         s_morse <= '1';
-        wait for 100 ns;
-        s_morse <= '0';     
+        wait for 50 ns;  -- 2
+        s_morse <= '0';
+        wait for 50 ns;
+        s_morse <= '1';    
+        wait for 50 ns;  -- 3
+        s_morse <= '0';
+        wait for 50 ns;
+        s_morse <= '1';    
+        wait for 50 ns;  -- 4
+        s_morse <= '0';
+        wait;
+        
+        wait for 50 ns;
+        s_morse <= '1';    
+        wait for 150 ns; -- 5
+        s_morse <= '0';
 
         report "Stimulus process finished";
         wait;
