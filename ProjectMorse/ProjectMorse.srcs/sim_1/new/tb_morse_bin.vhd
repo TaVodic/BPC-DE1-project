@@ -66,6 +66,8 @@ begin
         
         s_morse <= '0';
         wait for 100 ns; -- start
+        
+        -- letter B
         s_morse <= '1'; 
         wait for 150 ns; -- 1
         s_morse <= '0';
@@ -81,7 +83,19 @@ begin
         s_morse <= '1';    
         wait for 50 ns;  -- 4
         s_morse <= '0';
-        wait;
+        
+        wait for 100 ns; -- pause
+        
+        -- letter A
+        s_morse <= '1'; 
+        wait for 50 ns;  -- 1
+        s_morse <= '0';
+        wait for 50 ns;
+        s_morse <= '1';
+        wait for 150 ns;  -- 2
+        s_morse <= '0';
+        
+        wait; -- after this nothing happens
         
         wait for 50 ns;
         s_morse <= '1';    
