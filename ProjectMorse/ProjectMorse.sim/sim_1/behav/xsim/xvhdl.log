@@ -1,4 +1,2 @@
-INFO: [VRFC 10-163] Analyzing VHDL file "Z:/PC-II-SummerSemester/BPC-DE1-project/ProjectMorse/ProjectMorse.srcs/sources_1/new/morse_bin.vhd" into library xil_defaultlib
-INFO: [VRFC 10-3107] analyzing entity 'morse_bin'
-INFO: [VRFC 10-163] Analyzing VHDL file "Z:/PC-II-SummerSemester/BPC-DE1-project/ProjectMorse/ProjectMorse.srcs/sim_1/new/tb_morse_bin.vhd" into library xil_defaultlib
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/Gady-NTB/Documents/SynologyDrive/Gady_Soubory/Gadas_VUT_FEKT/4. Semestr/DE1/GIT/BPC-DE1-project/ProjectMorse/ProjectMorse.srcs/sim_1/new/tb_morse_bin.vhd" into library xil_defaultlib
 INFO: [VRFC 10-3107] analyzing entity 'tb_morse_bin'

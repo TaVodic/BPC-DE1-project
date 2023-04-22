@@ -95,6 +95,13 @@ begin
         wait for 150 ns;  -- 2
         s_morse <= '0';
         
+        wait for 100 ns; -- pause
+        
+        -- letter V
+        s_morse <= '1'; 
+        wait for 150 ns;  -- 1
+        s_morse <= '0';
+        
         wait; -- after this nothing happens
         
         wait for 50 ns;
