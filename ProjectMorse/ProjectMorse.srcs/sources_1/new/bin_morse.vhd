@@ -12,7 +12,7 @@ entity bin_morse is
     bin   : in    std_logic_vector(4 downto 0); --! Switches input 
     clk   : in    std_logic;                    --! Main clock
     morse : out   std_logic;                     --! Morse code
-    buz : out std_logic
+    buzz : out std_logic
   );
 end entity bin_morse;
 
@@ -34,7 +34,7 @@ architecture behavioral of bin_morse is
   signal morse_buff : std_logic;
   
   --Buzzer signal
-  signal buzz : std_logic;
+  signal sig_buzz : std_logic;
 
   -- Local delay counter
   signal sig_cnt : natural;
@@ -60,11 +60,11 @@ begin
       ce  => sig_en
     );
 
-  --buzzer : entity work.buzzer
-      --port map(
-        --clk => clk,
-        --buzz => buzz
-      --);
+  buzzer : entity work.buzzer
+      port map(
+        clk => clk,
+        buzz => sig_buzz
+      );
 
   p_bin_morse_decoder : process (clk) is
 
@@ -86,9 +86,9 @@ begin
     
     --detects and send a PWM signal for the buzzer
     --if (morse_buff = '1') then
-      --buz <= buzz;
+      buzz <= sig_buzz;
     --else
-      --buz <= '0';
+      --buzz <= '0';
     --end if;
     
       if (send_en = '1') then     

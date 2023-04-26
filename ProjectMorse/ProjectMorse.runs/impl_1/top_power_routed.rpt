@@ -1,7 +1,7 @@
 Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2020.2 (win64) Build 3064766 Wed Nov 18 09:12:45 MST 2020
-| Date             : Wed Apr 26 14:18:23 2023
+| Date             : Wed Apr 26 14:45:47 2023
 | Host             : PC-627 running 64-bit major release  (build 9200)
 | Command          : report_power -file top_power_routed.rpt -pb top_power_summary_routed.pb -rpx top_power_routed.rpx
 | Design           : top
@@ -30,14 +30,14 @@ Table of Contents
 ----------
 
 +--------------------------+--------------+
-| Total On-Chip Power (W)  | 9.796        |
+| Total On-Chip Power (W)  | 9.827        |
 | Design Power Budget (W)  | Unspecified* |
 | Power Budget Margin (W)  | NA           |
-| Dynamic (W)              | 9.696        |
+| Dynamic (W)              | 9.727        |
 | Device Static (W)        | 0.100        |
 | Effective TJA (C/W)      | 4.8          |
-| Max Ambient (C)          | 53.2         |
-| Junction Temperature (C) | 71.8         |
+| Max Ambient (C)          | 53.0         |
+| Junction Temperature (C) | 72.0         |
 | Confidence Level         | Low          |
 | Setting File             | ---          |
 | Simulation Activity File | ---          |
@@ -52,17 +52,17 @@ Table of Contents
 +----------------+-----------+----------+-----------+-----------------+
 | On-Chip        | Power (W) | Used     | Available | Utilization (%) |
 +----------------+-----------+----------+-----------+-----------------+
-| Slice Logic    |     1.632 |      896 |       --- |             --- |
-|   LUT as Logic |     1.591 |      684 |     32600 |            2.10 |
-|   CARRY4       |     0.033 |       16 |      8150 |            0.20 |
+| Slice Logic    |     1.676 |     1000 |       --- |             --- |
+|   LUT as Logic |     1.608 |      702 |     32600 |            2.15 |
+|   CARRY4       |     0.060 |       32 |      8150 |            0.39 |
 |   BUFG         |     0.005 |        1 |        32 |            3.13 |
-|   Register     |     0.003 |       75 |     65200 |            0.12 |
+|   Register     |     0.003 |      141 |     65200 |            0.22 |
 |   F7/F8 Muxes  |    <0.001 |        7 |     32600 |            0.02 |
-|   Others       |     0.000 |        6 |       --- |             --- |
-| Signals        |     1.482 |      873 |       --- |             --- |
-| I/O            |     6.583 |       25 |       210 |           11.90 |
+|   Others       |     0.000 |       10 |       --- |             --- |
+| Signals        |     1.468 |      969 |       --- |             --- |
+| I/O            |     6.583 |       26 |       210 |           12.38 |
 | Static Power   |     0.100 |          |           |                 |
-| Total          |     9.796 |          |           |                 |
+| Total          |     9.827 |          |           |                 |
 +----------------+-----------+----------+-----------+-----------------+
 
 
@@ -72,7 +72,7 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+-------------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) | Powerup (A) | Budget (A)  | Margin (A) |
 +-----------+-------------+-----------+-------------+------------+-------------+-------------+------------+
-| Vccint    |       0.950 |     3.345 |       3.309 |      0.036 |       NA    | Unspecified | NA         |
+| Vccint    |       0.950 |     3.378 |       3.342 |      0.036 |       NA    | Unspecified | NA         |
 | Vccaux    |       1.800 |     0.256 |       0.240 |      0.016 |       NA    | Unspecified | NA         |
 | Vcco33    |       3.300 |     1.856 |       1.855 |      0.001 |       NA    | Unspecified | NA         |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
@@ -136,13 +136,15 @@ Table of Contents
 3.1 By Hierarchy
 ----------------
 
-+-------------+-----------+
-| Name        | Power (W) |
-+-------------+-----------+
-| top         |     9.696 |
-|   bin2morse |     2.953 |
-|     clk_en0 |     0.107 |
-|   bin2seg   |     0.061 |
-+-------------+-----------+
++---------------+-----------+
+| Name          | Power (W) |
++---------------+-----------+
+| top           |     9.727 |
+|   bin2morse   |     2.988 |
+|     buzzer    |     0.027 |
+|       clk_en0 |     0.014 |
+|     clk_en0   |     0.111 |
+|   bin2seg     |     0.066 |
++---------------+-----------+
 
 

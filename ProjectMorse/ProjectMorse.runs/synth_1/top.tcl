@@ -89,6 +89,7 @@ OPTRACE "Adding files" START { }
 read_vhdl -library xil_defaultlib {
   C:/Users/240612/Documents/Gadas_Git/BPC-DE1-project/ProjectMorse/ProjectMorse.srcs/sources_1/new/bin_7seg.vhd
   C:/Users/240612/Documents/Gadas_Git/BPC-DE1-project/ProjectMorse/ProjectMorse.srcs/sources_1/new/clock_enable.vhd
+  C:/Users/240612/Documents/Gadas_Git/BPC-DE1-project/ProjectMorse/ProjectMorse.srcs/sources_1/new/buzzer.vhd
   C:/Users/240612/Documents/Gadas_Git/BPC-DE1-project/ProjectMorse/ProjectMorse.srcs/sources_1/new/bin_morse.vhd
   C:/Users/240612/Documents/Gadas_Git/BPC-DE1-project/ProjectMorse/ProjectMorse.srcs/sources_1/new/top.vhd
 }

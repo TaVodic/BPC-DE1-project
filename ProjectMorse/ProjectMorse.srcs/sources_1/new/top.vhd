@@ -45,7 +45,8 @@ entity top is
            BTNC : in STD_LOGIC;
            BTND : in STD_LOGIC;
            CLK100MHZ : in STD_LOGIC;
-           IRLED : out STD_LOGIC
+           IRLED : out STD_LOGIC;
+           BU : out STD_LOGIC
            );
 end top;
 
@@ -82,7 +83,8 @@ begin
       morse => IRLED,
       send => BTND,
       bin => SW,
-      clk => CLK100MHZ
+      clk => CLK100MHZ,
+      buzz => BU
     );
    
   -- Connect one common anode to 3.3V
