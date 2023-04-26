@@ -8,13 +8,17 @@
 
 ## Theoretical description and explanation
 
-Our project is focused on transmitting and receiving the MORSE code via IR signal between 2 FPGA borads. 
+Our project is focused on transmitting and receiving letters using MORSE code via IR signal between 2 FPGA borads. 
 
 ## Hardware description of demo application
 
-In our external receiver we used IR-phototransistor, but we needed to overcome problem with slew rate, so we come with solution with Sziklai pair, where we connected 2 of these pairs in series. So our slew rate is somwhere in range of 50ns. 
+### Transmitter
 
-In our external transmitter we used IR-led with LED diode and buzzer in paralel, for better visualision. We used npn transistor to sent signal via digital port.
+In our external transmitter we used IR-LED with LED diode and buzzer in paralel, for better visualision. We used npn transistor (BC337) to amplify signal from digital PMOD port.
+
+### Receiver
+
+In our external receiver we used IR-phototransistor, but we needed to overcome problem with slow slew rate, so we come with solution with Sziklai pair, where we connected 2 of these pairs in series. So our slew rate has improved a lot. For example ramp of rising edge lasts 50ns. 
 
 ## Software description
 
@@ -35,8 +39,12 @@ Write an instruction manual for your application, including photos or a link to 
 
 ## Transmitter Circuit
 
-![img](images/transmitter.png)
+![img1](images/Transmitter_block.png)
+![img2](images/Transmitter_schematic.png)
 
 ## Receiver Circuit
+
+![img1](images/Receiver_block.png)
+![img2](images/Receiver_schematic.png)
 
 
