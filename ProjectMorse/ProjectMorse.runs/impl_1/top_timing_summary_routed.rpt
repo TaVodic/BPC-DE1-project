@@ -1,8 +1,8 @@
 Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2020.2 (win64) Build 3064766 Wed Nov 18 09:12:45 MST 2020
-| Date         : Wed Apr 12 14:50:19 2023
-| Host         : PC-628 running 64-bit major release  (build 9200)
+| Date         : Wed Apr 26 14:18:23 2023
+| Host         : PC-627 running 64-bit major release  (build 9200)
 | Command      : report_timing_summary -max_paths 10 -file top_timing_summary_routed.rpt -pb top_timing_summary_routed.pb -rpx top_timing_summary_routed.rpx -warn_on_violation
 | Design       : top
 | Device       : 7a50ti-csg324
@@ -39,10 +39,10 @@ check_timing report
 
 Table of Contents
 -----------------
-1. checking no_clock (65)
+1. checking no_clock (75)
 2. checking constant_clock (0)
 3. checking pulse_width_clock (0)
-4. checking unconstrained_internal_endpoints (157)
+4. checking unconstrained_internal_endpoints (146)
 5. checking no_input_delay (6)
 6. checking no_output_delay (1)
 7. checking multiple_clock (0)
@@ -52,9 +52,9 @@ Table of Contents
 11. checking partial_output_delay (0)
 12. checking latch_loops (0)
 
-1. checking no_clock (65)
+1. checking no_clock (75)
 -------------------------
- There are 65 register/latch pins with no clock driven by root clock pin: CLK100MHZ (HIGH)
+ There are 75 register/latch pins with no clock driven by root clock pin: CLK100MHZ (HIGH)
 
 
 2. checking constant_clock (0)
@@ -67,9 +67,9 @@ Table of Contents
  There are 0 register/latch pins which need pulse_width check
 
 
-4. checking unconstrained_internal_endpoints (157)
+4. checking unconstrained_internal_endpoints (146)
 --------------------------------------------------
- There are 157 pins that are not constrained for maximum delay. (HIGH)
+ There are 146 pins that are not constrained for maximum delay. (HIGH)
 
  There are 0 pins that are not constrained for maximum delay due to constant clock.
 

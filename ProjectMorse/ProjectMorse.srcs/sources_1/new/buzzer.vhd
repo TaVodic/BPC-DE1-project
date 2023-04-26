@@ -31,17 +31,17 @@ begin
   p_buzzer : process (clk) is
   begin
 
-    if (rising_edge(clock)) then
+    if (rising_edge(clk)) then
       if (sig_en = '1') then
         latch <= '1';
       end if;
-      if (sig_cnt < 500 and latch = '1')
+      if (sig_cnt < 500 and latch = '1') then
         buzz <= '1';
         sig_cnt <= sig_cnt + 1;
       else
-        latch = '0';
+        latch <= '0';
         buzz <= '0';
-        sig_cnt <= '0';
+        sig_cnt <= 0;
       end if;
     end if;
   end process p_buzzer;

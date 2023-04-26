@@ -45,7 +45,6 @@ entity top is
            BTNC : in STD_LOGIC;
            BTND : in STD_LOGIC;
            CLK100MHZ : in STD_LOGIC;
-           LED : out STD_LOGIC;
            IRLED : out STD_LOGIC
            );
 end top;

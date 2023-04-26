@@ -24,7 +24,7 @@ else
 fi
 export LD_LIBRARY_PATH
 
-HD_PWD='C:/Users/240703/PC-II-SummerSemester/BPC-DE1-project/ProjectMorse/ProjectMorse.runs/impl_1'
+HD_PWD='C:/Users/240612/Documents/Gadas_Git/BPC-DE1-project/ProjectMorse/ProjectMorse.runs/impl_1'
 cd "$HD_PWD"
 
 HD_LOG=runme.log

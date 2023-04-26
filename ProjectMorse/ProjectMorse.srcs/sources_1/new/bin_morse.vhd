@@ -12,7 +12,7 @@ entity bin_morse is
     bin   : in    std_logic_vector(4 downto 0); --! Switches input 
     clk   : in    std_logic;                    --! Main clock
     morse : out   std_logic;                     --! Morse code
-    buzzer : out std_logic
+    buz : out std_logic
   );
 end entity bin_morse;
 
@@ -30,9 +30,11 @@ architecture behavioral of bin_morse is
   signal bin_current : std_logic_vector(4 downto 0); 
   -- sending latch
   signal latch : std_logic;
+  --morse buffer
+  signal morse_buff : std_logic;
   
   --Buzzer signal
---  signal buzz : std_logic;
+  signal buzz : std_logic;
 
   -- Local delay counter
   signal sig_cnt : natural;
@@ -59,16 +61,18 @@ begin
     );
 
   --buzzer : entity work.buzzer
-  --    port map(
-  --      clk => clk,
-  --      buzz => buzz
-  --    );
+      --port map(
+        --clk => clk,
+        --buzz => buzz
+      --);
 
   p_bin_morse_decoder : process (clk) is
 
   begin
       
     if (rising_edge(clk)) then    
+    --set morse output
+    morse <= morse_buff;
     
     -- set hold signal 
     if (send = '1' and latch = '0') then 
@@ -79,28 +83,29 @@ begin
     if (send = '0') then
         latch <= '0';
     end if;
-
-  --  if (morse = '1') then
-  --    buzzer <= buzz;
-  --  else
-  --    buzzer <= '0';
-  --  end if;
+    
+    --detects and send a PWM signal for the buzzer
+    --if (morse_buff = '1') then
+      --buz <= buzz;
+    --else
+      --buz <= '0';
+    --end if;
     
       if (send_en = '1') then     
         if (sig_en = '1') then -- every g_MAX
           case bin_current is        
             when "00001" =>     --A .-                if sig_cnt = 0 then                          
                 if (sig_cnt < 1) then  
-                  morse <= '1';                     -- 100ms dot
+                  morse_buff <= '1';                     -- 100ms dot
                   sig_cnt <= sig_cnt + 1;
                 elsif (sig_cnt < 2) then                  
-                  morse <= '0';                     -- 100ms pause
+                  morse_buff <= '0';                     -- 100ms pause
                   sig_cnt <= sig_cnt + 1;
                 elsif (sig_cnt < 5) then                  
-                  morse <= '1';                     -- 300ms dash
+                  morse_buff <= '1';                     -- 300ms dash
                   sig_cnt <= sig_cnt + 1;
                 elsif (sig_cnt = 5) then                  
-                  morse <= '0';
+                  morse_buff <= '0';
                   send_en <= '0';
                   sig_cnt <= 0;
                   bin_current <= "00000";                                    
@@ -108,28 +113,28 @@ begin
                       
           when "00010" =>     -- B -...
                 if (sig_cnt < 3) then  
-                  morse <= '1';                     -- 300ms dash
+                  morse_buff <= '1';                     -- 300ms dash
                   sig_cnt <= sig_cnt + 1;
                 elsif (sig_cnt < 4) then                  
-                  morse <= '0';                     -- 100ms pause
+                  morse_buff <= '0';                     -- 100ms pause
                   sig_cnt <= sig_cnt + 1;
                 elsif (sig_cnt < 5) then                  
-                  morse <= '1';                     -- 100ms dot
+                  morse_buff <= '1';                     -- 100ms dot
                   sig_cnt <= sig_cnt + 1;
                 elsif (sig_cnt < 6) then                  
-                  morse <= '0';                     -- 100ms pause
+                  morse_buff <= '0';                     -- 100ms pause
                   sig_cnt <= sig_cnt + 1;
                 elsif (sig_cnt < 7) then                  
-                  morse <= '1';                     -- 100ms dot
+                  morse_buff <= '1';                     -- 100ms dot
                   sig_cnt <= sig_cnt + 1;
                 elsif (sig_cnt < 8) then                  
-                  morse <= '0';                     -- 100ms pause
+                  morse_buff <= '0';                     -- 100ms pause
                   sig_cnt <= sig_cnt + 1;    
                 elsif (sig_cnt < 9) then                  
-                  morse <= '1';                     -- 100ms dot
+                  morse_buff <= '1';                     -- 100ms dot
                   sig_cnt <= sig_cnt + 1;
                 elsif (sig_cnt = 9) then                  
-                  morse <= '0';
+                  morse_buff <= '0';
                   send_en <= '0';
                   sig_cnt <= 0;
                   bin_current <= "00000";                                     
@@ -138,28 +143,28 @@ begin
     
           when "00011" =>     -- C -.-.
                 if (sig_cnt < 3) then  
-                  morse <= '1';                     -- 300ms dash
+                  morse_buff <= '1';                     -- 300ms dash
                   sig_cnt <= sig_cnt + 1;
                 elsif (sig_cnt < 4) then                  
-                  morse <= '0';                     -- 100ms pause
+                  morse_buff <= '0';                     -- 100ms pause
                   sig_cnt <= sig_cnt + 1;
                 elsif (sig_cnt < 5) then                  
-                  morse <= '1';                     -- 100ms dot
+                  morse_buff <= '1';                     -- 100ms dot
                   sig_cnt <= sig_cnt + 1;
                 elsif (sig_cnt < 6) then                  
-                  morse <= '0';                     -- 100ms pause
+                  morse_buff <= '0';                     -- 100ms pause
                   sig_cnt <= sig_cnt + 1;
                 elsif (sig_cnt < 9) then                  
-                  morse <= '1';                     -- 300ms dash
+                  morse_buff <= '1';                     -- 300ms dash
                   sig_cnt <= sig_cnt + 1;
                 elsif (sig_cnt < 10) then                  
-                  morse <= '0';                     -- 100ms pause
+                  morse_buff <= '0';                     -- 100ms pause
                   sig_cnt <= sig_cnt + 1;    
                 elsif (sig_cnt < 11) then                  
-                  morse <= '1';                     -- 100ms dot
+                  morse_buff <= '1';                     -- 100ms dot
                   sig_cnt <= sig_cnt + 1;
                 elsif (sig_cnt = 11) then                  
-                  morse <= '0';
+                  morse_buff <= '0';
                   send_en <= '0';
                   sig_cnt <= 0;
                   bin_current <= "00000";                                     
@@ -168,22 +173,22 @@ begin
               
           when "00100" =>     -- D -..
                 if (sig_cnt < 3) then  
-                  morse <= '1';                     -- 300ms dash
+                  morse_buff <= '1';                     -- 300ms dash
                   sig_cnt <= sig_cnt + 1;
                 elsif (sig_cnt < 4) then                  
-                  morse <= '0';                     -- 100ms pause
+                  morse_buff <= '0';                     -- 100ms pause
                   sig_cnt <= sig_cnt + 1;
                 elsif (sig_cnt < 5) then                  
-                  morse <= '1';                     -- 100ms dot
+                  morse_buff <= '1';                     -- 100ms dot
                   sig_cnt <= sig_cnt + 1;
                 elsif (sig_cnt < 6) then                  
-                  morse <= '0';                     -- 100ms pause
+                  morse_buff <= '0';                     -- 100ms pause
                   sig_cnt <= sig_cnt + 1;
                 elsif (sig_cnt < 7) then                  
-                  morse <= '1';                     -- 100ms dot
+                  morse_buff <= '1';                     -- 100ms dot
                   sig_cnt <= sig_cnt + 1;
                 elsif (sig_cnt = 7) then                  
-                  morse <= '0';
+                  morse_buff <= '0';
                   send_en <= '0';
                   sig_cnt <= 0;
                   bin_current <= "00000";                                     
@@ -192,10 +197,10 @@ begin
     
           when "00101" =>     -- E .
                 if (sig_cnt < 1) then                  
-                  morse <= '1';                     -- 100ms dot
+                  morse_buff <= '1';                     -- 100ms dot
                   sig_cnt <= sig_cnt + 1;
                 elsif (sig_cnt = 1) then                  
-                  morse <= '0';
+                  morse_buff <= '0';
                   send_en <= '0';
                   sig_cnt <= 0;
                   bin_current <= "00000";                                     
@@ -204,28 +209,28 @@ begin
               
           when "00110" =>     -- F ..-.
                 if (sig_cnt < 1) then  
-                  morse <= '1';                     -- 100ms dot
+                  morse_buff <= '1';                     -- 100ms dot
                   sig_cnt <= sig_cnt + 1;
                 elsif (sig_cnt < 2) then                  
-                  morse <= '0';                     -- 100ms pause
+                  morse_buff <= '0';                     -- 100ms pause
                   sig_cnt <= sig_cnt + 1;
                 elsif (sig_cnt < 3) then                  
-                  morse <= '1';                     -- 100ms dot
+                  morse_buff <= '1';                     -- 100ms dot
                   sig_cnt <= sig_cnt + 1;
                 elsif (sig_cnt < 4) then                  
-                  morse <= '0';                     -- 100ms pause
+                  morse_buff <= '0';                     -- 100ms pause
                   sig_cnt <= sig_cnt + 1;
                 elsif (sig_cnt < 7) then                  
-                  morse <= '1';                     -- 300ms dash
+                  morse_buff <= '1';                     -- 300ms dash
                   sig_cnt <= sig_cnt + 1;
                 elsif (sig_cnt < 8) then                  
-                  morse <= '0';                     -- 100ms pause
+                  morse_buff <= '0';                     -- 100ms pause
                   sig_cnt <= sig_cnt + 1;    
                 elsif (sig_cnt < 9) then                  
-                  morse <= '1';                     -- 100ms dot
+                  morse_buff <= '1';                     -- 100ms dot
                   sig_cnt <= sig_cnt + 1;
                 elsif (sig_cnt = 9) then                  
-                  morse <= '0';
+                  morse_buff <= '0';
                   send_en <= '0';
                   sig_cnt <= 0;
                   bin_current <= "00000";                                     
@@ -234,22 +239,22 @@ begin
             
           when "00111" =>     -- G --.
                 if (sig_cnt < 3) then  
-                  morse <= '1';                     -- 300ms dash
+                  morse_buff <= '1';                     -- 300ms dash
                   sig_cnt <= sig_cnt + 1;
                 elsif (sig_cnt < 4) then                  
-                  morse <= '0';                     -- 100ms pause
+                  morse_buff <= '0';                     -- 100ms pause
                   sig_cnt <= sig_cnt + 1;
                 elsif (sig_cnt < 7) then                  
-                  morse <= '1';                     -- 300ms dash
+                  morse_buff <= '1';                     -- 300ms dash
                   sig_cnt <= sig_cnt + 1;
                 elsif (sig_cnt < 8) then                  
-                  morse <= '0';                     -- 100ms pause
+                  morse_buff <= '0';                     -- 100ms pause
                   sig_cnt <= sig_cnt + 1;
                 elsif (sig_cnt < 9) then                  
-                  morse <= '1';                     -- 100ms dot
+                  morse_buff <= '1';                     -- 100ms dot
                   sig_cnt <= sig_cnt + 1;
                 elsif (sig_cnt = 9) then                  
-                  morse <= '0';
+                  morse_buff <= '0';
                   send_en <= '0';
                   sig_cnt <= 0;
                   bin_current <= "00000";                                     
@@ -258,28 +263,28 @@ begin
             
           when "01000" =>     -- H ....
                 if (sig_cnt < 1) then  
-                  morse <= '1';                     -- 100ms dot
+                  morse_buff <= '1';                     -- 100ms dot
                   sig_cnt <= sig_cnt + 1;
                 elsif (sig_cnt < 2) then                  
-                  morse <= '0';                     -- 100ms pause
+                  morse_buff <= '0';                     -- 100ms pause
                   sig_cnt <= sig_cnt + 1;
                 elsif (sig_cnt < 3) then                  
-                  morse <= '1';                     -- 100ms dot
+                  morse_buff <= '1';                     -- 100ms dot
                   sig_cnt <= sig_cnt + 1;
                 elsif (sig_cnt < 4) then                  
-                  morse <= '0';                     -- 100ms pause
+                  morse_buff <= '0';                     -- 100ms pause
                   sig_cnt <= sig_cnt + 1;
                 elsif (sig_cnt < 5) then                  
-                  morse <= '1';                     -- 100ms dot
+                  morse_buff <= '1';                     -- 100ms dot
                   sig_cnt <= sig_cnt + 1;
                 elsif (sig_cnt < 6) then                  
-                  morse <= '0';                     -- 100ms pause
+                  morse_buff <= '0';                     -- 100ms pause
                   sig_cnt <= sig_cnt + 1;    
                 elsif (sig_cnt < 7) then                  
-                  morse <= '1';                     -- 100ms dot
+                  morse_buff <= '1';                     -- 100ms dot
                   sig_cnt <= sig_cnt + 1;
                 elsif (sig_cnt = 7) then                  
-                  morse <= '0';
+                  morse_buff <= '0';
                   send_en <= '0';
                   sig_cnt <= 0;
                   bin_current <= "00000";                                     
@@ -288,16 +293,16 @@ begin
             
           when "01001" =>     -- I ..
                 if (sig_cnt < 1) then  
-                  morse <= '1';                     -- 100ms dot
+                  morse_buff <= '1';                     -- 100ms dot
                   sig_cnt <= sig_cnt + 1;
                 elsif (sig_cnt < 2) then                  
-                  morse <= '0';                     -- 100ms pause
+                  morse_buff <= '0';                     -- 100ms pause
                   sig_cnt <= sig_cnt + 1;
                 elsif (sig_cnt < 3) then                  
-                  morse <= '1';                     -- 100ms dot
+                  morse_buff <= '1';                     -- 100ms dot
                   sig_cnt <= sig_cnt + 1;
                 elsif (sig_cnt = 3) then                  
-                  morse <= '0';
+                  morse_buff <= '0';
                   send_en <= '0';
                   sig_cnt <= 0;
                   bin_current <= "00000";                                     
@@ -306,28 +311,28 @@ begin
             
           when "01010" =>     -- J .---
                 if (sig_cnt < 1) then  
-                  morse <= '1';                     -- 100ms dot
+                  morse_buff <= '1';                     -- 100ms dot
                   sig_cnt <= sig_cnt + 1;
                 elsif (sig_cnt < 2) then                  
-                  morse <= '0';                     -- 100ms pause
+                  morse_buff <= '0';                     -- 100ms pause
                   sig_cnt <= sig_cnt + 1;
                 elsif (sig_cnt < 5) then                  
-                  morse <= '1';                     -- 300ms dash
+                  morse_buff <= '1';                     -- 300ms dash
                   sig_cnt <= sig_cnt + 1;
                 elsif (sig_cnt < 6) then                  
-                  morse <= '0';                     -- 100ms pause
+                  morse_buff <= '0';                     -- 100ms pause
                   sig_cnt <= sig_cnt + 1;
                 elsif (sig_cnt < 9) then                  
-                  morse <= '1';                     -- 300ms dash
+                  morse_buff <= '1';                     -- 300ms dash
                   sig_cnt <= sig_cnt + 1;
                 elsif (sig_cnt < 10) then                  
-                  morse <= '0';                     -- 100ms pause
+                  morse_buff <= '0';                     -- 100ms pause
                   sig_cnt <= sig_cnt + 1;    
                 elsif (sig_cnt < 13) then                  
-                  morse <= '1';                     -- 300ms dash
+                  morse_buff <= '1';                     -- 300ms dash
                   sig_cnt <= sig_cnt + 1;
                 elsif (sig_cnt = 13) then                  
-                  morse <= '0';
+                  morse_buff <= '0';
                   send_en <= '0';
                   sig_cnt <= 0;
                   bin_current <= "00000";                                     
@@ -336,22 +341,22 @@ begin
             
           when "01011" =>     -- K -.-
                 if (sig_cnt < 3) then  
-                  morse <= '1';                     -- 300ms dash
+                  morse_buff <= '1';                     -- 300ms dash
                   sig_cnt <= sig_cnt + 1;
                 elsif (sig_cnt < 4) then                  
-                  morse <= '0';                     -- 100ms pause
+                  morse_buff <= '0';                     -- 100ms pause
                   sig_cnt <= sig_cnt + 1;
                 elsif (sig_cnt < 5) then                  
-                  morse <= '1';                     -- 100ms dot
+                  morse_buff <= '1';                     -- 100ms dot
                   sig_cnt <= sig_cnt + 1;
                 elsif (sig_cnt < 6) then                  
-                  morse <= '0';                     -- 100ms pause
+                  morse_buff <= '0';                     -- 100ms pause
                   sig_cnt <= sig_cnt + 1;
                 elsif (sig_cnt < 9) then                  
-                  morse <= '1';                     -- 300ms dash
+                  morse_buff <= '1';                     -- 300ms dash
                   sig_cnt <= sig_cnt + 1;
                 elsif (sig_cnt = 9) then                  
-                  morse <= '0';
+                  morse_buff <= '0';
                   send_en <= '0';
                   sig_cnt <= 0;
                   bin_current <= "00000";                                     
@@ -360,28 +365,28 @@ begin
             
           when "01100" =>     -- L .-..
                 if (sig_cnt < 1) then  
-                  morse <= '1';                     -- 100ms dot
+                  morse_buff <= '1';                     -- 100ms dot
                   sig_cnt <= sig_cnt + 1;
                 elsif (sig_cnt < 2) then                  
-                  morse <= '0';                     -- 100ms pause
+                  morse_buff <= '0';                     -- 100ms pause
                   sig_cnt <= sig_cnt + 1;
                 elsif (sig_cnt < 5) then                  
-                  morse <= '1';                     -- 300ms dash
+                  morse_buff <= '1';                     -- 300ms dash
                   sig_cnt <= sig_cnt + 1;
                 elsif (sig_cnt < 6) then                  
-                  morse <= '0';                     -- 100ms pause
+                  morse_buff <= '0';                     -- 100ms pause
                   sig_cnt <= sig_cnt + 1;
                 elsif (sig_cnt < 7) then                  
-                  morse <= '1';                     -- 100ms dot
+                  morse_buff <= '1';                     -- 100ms dot
                   sig_cnt <= sig_cnt + 1;
                 elsif (sig_cnt < 8) then                  
-                  morse <= '0';                     -- 100ms pause
+                  morse_buff <= '0';                     -- 100ms pause
                   sig_cnt <= sig_cnt + 1;    
                 elsif (sig_cnt < 9) then                  
-                  morse <= '1';                     -- 100ms dot
+                  morse_buff <= '1';                     -- 100ms dot
                   sig_cnt <= sig_cnt + 1;
                 elsif (sig_cnt = 9) then                  
-                  morse <= '0';
+                  morse_buff <= '0';
                   send_en <= '0';
                   sig_cnt <= 0;
                   bin_current <= "00000";                                     
@@ -390,16 +395,16 @@ begin
             
           when "01101" =>     -- M --
                 if (sig_cnt < 3) then  
-                  morse <= '1';                     -- 300ms dash
+                  morse_buff <= '1';                     -- 300ms dash
                   sig_cnt <= sig_cnt + 1;
                 elsif (sig_cnt < 4) then                  
-                  morse <= '0';                     -- 100ms pause
+                  morse_buff <= '0';                     -- 100ms pause
                   sig_cnt <= sig_cnt + 1;
                 elsif (sig_cnt < 7) then                  
-                  morse <= '1';                     -- 300ms dash
+                  morse_buff <= '1';                     -- 300ms dash
                   sig_cnt <= sig_cnt + 1;
                 elsif (sig_cnt = 7) then                  
-                  morse <= '0';
+                  morse_buff <= '0';
                   send_en <= '0';
                   sig_cnt <= 0;
                   bin_current <= "00000";                                     
@@ -408,16 +413,16 @@ begin
             
           when "01110" =>     -- N -.
                 if (sig_cnt < 3) then  
-                  morse <= '1';                     -- 300ms dash
+                  morse_buff <= '1';                     -- 300ms dash
                   sig_cnt <= sig_cnt + 1;
                 elsif (sig_cnt < 4) then                  
-                  morse <= '0';                     -- 100ms pause
+                  morse_buff <= '0';                     -- 100ms pause
                   sig_cnt <= sig_cnt + 1;
                 elsif (sig_cnt < 5) then                  
-                  morse <= '1';                     -- 100ms dot
+                  morse_buff <= '1';                     -- 100ms dot
                   sig_cnt <= sig_cnt + 1;
                 elsif (sig_cnt = 5) then                  
-                  morse <= '0';
+                  morse_buff <= '0';
                   send_en <= '0';
                   sig_cnt <= 0;
                   bin_current <= "00000";                                     
@@ -426,22 +431,22 @@ begin
             
           when "01111" =>     -- O ---
                 if (sig_cnt < 3) then  
-                  morse <= '1';                     -- 300ms dash
+                  morse_buff <= '1';                     -- 300ms dash
                   sig_cnt <= sig_cnt + 1;
                 elsif (sig_cnt < 4) then                  
-                  morse <= '0';                     -- 100ms pause
+                  morse_buff <= '0';                     -- 100ms pause
                   sig_cnt <= sig_cnt + 1;
                 elsif (sig_cnt < 7) then                  
-                  morse <= '1';                     -- 300ms dash
+                  morse_buff <= '1';                     -- 300ms dash
                   sig_cnt <= sig_cnt + 1;
                 elsif (sig_cnt < 8) then                  
-                  morse <= '0';                     -- 100ms pause
+                  morse_buff <= '0';                     -- 100ms pause
                   sig_cnt <= sig_cnt + 1;
                 elsif (sig_cnt < 11) then                  
-                  morse <= '1';                     -- 300ms dash
+                  morse_buff <= '1';                     -- 300ms dash
                   sig_cnt <= sig_cnt + 1;
                 elsif (sig_cnt = 11) then                  
-                  morse <= '0';
+                  morse_buff <= '0';
                   send_en <= '0';
                   sig_cnt <= 0;
                   bin_current <= "00000";                                     
@@ -450,28 +455,28 @@ begin
             
           when "10000" =>     -- P .--.
                 if (sig_cnt < 1) then  
-                  morse <= '1';                     -- 100ms dot
+                  morse_buff <= '1';                     -- 100ms dot
                   sig_cnt <= sig_cnt + 1;
                 elsif (sig_cnt < 2) then                  
-                  morse <= '0';                     -- 100ms pause
+                  morse_buff <= '0';                     -- 100ms pause
                   sig_cnt <= sig_cnt + 1;
                 elsif (sig_cnt < 5) then                  
-                  morse <= '1';                     -- 300ms dash
+                  morse_buff <= '1';                     -- 300ms dash
                   sig_cnt <= sig_cnt + 1;
                 elsif (sig_cnt < 6) then                  
-                  morse <= '0';                     -- 100ms pause
+                  morse_buff <= '0';                     -- 100ms pause
                   sig_cnt <= sig_cnt + 1;
                 elsif (sig_cnt < 9) then                  
-                  morse <= '1';                     -- 300ms dash
+                  morse_buff <= '1';                     -- 300ms dash
                   sig_cnt <= sig_cnt + 1;
                 elsif (sig_cnt < 10) then                  
-                  morse <= '0';                     -- 100ms pause
+                  morse_buff <= '0';                     -- 100ms pause
                   sig_cnt <= sig_cnt + 1;    
                 elsif (sig_cnt < 11) then                  
-                  morse <= '1';                     -- 100ms dot
+                  morse_buff <= '1';                     -- 100ms dot
                   sig_cnt <= sig_cnt + 1;
                 elsif (sig_cnt = 11) then                  
-                  morse <= '0';
+                  morse_buff <= '0';
                   send_en <= '0';
                   sig_cnt <= 0;
                   bin_current <= "00000";                                     
@@ -480,28 +485,28 @@ begin
             
           when "10001" =>     -- Q --.-
                 if (sig_cnt < 3) then  
-                  morse <= '1';                     -- 300ms dash
+                  morse_buff <= '1';                     -- 300ms dash
                   sig_cnt <= sig_cnt + 1;
                 elsif (sig_cnt < 4) then                  
-                  morse <= '0';                     -- 100ms pause
+                  morse_buff <= '0';                     -- 100ms pause
                   sig_cnt <= sig_cnt + 1;
                 elsif (sig_cnt < 7) then                  
-                  morse <= '1';                     -- 300ms dash
+                  morse_buff <= '1';                     -- 300ms dash
                   sig_cnt <= sig_cnt + 1;
                 elsif (sig_cnt < 8) then                  
-                  morse <= '0';                     -- 100ms pause
+                  morse_buff <= '0';                     -- 100ms pause
                   sig_cnt <= sig_cnt + 1;
                 elsif (sig_cnt < 9) then                  
-                  morse <= '1';                     -- 100ms dot
+                  morse_buff <= '1';                     -- 100ms dot
                   sig_cnt <= sig_cnt + 1;
                 elsif (sig_cnt < 10) then                  
-                  morse <= '0';                     -- 100ms pause
+                  morse_buff <= '0';                     -- 100ms pause
                   sig_cnt <= sig_cnt + 1;    
                 elsif (sig_cnt < 13) then                  
-                  morse <= '1';                     -- 300ms dash
+                  morse_buff <= '1';                     -- 300ms dash
                   sig_cnt <= sig_cnt + 1;
                 elsif (sig_cnt = 13) then                  
-                  morse <= '0';
+                  morse_buff <= '0';
                   send_en <= '0';
                   sig_cnt <= 0;
                   bin_current <= "00000";                                     
@@ -510,22 +515,22 @@ begin
             
           when "10010" =>     -- R .-.
                 if (sig_cnt < 1) then  
-                  morse <= '1';                     -- 100ms dot
+                  morse_buff <= '1';                     -- 100ms dot
                   sig_cnt <= sig_cnt + 1;
                 elsif (sig_cnt < 2) then                  
-                  morse <= '0';                     -- 100ms pause
+                  morse_buff <= '0';                     -- 100ms pause
                   sig_cnt <= sig_cnt + 1;
                 elsif (sig_cnt < 5) then                  
-                  morse <= '1';                     -- 300ms dash
+                  morse_buff <= '1';                     -- 300ms dash
                   sig_cnt <= sig_cnt + 1;
                 elsif (sig_cnt < 6) then                  
-                  morse <= '0';                     -- 100ms pause
+                  morse_buff <= '0';                     -- 100ms pause
                   sig_cnt <= sig_cnt + 1;
                 elsif (sig_cnt < 7) then                  
-                  morse <= '1';                     -- 100ms dot
+                  morse_buff <= '1';                     -- 100ms dot
                   sig_cnt <= sig_cnt + 1;
                 elsif (sig_cnt = 7) then                  
-                  morse <= '0';
+                  morse_buff <= '0';
                   send_en <= '0';
                   sig_cnt <= 0;
                   bin_current <= "00000";                                     
@@ -534,22 +539,22 @@ begin
             
           when "10011" =>     -- S ...
                 if (sig_cnt < 1) then  
-                  morse <= '1';                     -- 100ms dot
+                  morse_buff <= '1';                     -- 100ms dot
                   sig_cnt <= sig_cnt + 1;
                 elsif (sig_cnt < 2) then                  
-                  morse <= '0';                     -- 100ms pause
+                  morse_buff <= '0';                     -- 100ms pause
                   sig_cnt <= sig_cnt + 1;
                 elsif (sig_cnt < 3) then                  
-                  morse <= '1';                     -- 100ms dot
+                  morse_buff <= '1';                     -- 100ms dot
                   sig_cnt <= sig_cnt + 1;
                 elsif (sig_cnt < 4) then                  
-                  morse <= '0';                     -- 100ms pause
+                  morse_buff <= '0';                     -- 100ms pause
                   sig_cnt <= sig_cnt + 1;
                 elsif (sig_cnt < 5) then                  
-                  morse <= '1';                     -- 100ms dot
+                  morse_buff <= '1';                     -- 100ms dot
                   sig_cnt <= sig_cnt + 1;
                 elsif (sig_cnt = 5) then                  
-                  morse <= '0';
+                  morse_buff <= '0';
                   send_en <= '0';
                   sig_cnt <= 0;
                   bin_current <= "00000";                                     
@@ -558,10 +563,10 @@ begin
             
           when "10100" =>     -- T -
                 if (sig_cnt < 3) then                  
-                  morse <= '1';                     -- 300ms dash
+                  morse_buff <= '1';                     -- 300ms dash
                   sig_cnt <= sig_cnt + 1;
                 elsif (sig_cnt = 3) then                  
-                  morse <= '0';
+                  morse_buff <= '0';
                   send_en <= '0';
                   sig_cnt <= 0;
                   bin_current <= "00000";                                     
@@ -570,22 +575,22 @@ begin
             
           when "10101" =>     -- U ..-
                 if (sig_cnt < 1) then  
-                  morse <= '1';                     -- 100ms dot
+                  morse_buff <= '1';                     -- 100ms dot
                   sig_cnt <= sig_cnt + 1;
                 elsif (sig_cnt < 2) then                  
-                  morse <= '0';                     -- 100ms pause
+                  morse_buff <= '0';                     -- 100ms pause
                   sig_cnt <= sig_cnt + 1;
                 elsif (sig_cnt < 3) then                  
-                  morse <= '1';                     -- 100ms dot
+                  morse_buff <= '1';                     -- 100ms dot
                   sig_cnt <= sig_cnt + 1;
                 elsif (sig_cnt < 4) then                  
-                  morse <= '0';                     -- 100ms pause
+                  morse_buff <= '0';                     -- 100ms pause
                   sig_cnt <= sig_cnt + 1;
                 elsif (sig_cnt < 7) then                  
-                  morse <= '1';                     -- 300ms dash
+                  morse_buff <= '1';                     -- 300ms dash
                   sig_cnt <= sig_cnt + 1;
                 elsif (sig_cnt = 7) then                  
-                  morse <= '0';
+                  morse_buff <= '0';
                   send_en <= '0';
                   sig_cnt <= 0;
                   bin_current <= "00000";                                     
@@ -594,28 +599,28 @@ begin
             
           when "10110" =>     -- V ...-
                 if (sig_cnt < 1) then  
-                  morse <= '1';                     -- 100ms dot
+                  morse_buff <= '1';                     -- 100ms dot
                   sig_cnt <= sig_cnt + 1;
                 elsif (sig_cnt < 2) then                  
-                  morse <= '0';                     -- 100ms pause
+                  morse_buff <= '0';                     -- 100ms pause
                   sig_cnt <= sig_cnt + 1;
                 elsif (sig_cnt < 3) then                  
-                  morse <= '1';                     -- 100ms dot
+                  morse_buff <= '1';                     -- 100ms dot
                   sig_cnt <= sig_cnt + 1;
                 elsif (sig_cnt < 4) then                  
-                  morse <= '0';                     -- 100ms pause
+                  morse_buff <= '0';                     -- 100ms pause
                   sig_cnt <= sig_cnt + 1;
                 elsif (sig_cnt < 5) then                  
-                  morse <= '1';                     -- 100ms dot
+                  morse_buff <= '1';                     -- 100ms dot
                   sig_cnt <= sig_cnt + 1;
                 elsif (sig_cnt < 6) then                  
-                  morse <= '0';                     -- 100ms pause
+                  morse_buff <= '0';                     -- 100ms pause
                   sig_cnt <= sig_cnt + 1;    
                 elsif (sig_cnt < 9) then                  
-                  morse <= '1';                     -- 300ms dash
+                  morse_buff <= '1';                     -- 300ms dash
                   sig_cnt <= sig_cnt + 1;
                 elsif (sig_cnt = 9) then                  
-                  morse <= '0';
+                  morse_buff <= '0';
                   send_en <= '0';
                   sig_cnt <= 0;
                   bin_current <= "00000";                                     
@@ -624,22 +629,22 @@ begin
             
           when "10111" =>     -- W .--
                 if (sig_cnt < 1) then  
-                  morse <= '1';                     -- 100ms dot
+                  morse_buff <= '1';                     -- 100ms dot
                   sig_cnt <= sig_cnt + 1;
                 elsif (sig_cnt < 2) then                  
-                  morse <= '0';                     -- 100ms pause
+                  morse_buff <= '0';                     -- 100ms pause
                   sig_cnt <= sig_cnt + 1;
                 elsif (sig_cnt < 5) then                  
-                  morse <= '1';                     -- 300ms dash
+                  morse_buff <= '1';                     -- 300ms dash
                   sig_cnt <= sig_cnt + 1;
                 elsif (sig_cnt < 6) then                  
-                  morse <= '0';                     -- 100ms pause
+                  morse_buff <= '0';                     -- 100ms pause
                   sig_cnt <= sig_cnt + 1;
                 elsif (sig_cnt < 9) then                  
-                  morse <= '1';                     -- 300ms dash
+                  morse_buff <= '1';                     -- 300ms dash
                   sig_cnt <= sig_cnt + 1;
                 elsif (sig_cnt = 9) then                  
-                  morse <= '0';
+                  morse_buff <= '0';
                   send_en <= '0';
                   sig_cnt <= 0;
                   bin_current <= "00000";                                     
@@ -648,28 +653,28 @@ begin
             
           when "11000" =>     -- X -..-
                 if (sig_cnt < 3) then  
-                  morse <= '1';                     -- 300ms dash
+                  morse_buff <= '1';                     -- 300ms dash
                   sig_cnt <= sig_cnt + 1;
                 elsif (sig_cnt < 4) then                  
-                  morse <= '0';                     -- 100ms pause
+                  morse_buff <= '0';                     -- 100ms pause
                   sig_cnt <= sig_cnt + 1;
                 elsif (sig_cnt < 5) then                  
-                  morse <= '1';                     -- 100ms dot
+                  morse_buff <= '1';                     -- 100ms dot
                   sig_cnt <= sig_cnt + 1;
                 elsif (sig_cnt < 6) then                  
-                  morse <= '0';                     -- 100ms pause
+                  morse_buff <= '0';                     -- 100ms pause
                   sig_cnt <= sig_cnt + 1;
                 elsif (sig_cnt < 7) then                  
-                  morse <= '1';                     -- 100ms dot
+                  morse_buff <= '1';                     -- 100ms dot
                   sig_cnt <= sig_cnt + 1;
                 elsif (sig_cnt < 8) then                  
-                  morse <= '0';                     -- 100ms pause
+                  morse_buff <= '0';                     -- 100ms pause
                   sig_cnt <= sig_cnt + 1;    
                 elsif (sig_cnt < 11) then                  
-                  morse <= '1';                     -- 300ms dash
+                  morse_buff <= '1';                     -- 300ms dash
                   sig_cnt <= sig_cnt + 1;
                 elsif (sig_cnt = 11) then                  
-                  morse <= '0';
+                  morse_buff <= '0';
                   send_en <= '0';
                   sig_cnt <= 0;
                   bin_current <= "00000";                                     
@@ -678,28 +683,28 @@ begin
             
           when "11001" =>     -- Y -.--
                 if (sig_cnt < 3) then  
-                  morse <= '1';                     -- 300ms dash
+                  morse_buff <= '1';                     -- 300ms dash
                   sig_cnt <= sig_cnt + 1;
                 elsif (sig_cnt < 4) then                  
-                  morse <= '0';                     -- 100ms pause
+                  morse_buff <= '0';                     -- 100ms pause
                   sig_cnt <= sig_cnt + 1;
                 elsif (sig_cnt < 5) then                  
-                  morse <= '1';                     -- 100ms dot
+                  morse_buff <= '1';                     -- 100ms dot
                   sig_cnt <= sig_cnt + 1;
                 elsif (sig_cnt < 6) then                  
-                  morse <= '0';                     -- 100ms pause
+                  morse_buff <= '0';                     -- 100ms pause
                   sig_cnt <= sig_cnt + 1;
                 elsif (sig_cnt < 9) then                  
-                  morse <= '1';                     -- 300ms dash
+                  morse_buff <= '1';                     -- 300ms dash
                   sig_cnt <= sig_cnt + 1;
                 elsif (sig_cnt < 10) then                  
-                  morse <= '0';                     -- 100ms pause
+                  morse_buff <= '0';                     -- 100ms pause
                   sig_cnt <= sig_cnt + 1;    
                 elsif (sig_cnt < 13) then                  
-                  morse <= '1';                     -- 300ms dash
+                  morse_buff <= '1';                     -- 300ms dash
                   sig_cnt <= sig_cnt + 1;
                 elsif (sig_cnt = 13) then                  
-                  morse <= '0';
+                  morse_buff <= '0';
                   send_en <= '0';
                   sig_cnt <= 0;
                   bin_current <= "00000";                                     
@@ -708,28 +713,28 @@ begin
             
           when "11010" =>     -- Z --..
                 if (sig_cnt < 3) then  
-                  morse <= '1';                     -- 300ms dash
+                  morse_buff <= '1';                     -- 300ms dash
                   sig_cnt <= sig_cnt + 1;
                 elsif (sig_cnt < 4) then                  
-                  morse <= '0';                     -- 100ms pause
+                  morse_buff <= '0';                     -- 100ms pause
                   sig_cnt <= sig_cnt + 1;
                 elsif (sig_cnt < 7) then                  
-                  morse <= '1';                     -- 300ms dash
+                  morse_buff <= '1';                     -- 300ms dash
                   sig_cnt <= sig_cnt + 1;
                 elsif (sig_cnt < 8) then                  
-                  morse <= '0';                     -- 100ms pause
+                  morse_buff <= '0';                     -- 100ms pause
                   sig_cnt <= sig_cnt + 1;
                 elsif (sig_cnt < 9) then                  
-                  morse <= '1';                     -- 100ms dot
+                  morse_buff <= '1';                     -- 100ms dot
                   sig_cnt <= sig_cnt + 1;
                 elsif (sig_cnt < 10) then                  
-                  morse <= '0';                     -- 100ms pause
+                  morse_buff <= '0';                     -- 100ms pause
                   sig_cnt <= sig_cnt + 1;    
                 elsif (sig_cnt < 11) then                  
-                  morse <= '1';                     -- 100ms dot
+                  morse_buff <= '1';                     -- 100ms dot
                   sig_cnt <= sig_cnt + 1;
                 elsif (sig_cnt = 11) then                  
-                  morse <= '0';
+                  morse_buff <= '0';
                   send_en <= '0';
                   sig_cnt <= 0;
                   bin_current <= "00000";                                     
