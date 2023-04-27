@@ -29,8 +29,8 @@ Put flowchats/state diagrams of your algorithm(s) and direct links to source/tes
 Write descriptive text and simulation screenshots of your components.
 
 ## Instructions
+Write an instruction manual for your application.
 
-Write an instruction manual for your application, including photos or a link to a video.
 [Working demonstration video](https://youtu.be/yEXXWRQE4EQ)
 
 ## References
