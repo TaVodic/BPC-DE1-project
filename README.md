@@ -31,6 +31,7 @@ Write descriptive text and simulation screenshots of your components.
 ## Instructions
 
 Write an instruction manual for your application, including photos or a link to a video.
+[Working demonstration video](https://youtu.be/yEXXWRQE4EQ)
 
 ## References
 
