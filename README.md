@@ -30,9 +30,9 @@ Write descriptive text and simulation screenshots of your components.
 
 ## Instructions
 Usage of the transmitter is as follows:
-1. By using the integrated two position switches on the Nexys 4 Artix 7 FPGA developement board, the user selects the desired letter to be sent.
-2. The BTND button serves as a send button. By pressing it the transmitter sends the morse code to the receiver by an IR LED.
-   The progress can me observed on an LED connected parallel to the sending output.
+1. By using two position switches on the Nexys 4 Artix 7 FPGA developement board, user can select a desired letter to be sent.
+2. BTND button serves as a send button. By pressing it, the transmitter sends the morse code to the receiver by an IR LED.
+   The progress can be observed on an LED connected parallel to the sending output.
    
 Receiver doesn't require any intervention by the user. It's always waiting for an incoming transmittion and displays it on a 7 segment display.
 
