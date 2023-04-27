@@ -4,7 +4,7 @@
 * Martin Ťavoda
 * Vojtěch Drtina
 * Jan Gadas
-* Slávek Kužela
+* Miloslav Kužela
 
 ## Theoretical description and explanation
 
