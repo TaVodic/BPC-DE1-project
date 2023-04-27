@@ -21,7 +21,7 @@ begin
       -- 1   @ 10 ns
       -- ??? @ 250 ms
       -- 10000000 -- 100ms
-      g_MAX => 10
+      g_MAX => 10000
     )
     port map(
       clk => clk,
