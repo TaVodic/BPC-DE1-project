@@ -2,6 +2,8 @@
 2020.2
 Nov 18 2020
 09:47:47
-C:/Users/Gady-NTB/Documents/SynologyDrive/Gady_Soubory/Gadas_VUT_FEKT/4. Semestr/DE1/GIT/BPC-DE1-project/ProjectMorse/ProjectMorse.srcs/sim_1/new/tb_morse_bin.vhd,1682195081,vhdl,,,,tb_morse_bin,,,,,,,,
-C:/Users/Gady-NTB/Documents/SynologyDrive/Gady_Soubory/Gadas_VUT_FEKT/4. Semestr/DE1/GIT/BPC-DE1-project/ProjectMorse/ProjectMorse.srcs/sources_1/new/clock_enable.vhd,1680721442,vhdl,C:/Users/Gady-NTB/Documents/SynologyDrive/Gady_Soubory/Gadas_VUT_FEKT/4. Semestr/DE1/GIT/BPC-DE1-project/ProjectMorse/ProjectMorse.srcs/sources_1/new/morse_bin.vhd,,,clock_enable,,,,,,,,
-C:/Users/Gady-NTB/Documents/SynologyDrive/Gady_Soubory/Gadas_VUT_FEKT/4. Semestr/DE1/GIT/BPC-DE1-project/ProjectMorse/ProjectMorse.srcs/sources_1/new/morse_bin.vhd,1682194283,vhdl,C:/Users/Gady-NTB/Documents/SynologyDrive/Gady_Soubory/Gadas_VUT_FEKT/4. Semestr/DE1/GIT/BPC-DE1-project/ProjectMorse/ProjectMorse.srcs/sim_1/new/tb_morse_bin.vhd,,,morse_bin,,,,,,,,
+Z:/PC-II-SummerSemester/BPC-DE1-project/ProjectMorse/ProjectMorse.srcs/sim_1/new/tb_bin_morse.vhd,1682177756,vhdl,,,,tb_bin_morse,,,,,,,,
+Z:/PC-II-SummerSemester/BPC-DE1-project/ProjectMorse/ProjectMorse.srcs/sim_1/new/tb_morse_bin.vhd,1682506974,vhdl,,,,tb_morse_bin,,,,,,,,
+Z:/PC-II-SummerSemester/BPC-DE1-project/ProjectMorse/ProjectMorse.srcs/sources_1/new/bin_morse.vhd,1682799054,vhdl,Z:/PC-II-SummerSemester/BPC-DE1-project/ProjectMorse/ProjectMorse.srcs/sim_1/new/tb_bin_morse.vhd,,,bin_morse,,,,,,,,
+Z:/PC-II-SummerSemester/BPC-DE1-project/ProjectMorse/ProjectMorse.srcs/sources_1/new/buzzer.vhd,1682799054,vhdl,Z:/PC-II-SummerSemester/BPC-DE1-project/ProjectMorse/ProjectMorse.srcs/sources_1/new/bin_morse.vhd,,,buzzer,,,,,,,,
+Z:/PC-II-SummerSemester/BPC-DE1-project/ProjectMorse/ProjectMorse.srcs/sources_1/new/clock_enable.vhd,1681302019,vhdl,Z:/PC-II-SummerSemester/BPC-DE1-project/ProjectMorse/ProjectMorse.srcs/sources_1/new/bin_morse.vhd;Z:/PC-II-SummerSemester/BPC-DE1-project/ProjectMorse/ProjectMorse.srcs/sources_1/new/buzzer.vhd,,,clock_enable,,,,,,,,

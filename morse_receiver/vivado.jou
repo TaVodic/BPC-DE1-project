@@ -1,0 +1,14 @@
+#-----------------------------------------------------------
+# Vivado v2020.2 (64-bit)
+# SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
+# IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+# Start of session at: Sat Apr 29 23:39:14 2023
+# Process ID: 5884
+# Current directory: Z:/PC-II-SummerSemester/BPC-DE1-project/morse_receiver
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent16324 Z:\PC-II-SummerSemester\BPC-DE1-project\morse_receiver\morse_receiver.xpr
+# Log file: Z:/PC-II-SummerSemester/BPC-DE1-project/morse_receiver/vivado.log
+# Journal file: Z:/PC-II-SummerSemester/BPC-DE1-project/morse_receiver\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project Z:/PC-II-SummerSemester/BPC-DE1-project/morse_receiver/morse_receiver.xpr
+update_compile_order -fileset sources_1

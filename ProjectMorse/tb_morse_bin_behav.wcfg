@@ -11,34 +11,33 @@
    </db_ref_list>
    <zoom_setting>
       <ZoomStartTime time="0fs"></ZoomStartTime>
-      <ZoomEndTime time="1590001fs"></ZoomEndTime>
-      <Cursor1Time time="0fs"></Cursor1Time>
+      <ZoomEndTime time="970249fs"></ZoomEndTime>
+      <Cursor1Time time="655000fs"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
       <NameColumnWidth column_width="145"></NameColumnWidth>
-      <ValueColumnWidth column_width="88"></ValueColumnWidth>
+      <ValueColumnWidth column_width="84"></ValueColumnWidth>
    </column_width_setting>
    <WVObjectSize size="8" />
    <wvobject fp_name="/tb_morse_bin/s_clk_100MHz" type="logic">
       <obj_property name="ElementShortName">s_clk_100MHz</obj_property>
       <obj_property name="ObjectShortName">s_clk_100MHz</obj_property>
    </wvobject>
-   <wvobject fp_name="/tb_morse_bin/s_bin" type="array">
-      <obj_property name="ElementShortName">s_bin[4:0]</obj_property>
-      <obj_property name="ObjectShortName">s_bin[4:0]</obj_property>
-      <obj_property name="isExpanded"></obj_property>
+   <wvobject fp_name="/tb_morse_bin/c_CLK_100MHZ_PERIOD" type="other">
+      <obj_property name="ElementShortName">c_CLK_100MHZ_PERIOD</obj_property>
+      <obj_property name="ObjectShortName">c_CLK_100MHZ_PERIOD</obj_property>
    </wvobject>
    <wvobject fp_name="/tb_morse_bin/s_morse" type="logic">
       <obj_property name="ElementShortName">s_morse</obj_property>
       <obj_property name="ObjectShortName">s_morse</obj_property>
    </wvobject>
-   <wvobject fp_name="/tb_morse_bin/c_CLK_100MHZ_PERIOD" type="other">
-      <obj_property name="ElementShortName">c_CLK_100MHZ_PERIOD</obj_property>
-      <obj_property name="ObjectShortName">c_CLK_100MHZ_PERIOD</obj_property>
-   </wvobject>
    <wvobject fp_name="/tb_morse_bin/uut_tb_morse_bin/pulse_cnt" type="other">
       <obj_property name="ElementShortName">pulse_cnt</obj_property>
       <obj_property name="ObjectShortName">pulse_cnt</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_morse_bin/uut_tb_morse_bin/pulse_cnt_pause" type="other">
+      <obj_property name="ElementShortName">pulse_cnt_pause</obj_property>
+      <obj_property name="ObjectShortName">pulse_cnt_pause</obj_property>
    </wvobject>
    <wvobject fp_name="/tb_morse_bin/uut_tb_morse_bin/index" type="other">
       <obj_property name="ElementShortName">index</obj_property>
@@ -47,9 +46,11 @@
    <wvobject fp_name="/tb_morse_bin/uut_tb_morse_bin/buff" type="array">
       <obj_property name="ElementShortName">buff[4:0]</obj_property>
       <obj_property name="ObjectShortName">buff[4:0]</obj_property>
+      <obj_property name="isExpanded"></obj_property>
    </wvobject>
-   <wvobject fp_name="/tb_morse_bin/uut_tb_morse_bin/pulse_cnt_pause" type="other">
-      <obj_property name="ElementShortName">pulse_cnt_pause</obj_property>
-      <obj_property name="ObjectShortName">pulse_cnt_pause</obj_property>
+   <wvobject fp_name="/tb_morse_bin/s_bin" type="array">
+      <obj_property name="ElementShortName">s_bin[4:0]</obj_property>
+      <obj_property name="ObjectShortName">s_bin[4:0]</obj_property>
+      <obj_property name="isExpanded"></obj_property>
    </wvobject>
 </wave_config>

@@ -1,0 +1,30 @@
+#-----------------------------------------------------------
+# Vivado v2020.2 (64-bit)
+# SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
+# IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+# Start of session at: Sat Apr 29 23:31:01 2023
+# Process ID: 17116
+# Current directory: Z:/PC-II-SummerSemester/BPC-DE1-project/ProjectMorse
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent5112 Z:\PC-II-SummerSemester\BPC-DE1-project\ProjectMorse\ProjectMorse.xpr
+# Log file: Z:/PC-II-SummerSemester/BPC-DE1-project/ProjectMorse/vivado.log
+# Journal file: Z:/PC-II-SummerSemester/BPC-DE1-project/ProjectMorse\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project Z:/PC-II-SummerSemester/BPC-DE1-project/ProjectMorse/ProjectMorse.xpr
+update_compile_order -fileset sources_1
+launch_simulation
+open_wave_config Z:/PC-II-SummerSemester/BPC-DE1-project/ProjectMorse/tb_morse_bin_behav.wcfg
+source tb_morse_bin.tcl
+save_wave_config {Z:/PC-II-SummerSemester/BPC-DE1-project/ProjectMorse/tb_morse_bin_behav.wcfg}
+close_sim
+# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
+set_property source_mgmt_mode None [current_project]
+set_property top tb_bin_morse [get_filesets sim_1]
+set_property top_lib xil_defaultlib [get_filesets sim_1]
+# Re-enabling previously disabled source management mode.
+set_property source_mgmt_mode All [current_project]
+update_compile_order -fileset sim_1
+launch_simulation
+open_wave_config Z:/PC-II-SummerSemester/BPC-DE1-project/ProjectMorse/tb_morse_bin_behav.wcfg
+source tb_bin_morse.tcl
+close_sim

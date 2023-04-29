@@ -1,0 +1,1 @@
+-wto "a722129e1b3a4944b4ea02eaf1931ba2" --incr --debug "typical" --relax --mt "2" -L "xil_defaultlib" -L "secureip" --snapshot "tb_bin_morse_behav" "xil_defaultlib.tb_bin_morse" -log "elaborate.log" 
