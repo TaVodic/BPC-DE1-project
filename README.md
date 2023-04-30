@@ -19,9 +19,13 @@ On the receiving FPGA board, the incoming letter is instantly displayed on 7-seg
 
 We transmit the output signal form FPGA board via IR LED, which we feed with NPN transistor, because the FPGA PMOD port cannot supply enough current. We also used an external white LED and buzzer to demonstrate the outgoing morse signal.
 
+![img](images/NEXYS_A7_50T_Transmitter.png)
+
 ### Receiver
 
 As external receiver we used IR-phototransistor. Since we needed to overcome the problem with low slew rate, we come with solution with Sziklai pair. We connected two of these pairs in cascade, which improved our slew rate significantly. Therefore, the ramp of rising edge lasts only 50 ns.
+
+![img](images/NEXYS_A7_50T_Receiver.png)
 
 ## Software description
 
