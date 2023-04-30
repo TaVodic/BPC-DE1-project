@@ -17,7 +17,7 @@ On the receiving FPGA board, the incoming letter is instantly displayed on 7-seg
 
 ### Transmitter
 
-We transmit the output signal form FPGA board via IR LED, which we feed with NPN transistor, because the FPGA port cannot supply enough current. We also used an external LED and buzzer to demonstrate the outgoing morse signal.
+We transmit the output signal form FPGA board via IR LED, which we feed with NPN transistor, because the FPGA PMOD port cannot supply enough current. We also used an external white LED and buzzer to demonstrate the outgoing morse signal.
 
 ### Receiver
 
