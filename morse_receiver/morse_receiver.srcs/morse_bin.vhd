@@ -62,13 +62,8 @@ begin
     generic map (
       -- FOR SIMULATION, KEEP THIS VALUE TO 1
       -- FOR IMPLEMENTATION, CALCULATE VALUE: 250 ms / (1/100 MHz) aka 250ms*100MHz
-      -- 1   @ 10 ns
-      -- ??? @ 250 ms
-      -- 10000000 -- 100ms
-      -- 5 -- 50ns
-      -- 100000 -- 1ms      
-      -- 500 -- 5us
-      -- 1 - is only for simulaton -> no prescaler
+      -- 2   @ 20 ns  @  Testbench
+      -- 2000000  @  200 ms  @   Reality
       g_MAX => 2000000
     )
     port map (

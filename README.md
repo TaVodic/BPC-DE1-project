@@ -40,9 +40,11 @@ Dva obrázky diagramov.
 ### Waveforms from simulation
 
 #### Transmitter
-![img](images/Transmitter_testbench.png)
+![img](images/Transmitter_testbench_2.png)
 #### Receiver
-*Sem by bolo dobré vložiť popis toho čo na tomto obrázku je vidieť. (prijímanie troch písmen, countre, buffer...)* <p>
+![img](images/Receiver_testbench_2.png)
+
+<p>
 
 ## Instructions
 Usage of the transmitter is as follows:
