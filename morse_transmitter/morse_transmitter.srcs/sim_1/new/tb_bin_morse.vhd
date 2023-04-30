@@ -66,23 +66,38 @@ begin
     p_reset_gen : process
     begin
     
+        s_send <= '0';
+        wait for 100 ns;
         s_send <= '1';
         wait for 100 ns;
         s_send <= '0';
-        wait for 400 ns;
+        wait for 100 ns;
+        s_send <= '1';
+        wait for 100 ns;
+        s_send <= '0';
+        wait for 100 ns;
+        s_send <= '1';
+        wait for 100 ns;
+        s_send <= '0';
+        wait for 100 ns;
         s_send <= '1';
         wait for 100 ns;
         s_send <= '0';
         
-
         wait;
     end process p_reset_gen;
 
     p_stimulus : process
     begin
         report "Stimulus process started";
-        s_bin <= "11010";
-      
+        
+        s_bin <= "11010";   -- Z
+        wait for 250 ns;
+        s_bin <= "00001";   -- A
+        wait for 200 ns;
+        s_bin <= "00010";   -- B
+        wait for 200 ns;
+        s_bin <= "01000";   -- H
 
         report "Stimulus process finished";
         wait;
