@@ -17,11 +17,15 @@ On the receiving FPGA board, the incoming letter is instantly displayed on 7-seg
 
 ### Transmitter
 
-We transmit the output signal form FPGA board via IR LED, which we feed with NPN transistor, because the FPGA port cannot supply enough current. We also used an external LED and buzzer to demonstrate the outgoing morse signal.
+We transmit the output signal form FPGA board via IR LED, which we feed with NPN transistor, because the FPGA PMOD port cannot supply enough current. We also used an external white LED and buzzer to demonstrate the outgoing morse signal.
+
+![img](images/NEXYS_A7_50T_Transmitter.png)
 
 ### Receiver
 
 As external receiver we used IR-phototransistor. Since we needed to overcome the problem with low slew rate, we come with solution with Sziklai pair. We connected two of these pairs in cascade, which improved our slew rate significantly. Therefore, the ramp of rising edge lasts only 50 ns.
+
+![img](images/NEXYS_A7_50T_Receiver.png)
 
 ## Software description
 
@@ -31,7 +35,7 @@ The [top_transmitter](morse_transmitter/morse_transmitter.srcs/sources_1/new/top
 
 ### Receiver
 
-The software of receiving FPGA board is very similar to the transmitter. The [top design](morse_receiver/morse_receiver.srcs/top_receiver.vhd) source also contains two entities. First one, called [morse_bin](morse_receiver/morse_receiver.srcs/morse_bin.vhd), parse the input morse code to bin representation of a letter. The conversion is done by decision of counter value, which is incremented during high pulse of input signal. If the value is 5 the input signal represents dot if it's 15 the signal represents dash. A low pulse is also followed by another counter, which when it reaches 200 ms, the reception of letter is considered as finished. All counters in this entity are feed by [prescaler](morse_receiver/morse_receiver.srcs/clock_enable.vhd) of constant g_max = 2 000 000, which coresponds to 20 ms. <br> The second part of top design is the same binary to 7 segemnt [converter](Z:/PC-II-SummerSemester/BPC-DE1-project/morse_receiver/morse_receiver.srcs/bin_7seg.vhd) as in the transmitter.
+The software of receiving FPGA board is very similar to the transmitter. The [top design](morse_receiver/morse_receiver.srcs/top_receiver.vhd) source also contains two entities. First one, called [morse_bin](morse_receiver/morse_receiver.srcs/morse_bin.vhd), parse the input morse code to bin representation of a letter. The conversion is done by decision of counter value, which is incremented during high pulse of input signal. If the value is 5 the input signal represents dot if it's 15 the signal represents dash. A low pulse is also followed by another counter, which when it reaches 200 ms, the reception of letter is considered as finished. All counters in this entity are feed by [prescaler](morse_receiver/morse_receiver.srcs/clock_enable.vhd) of constant g_max = 2 000 000, which coresponds to 20 ms. <br> The second part of top design is the same binary to 7 segment [converter](Z:/PC-II-SummerSemester/BPC-DE1-project/morse_receiver/morse_receiver.srcs/bin_7seg.vhd) as in the transmitter.
 
 ### Block diagrams of software 
 
@@ -42,10 +46,11 @@ The software of receiving FPGA board is very similar to the transmitter. The [to
 ### Waveforms from simulation
 
 #### Transmitter
-*Hoši, nepodarilo sa mi rozchodiť tb na transmitter, skúste sa na to pls pozrieť a vložiť screen sem.*
+![img](images/Transmitter_testbench_2.png)
 #### Receiver
-*Sem by bolo dobré vložiť popis toho čo na tomto obrázku je vidieť. (prijímanie troch písmen, countre, buffer...)* <p>
-![](images/WaveformReceiver.jpg)
+![img](images/Receiver_testbench_2.png)
+
+<p>
 
 ## Instructions
 Usage of the transmitter is as follows:
@@ -59,7 +64,7 @@ Receiver doesn't require any intervention by the user. It's always waiting for a
 
 ## References
 
-1. Referencie na datasheet NEXIS anpríklad
+1. [NEXYS A7 50T Reference Manual](https://digilent.com/reference/programmable-logic/nexys-a7/reference-manual)
 2. nejaký VHDL cheat-sheet
 3. a pod.
 

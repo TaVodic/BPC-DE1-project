@@ -1,0 +1,6 @@
+Vivado Simulator 2020.2
+Time resolution is 1 ps
+Note: Stimulus process started
+Time: 0 ps  Iteration: 0  Process: /tb_bin_morse/p_stimulus  File: C:/Users/Gady-NTB/Documents/SynologyDrive/Gady_Soubory/Gadas_VUT_FEKT/4. Semestr/DE1/GIT/BPC-DE1-project/morse_transmitter/morse_transmitter.srcs/sim_1/new/tb_bin_morse.vhd
+Note: Stimulus process finished
+Time: 650 ns  Iteration: 0  Process: /tb_bin_morse/p_stimulus  File: C:/Users/Gady-NTB/Documents/SynologyDrive/Gady_Soubory/Gadas_VUT_FEKT/4. Semestr/DE1/GIT/BPC-DE1-project/morse_transmitter/morse_transmitter.srcs/sim_1/new/tb_bin_morse.vhd
