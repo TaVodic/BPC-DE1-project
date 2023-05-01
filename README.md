@@ -64,7 +64,7 @@ Receiver doesn't require any intervention by the user. It's always waiting for a
 
 1. [NEXYS A7 50T Reference Manual](https://digilent.com/reference/programmable-logic/nexys-a7/reference-manual)
 2. nejaký VHDL cheat-sheet
-3. a pod.
+3. [Falstad Circuit simulator](https://www.falstad.com/circuit/circuitjs.html)
 
 ## Transmitter Circuit
 
