@@ -20,12 +20,18 @@ On the receiving FPGA board, the incoming letter is instantly displayed on 7-seg
 We transmit the output signal form FPGA board via IR LED, which we feed with NPN transistor, because the FPGA PMOD port cannot supply enough current. We also used an external white LED and buzzer to demonstrate the outgoing morse signal.
 
 ![img](images/NEXYS_A7_50T_Transmitter.png)
+<p align="center">
+  <img src="images/Transmitter_schematic.png" width=60% height=60%/>
+</p>
 
 ### Receiver
 
 As external receiver we used IR-phototransistor. Since we needed to overcome the problem with low slew rate, we come with solution with Sziklai pair. We connected two of these pairs in cascade, which improved our slew rate significantly. Therefore, the ramp of rising edge lasts only 50 ns.
 
 ![img](images/NEXYS_A7_50T_Receiver.png)
+<p align="center">
+  <img src="images/Receiver_schematic.png"/>
+</p>
 
 ## Software description
 
@@ -37,13 +43,14 @@ The [top_transmitter](morse_transmitter/morse_transmitter.srcs/sources_1/new/top
 
 The software of receiving FPGA board is very similar to the transmitter. The [top design](morse_receiver/morse_receiver.srcs/top_receiver.vhd) source also contains two entities. First one, called [morse_bin](morse_receiver/morse_receiver.srcs/morse_bin.vhd), parse the input morse code to bin representation of a letter. The conversion is done by decision of counter value, which is incremented during high pulse of input signal. If the value is 5 the input signal represents dot if it's 15 the signal represents dash. A low pulse is also followed by another counter, which when it reaches 200 ms, the reception of letter is considered as finished. All counters in this entity are feed by [prescaler](morse_receiver/morse_receiver.srcs/clock_enable.vhd) of constant g_max = 2 000 000, which coresponds to 20 ms. <br> The second part of top design is the same binary to 7 segment [converter](Z:/PC-II-SummerSemester/BPC-DE1-project/morse_receiver/morse_receiver.srcs/bin_7seg.vhd) as in the transmitter.
 
-### Block diagrams of software 
+### Software block diagrams
 
 #### Transmitter
-
+![img](images\Block_diagram_transmitter.jpeg)
 #### Receiver
+![img](images\Block_diagram_receiver.jpeg)
 
-### Waveforms from simulation
+### Simulation waveforms
 
 #### Transmitter
 ![img](images/Transmitter_testbench_2.png)
@@ -65,17 +72,6 @@ Receiver doesn't require any intervention by the user. It's always waiting for a
 ## References
 
 1. [NEXYS A7 50T Reference Manual](https://digilent.com/reference/programmable-logic/nexys-a7/reference-manual)
-2. nejaký VHDL cheat-sheet
+2. [Digital electronics 1](https://github.com/tomas-fryza/digital-electronics-1)
 3. a pod.
-
-## Transmitter Circuit
-
-![img1](images/Transmitter_block.png)
-![img2](images/Transmitter_schematic.png)
-
-## Receiver Circuit
-
-![img1](images/Receiver_block.png)
-![img2](images/Receiver_schematic.png)
-
-
+4. own notes from lab exercises
