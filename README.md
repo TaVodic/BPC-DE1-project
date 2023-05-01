@@ -35,7 +35,9 @@ The software of receiving FPGA board is very similar to the transmitter. The [to
 
 ### Block diagrams of software 
 
-Dva obrázky diagramov.
+#### Transmitter
+
+#### Receiver
 
 ### Waveforms from simulation
 

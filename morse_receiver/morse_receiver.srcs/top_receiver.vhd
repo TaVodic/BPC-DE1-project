@@ -43,7 +43,7 @@ entity top_receiver is
            AN : out STD_LOGIC_VECTOR (7 downto 0);           
            BTNC : in STD_LOGIC;
            CLK100MHZ : in STD_LOGIC;
-           JD : in STD_LOGIC
+           JD : in STD_LOGIC -- MORSE
            );
 end top_receiver;
 
@@ -68,7 +68,7 @@ begin
     
   morse2bin : entity work.morse_bin
     port map (
-      morse => JD,
+      morse => JD, -- MORSE
       bin => s_bin,
       clk => CLK100MHZ
   );
