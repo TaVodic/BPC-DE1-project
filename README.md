@@ -44,7 +44,7 @@ As external receiver we used IR-phototransistor. Since we needed to overcome the
 The [top_transmitter](morse_transmitter/morse_transmitter.srcs/sources_1/new/top.vhd) has four input and four output ports. It includes two entities. [Bin_7seg](morse_transmitter/morse_transmitter.srcs/sources_1/new/bin_7seg.vhd), which converts the input binary code to individual segment to be set on the display. The segment can be blanked by pressing a button (BTNC). The second entity [(bin_morse)](morse_transmitter/morse_transmitter.srcs/sources_1/new/bin_morse.vhd) of top design is the main converter from binary format of letter to morse code. It contains the [prescaler](morse_transmitter/morse_transmitter.srcs/sources_1/new/clock_enable.vhd), which divide the main clock by g_max = 10 000 000. That means, the morse converter is controlled by clock with period of 100 ms. It also contains [buzzer](morse_transmitter\morse_transmitter.srcs\sources_1\new\buzzer.vhd) entity which generates PWM signal of duty cycle of 50% on 1kHz for external buzzer.
 </div>
 
-![img](images\Block_diagram_transmitter.jpeg)
+![img](images/Block_diagram_transmitter.jpeg)
 
 ### Receiver
 <div style="text-align: justify">
@@ -52,7 +52,7 @@ The [top_transmitter](morse_transmitter/morse_transmitter.srcs/sources_1/new/top
 The software of receiving FPGA board is very similar to the transmitter. The [top design](morse_receiver/morse_receiver.srcs/top_receiver.vhd) source also contains two entities. First one, called [morse_bin](morse_receiver/morse_receiver.srcs/morse_bin.vhd), parse the input morse code to bin representation of a letter. The conversion is done by decision of counter value, which is incremented during high pulse of input signal. If the value is 5 the input signal represents dot if it's 15 the signal represents dash. A low pulse is also followed by another counter, which when it reaches 200 ms, the reception of letter is considered as finished. All counters in this entity are feed by [prescaler](morse_receiver/morse_receiver.srcs/clock_enable.vhd) of constant g_max = 2 000 000, which coresponds to 20 ms. <br> The second part of top design is the same binary to 7 segment [converter](Z:/PC-II-SummerSemester/BPC-DE1-project/morse_receiver/morse_receiver.srcs/bin_7seg.vhd) as in the transmitter.
 </div>
 
-![img](images\Block_diagram_receiver.jpeg)
+![img](images/Block_diagram_receiver.jpeg)
 
 ### Simulation waveforms
 
