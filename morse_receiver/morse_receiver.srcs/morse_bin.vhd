@@ -188,7 +188,7 @@ begin
                     end if; 
 
                     -- --.- Q => bin 10001
-                    if (buff = "01101" and index = 4) then 
+                    if (buff = "01011" and index = 4) then 
                         bin <= "10001";
                     end if; 
 
