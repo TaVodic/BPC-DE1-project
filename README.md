@@ -69,7 +69,7 @@ Usage of the transmitter is as follows:
    
 Receiver doesn't require any intervention by the user. It's always waiting for an incoming transmission  and displays it on a 7 segment display.
 
-[Working demonstration video](https://youtu.be/yEXXWRQE4EQ)
+[Working demonstration video](https://youtu.be/mva9a1ClfVo)
 
 ## References
 
