@@ -1,2 +1,4 @@
-INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/Gady-NTB/Documents/SynologyDrive/Gady_Soubory/Gadas_VUT_FEKT/4. Semestr/DE1/GIT/BPC-DE1-project/morse_transmitter/morse_transmitter.srcs/sim_1/new/tb_bin_morse.vhd" into library xil_defaultlib
-INFO: [VRFC 10-3107] analyzing entity 'tb_bin_morse'
+INFO: [VRFC 10-163] Analyzing VHDL file "P:/DE1/Cviceni/BPC-DE1-project/morse_transmitter/morse_transmitter.srcs/sources_1/new/buzzer.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'buzzer'
+INFO: [VRFC 10-163] Analyzing VHDL file "P:/DE1/Cviceni/BPC-DE1-project/morse_transmitter/morse_transmitter.srcs/sim_1/new/tb_buzzer.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'tb_buzzer'

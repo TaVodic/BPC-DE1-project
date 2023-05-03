@@ -11,9 +11,9 @@ echo "Please update the PATH and LD_LIBRARY_PATH variables below, before executi
 exit
 
 if [ -z "$PATH" ]; then
-  PATH=D:/Vivado2020.2/Vivado/2020.2/ids_lite/ISE/bin/nt64;D:/Vivado2020.2/Vivado/2020.2/ids_lite/ISE/lib/nt64:D:/Vivado2020.2/Vivado/2020.2/bin
+  PATH=C:/appz/Xilinx/Vivado/2020.2/ids_lite/ISE/bin/nt64;C:/appz/Xilinx/Vivado/2020.2/ids_lite/ISE/lib/nt64:C:/appz/Xilinx/Vivado/2020.2/bin
 else
-  PATH=D:/Vivado2020.2/Vivado/2020.2/ids_lite/ISE/bin/nt64;D:/Vivado2020.2/Vivado/2020.2/ids_lite/ISE/lib/nt64:D:/Vivado2020.2/Vivado/2020.2/bin:$PATH
+  PATH=C:/appz/Xilinx/Vivado/2020.2/ids_lite/ISE/bin/nt64;C:/appz/Xilinx/Vivado/2020.2/ids_lite/ISE/lib/nt64:C:/appz/Xilinx/Vivado/2020.2/bin:$PATH
 fi
 export PATH
 
@@ -24,7 +24,7 @@ else
 fi
 export LD_LIBRARY_PATH
 
-HD_PWD='C:/Users/Gady-NTB/Documents/SynologyDrive/Gady_Soubory/Gadas_VUT_FEKT/4. Semestr/DE1/GIT/BPC-DE1-project/morse_transmitter/morse_transmitter.runs/synth_1'
+HD_PWD='P:/DE1/Cviceni/BPC-DE1-project/morse_transmitter/morse_transmitter.runs/synth_1'
 cd "$HD_PWD"
 
 HD_LOG=runme.log

@@ -21,7 +21,7 @@ begin
       -- 1   @ 10 ns
       -- ??? @ 250 ms
       -- 10000000 -- 100ms
-      g_MAX => 1000
+      g_MAX => 100000
     )
     port map(
       clk => clk,
@@ -31,14 +31,14 @@ begin
   p_buzzer : process (clk) is
   begin
 
-    if (rising_edge(clk)) then
+    if (falling_edge(clk)) then
       if (sig_en = '1') then
         latch <= '1';
       end if;
-      if (sig_cnt < 500 and latch = '1') then
+      if (sig_cnt < 50000 and latch = '1') then
         buzz <= '1';
         sig_cnt <= sig_cnt + 1;
-      else
+      elsif (sig_cnt >= 50000) then
         latch <= '0';
         buzz <= '0';
         sig_cnt <= 0;

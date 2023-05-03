@@ -83,11 +83,11 @@ begin
     end if;
     
     --detects and send a PWM signal for the buzzer
-    --if (morse_buff = '1') then
+    if (morse_buff = '1') then
       buzz <= sig_buzz;
-    --else
-      --buzz <= '0';
-    --end if;
+    else
+      buzz <= '0';
+    end if;
     
       if (send_en = '1') then     
         if (sig_en = '1') then -- every g_MAX

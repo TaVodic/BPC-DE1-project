@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Webtalk v2020.2 (64-bit)
+# SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
+# IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+# Start of session at: Wed May  3 13:18:16 2023
+# Process ID: 12864
+# Current directory: P:/DE1/Cviceni/BPC-DE1-project/morse_transmitter/morse_transmitter.sim/sim_1/behav/xsim
+# Command line: wbtcv.exe -mode batch -source P:/DE1/Cviceni/BPC-DE1-project/morse_transmitter/morse_transmitter.sim/sim_1/behav/xsim/xsim.dir/tb_buzzer_behav/webtalk/xsim_webtalk.tcl -notrace
+# Log file: P:/DE1/Cviceni/BPC-DE1-project/morse_transmitter/morse_transmitter.sim/sim_1/behav/xsim/webtalk.log
+# Journal file: P:/DE1/Cviceni/BPC-DE1-project/morse_transmitter/morse_transmitter.sim/sim_1/behav/xsim\webtalk.jou
+#-----------------------------------------------------------
+source P:/DE1/Cviceni/BPC-DE1-project/morse_transmitter/morse_transmitter.sim/sim_1/behav/xsim/xsim.dir/tb_buzzer_behav/webtalk/xsim_webtalk.tcl -notrace

@@ -2,12 +2,12 @@
 # Vivado v2020.2 (64-bit)
 # SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
 # IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
-# Start of session at: Wed Apr 26 19:23:15 2023
-# Process ID: 7572
-# Current directory: C:/Users/Gady-NTB/Documents/SynologyDrive/Gady_Soubory/Gadas_VUT_FEKT/4. Semestr/DE1/GIT/BPC-DE1-project/morse_transmitter/morse_transmitter.runs/synth_1
+# Start of session at: Wed May  3 13:30:44 2023
+# Process ID: 360
+# Current directory: P:/DE1/Cviceni/BPC-DE1-project/morse_transmitter/morse_transmitter.runs/synth_1
 # Command line: vivado.exe -log top.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source top.tcl
-# Log file: C:/Users/Gady-NTB/Documents/SynologyDrive/Gady_Soubory/Gadas_VUT_FEKT/4. Semestr/DE1/GIT/BPC-DE1-project/morse_transmitter/morse_transmitter.runs/synth_1/top.vds
-# Journal file: C:/Users/Gady-NTB/Documents/SynologyDrive/Gady_Soubory/Gadas_VUT_FEKT/4. Semestr/DE1/GIT/BPC-DE1-project/morse_transmitter/morse_transmitter.runs/synth_1\vivado.jou
+# Log file: P:/DE1/Cviceni/BPC-DE1-project/morse_transmitter/morse_transmitter.runs/synth_1/top.vds
+# Journal file: P:/DE1/Cviceni/BPC-DE1-project/morse_transmitter/morse_transmitter.runs/synth_1\vivado.jou
 #-----------------------------------------------------------
 source top.tcl -notrace
 Command: synth_design -top top -part xc7a50ticsg324-1L
@@ -17,70 +17,70 @@ INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a50t
 INFO: [Device 21-403] Loading part xc7a50ticsg324-1L
 INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
 INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
-INFO: [Synth 8-7075] Helper process launched with PID 5068
+INFO: [Synth 8-7075] Helper process launched with PID 11900
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:10 ; elapsed = 00:00:12 . Memory (MB): peak = 999.324 ; gain = 0.000
+Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 999.566 ; gain = 0.000
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-638] synthesizing module 'top' [C:/Users/Gady-NTB/Documents/SynologyDrive/Gady_Soubory/Gadas_VUT_FEKT/4. Semestr/DE1/GIT/BPC-DE1-project/morse_transmitter/morse_transmitter.srcs/sources_1/new/top.vhd:57]
-INFO: [Synth 8-638] synthesizing module 'bin_7seg' [C:/Users/Gady-NTB/Documents/SynologyDrive/Gady_Soubory/Gadas_VUT_FEKT/4. Semestr/DE1/GIT/BPC-DE1-project/morse_transmitter/morse_transmitter.srcs/sources_1/new/bin_7seg.vhd:37]
-INFO: [Synth 8-256] done synthesizing module 'bin_7seg' (1#1) [C:/Users/Gady-NTB/Documents/SynologyDrive/Gady_Soubory/Gadas_VUT_FEKT/4. Semestr/DE1/GIT/BPC-DE1-project/morse_transmitter/morse_transmitter.srcs/sources_1/new/bin_7seg.vhd:37]
-INFO: [Synth 8-638] synthesizing module 'bin_morse' [C:/Users/Gady-NTB/Documents/SynologyDrive/Gady_Soubory/Gadas_VUT_FEKT/4. Semestr/DE1/GIT/BPC-DE1-project/morse_transmitter/morse_transmitter.srcs/sources_1/new/bin_morse.vhd:23]
-INFO: [Synth 8-638] synthesizing module 'clock_enable' [C:/Users/Gady-NTB/Documents/SynologyDrive/Gady_Soubory/Gadas_VUT_FEKT/4. Semestr/DE1/GIT/BPC-DE1-project/morse_transmitter/morse_transmitter.srcs/sources_1/new/clock_enable.vhd:40]
+INFO: [Synth 8-638] synthesizing module 'top' [P:/DE1/Cviceni/BPC-DE1-project/morse_transmitter/morse_transmitter.srcs/sources_1/new/top.vhd:57]
+INFO: [Synth 8-638] synthesizing module 'bin_7seg' [P:/DE1/Cviceni/BPC-DE1-project/morse_transmitter/morse_transmitter.srcs/sources_1/new/bin_7seg.vhd:37]
+INFO: [Synth 8-256] done synthesizing module 'bin_7seg' (1#1) [P:/DE1/Cviceni/BPC-DE1-project/morse_transmitter/morse_transmitter.srcs/sources_1/new/bin_7seg.vhd:37]
+INFO: [Synth 8-638] synthesizing module 'bin_morse' [P:/DE1/Cviceni/BPC-DE1-project/morse_transmitter/morse_transmitter.srcs/sources_1/new/bin_morse.vhd:23]
+INFO: [Synth 8-638] synthesizing module 'clock_enable' [P:/DE1/Cviceni/BPC-DE1-project/morse_transmitter/morse_transmitter.srcs/sources_1/new/clock_enable.vhd:40]
 	Parameter g_MAX bound to: 10000000 - type: integer 
-INFO: [Synth 8-256] done synthesizing module 'clock_enable' (2#1) [C:/Users/Gady-NTB/Documents/SynologyDrive/Gady_Soubory/Gadas_VUT_FEKT/4. Semestr/DE1/GIT/BPC-DE1-project/morse_transmitter/morse_transmitter.srcs/sources_1/new/clock_enable.vhd:40]
-INFO: [Synth 8-638] synthesizing module 'buzzer' [C:/Users/Gady-NTB/Documents/SynologyDrive/Gady_Soubory/Gadas_VUT_FEKT/4. Semestr/DE1/GIT/BPC-DE1-project/morse_transmitter/morse_transmitter.srcs/sources_1/new/buzzer.vhd:10]
-INFO: [Synth 8-638] synthesizing module 'clock_enable__parameterized0' [C:/Users/Gady-NTB/Documents/SynologyDrive/Gady_Soubory/Gadas_VUT_FEKT/4. Semestr/DE1/GIT/BPC-DE1-project/morse_transmitter/morse_transmitter.srcs/sources_1/new/clock_enable.vhd:40]
-	Parameter g_MAX bound to: 1000 - type: integer 
-INFO: [Synth 8-256] done synthesizing module 'clock_enable__parameterized0' (2#1) [C:/Users/Gady-NTB/Documents/SynologyDrive/Gady_Soubory/Gadas_VUT_FEKT/4. Semestr/DE1/GIT/BPC-DE1-project/morse_transmitter/morse_transmitter.srcs/sources_1/new/clock_enable.vhd:40]
-INFO: [Synth 8-256] done synthesizing module 'buzzer' (3#1) [C:/Users/Gady-NTB/Documents/SynologyDrive/Gady_Soubory/Gadas_VUT_FEKT/4. Semestr/DE1/GIT/BPC-DE1-project/morse_transmitter/morse_transmitter.srcs/sources_1/new/buzzer.vhd:10]
-INFO: [Synth 8-256] done synthesizing module 'bin_morse' (4#1) [C:/Users/Gady-NTB/Documents/SynologyDrive/Gady_Soubory/Gadas_VUT_FEKT/4. Semestr/DE1/GIT/BPC-DE1-project/morse_transmitter/morse_transmitter.srcs/sources_1/new/bin_morse.vhd:23]
-INFO: [Synth 8-256] done synthesizing module 'top' (5#1) [C:/Users/Gady-NTB/Documents/SynologyDrive/Gady_Soubory/Gadas_VUT_FEKT/4. Semestr/DE1/GIT/BPC-DE1-project/morse_transmitter/morse_transmitter.srcs/sources_1/new/top.vhd:57]
+INFO: [Synth 8-256] done synthesizing module 'clock_enable' (2#1) [P:/DE1/Cviceni/BPC-DE1-project/morse_transmitter/morse_transmitter.srcs/sources_1/new/clock_enable.vhd:40]
+INFO: [Synth 8-638] synthesizing module 'buzzer' [P:/DE1/Cviceni/BPC-DE1-project/morse_transmitter/morse_transmitter.srcs/sources_1/new/buzzer.vhd:10]
+INFO: [Synth 8-638] synthesizing module 'clock_enable__parameterized0' [P:/DE1/Cviceni/BPC-DE1-project/morse_transmitter/morse_transmitter.srcs/sources_1/new/clock_enable.vhd:40]
+	Parameter g_MAX bound to: 100000 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'clock_enable__parameterized0' (2#1) [P:/DE1/Cviceni/BPC-DE1-project/morse_transmitter/morse_transmitter.srcs/sources_1/new/clock_enable.vhd:40]
+INFO: [Synth 8-256] done synthesizing module 'buzzer' (3#1) [P:/DE1/Cviceni/BPC-DE1-project/morse_transmitter/morse_transmitter.srcs/sources_1/new/buzzer.vhd:10]
+INFO: [Synth 8-256] done synthesizing module 'bin_morse' (4#1) [P:/DE1/Cviceni/BPC-DE1-project/morse_transmitter/morse_transmitter.srcs/sources_1/new/bin_morse.vhd:23]
+INFO: [Synth 8-256] done synthesizing module 'top' (5#1) [P:/DE1/Cviceni/BPC-DE1-project/morse_transmitter/morse_transmitter.srcs/sources_1/new/top.vhd:57]
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:13 ; elapsed = 00:00:16 . Memory (MB): peak = 999.324 ; gain = 0.000
+Finished RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:07 . Memory (MB): peak = 999.566 ; gain = 0.000
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:14 ; elapsed = 00:00:18 . Memory (MB): peak = 999.324 ; gain = 0.000
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:06 ; elapsed = 00:00:08 . Memory (MB): peak = 999.566 ; gain = 0.000
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:14 ; elapsed = 00:00:18 . Memory (MB): peak = 999.324 ; gain = 0.000
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:06 ; elapsed = 00:00:08 . Memory (MB): peak = 999.566 ; gain = 0.000
 ---------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.031 . Memory (MB): peak = 999.324 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.017 . Memory (MB): peak = 999.566 ; gain = 0.000
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
 Initializing timing engine
-Parsing XDC File [C:/Users/Gady-NTB/Documents/SynologyDrive/Gady_Soubory/Gadas_VUT_FEKT/4. Semestr/DE1/GIT/BPC-DE1-project/morse_transmitter/morse_transmitter.srcs/constrs_1/new/nexys-a7-50t.xdc]
-Finished Parsing XDC File [C:/Users/Gady-NTB/Documents/SynologyDrive/Gady_Soubory/Gadas_VUT_FEKT/4. Semestr/DE1/GIT/BPC-DE1-project/morse_transmitter/morse_transmitter.srcs/constrs_1/new/nexys-a7-50t.xdc]
-INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Users/Gady-NTB/Documents/SynologyDrive/Gady_Soubory/Gadas_VUT_FEKT/4. Semestr/DE1/GIT/BPC-DE1-project/morse_transmitter/morse_transmitter.srcs/constrs_1/new/nexys-a7-50t.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/top_propImpl.xdc].
+Parsing XDC File [P:/DE1/Cviceni/BPC-DE1-project/morse_transmitter/morse_transmitter.srcs/constrs_1/new/nexys-a7-50t.xdc]
+Finished Parsing XDC File [P:/DE1/Cviceni/BPC-DE1-project/morse_transmitter/morse_transmitter.srcs/constrs_1/new/nexys-a7-50t.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [P:/DE1/Cviceni/BPC-DE1-project/morse_transmitter/morse_transmitter.srcs/constrs_1/new/nexys-a7-50t.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/top_propImpl.xdc].
 Resolution: To avoid this warning, move constraints listed in [.Xil/top_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1001.590 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 999.812 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.073 . Memory (MB): peak = 1001.590 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.008 . Memory (MB): peak = 999.812 ; gain = 0.000
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:28 ; elapsed = 00:00:34 . Memory (MB): peak = 1001.590 ; gain = 2.266
+Finished Constraint Validation : Time (s): cpu = 00:00:11 ; elapsed = 00:00:14 . Memory (MB): peak = 999.812 ; gain = 0.246
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7a50ticsg324-1L
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:28 ; elapsed = 00:00:35 . Memory (MB): peak = 1001.590 ; gain = 2.266
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:11 ; elapsed = 00:00:14 . Memory (MB): peak = 999.812 ; gain = 0.246
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:28 ; elapsed = 00:00:35 . Memory (MB): peak = 1001.590 ; gain = 2.266
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:11 ; elapsed = 00:00:14 . Memory (MB): peak = 999.812 ; gain = 0.246
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:32 ; elapsed = 00:00:39 . Memory (MB): peak = 1001.590 ; gain = 2.266
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:13 ; elapsed = 00:00:16 . Memory (MB): peak = 999.812 ; gain = 0.246
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start RTL Component Statistics 
@@ -96,7 +96,7 @@ Detailed RTL Component Info :
 	   2 Input   31 Bit        Muxes := 49    
 	   2 Input    8 Bit        Muxes := 1     
 	   2 Input    5 Bit        Muxes := 63    
-	   2 Input    1 Bit        Muxes := 347   
+	   2 Input    1 Bit        Muxes := 350   
 	   5 Input    1 Bit        Muxes := 3     
 ---------------------------------------------------------------------------------
 Finished RTL Component Statistics 
@@ -114,7 +114,7 @@ Finished Part Resource Summary
 Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:49 ; elapsed = 00:01:00 . Memory (MB): peak = 1001.590 ; gain = 2.266
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:21 ; elapsed = 00:00:25 . Memory (MB): peak = 999.812 ; gain = 0.246
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP, Shift Register and Retiming Reporting
@@ -135,19 +135,19 @@ Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:01:01 ; elapsed = 00:01:15 . Memory (MB): peak = 1001.590 ; gain = 2.266
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:26 ; elapsed = 00:00:31 . Memory (MB): peak = 999.812 ; gain = 0.246
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:01:01 ; elapsed = 00:01:15 . Memory (MB): peak = 1001.590 ; gain = 2.266
+Finished Timing Optimization : Time (s): cpu = 00:00:26 ; elapsed = 00:00:31 . Memory (MB): peak = 999.812 ; gain = 0.246
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:01:03 ; elapsed = 00:01:17 . Memory (MB): peak = 1039.941 ; gain = 40.617
+Finished Technology Mapping : Time (s): cpu = 00:00:27 ; elapsed = 00:00:31 . Memory (MB): peak = 1036.453 ; gain = 36.887
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start IO Insertion
@@ -165,37 +165,37 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:01:11 ; elapsed = 00:01:26 . Memory (MB): peak = 1054.723 ; gain = 55.398
+Finished IO Insertion : Time (s): cpu = 00:00:30 ; elapsed = 00:00:35 . Memory (MB): peak = 1051.227 ; gain = 51.660
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:01:11 ; elapsed = 00:01:26 . Memory (MB): peak = 1054.723 ; gain = 55.398
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:30 ; elapsed = 00:00:35 . Memory (MB): peak = 1051.227 ; gain = 51.660
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:01:11 ; elapsed = 00:01:26 . Memory (MB): peak = 1054.723 ; gain = 55.398
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:30 ; elapsed = 00:00:35 . Memory (MB): peak = 1051.227 ; gain = 51.660
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:01:11 ; elapsed = 00:01:26 . Memory (MB): peak = 1054.723 ; gain = 55.398
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:30 ; elapsed = 00:00:35 . Memory (MB): peak = 1051.227 ; gain = 51.660
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:01:11 ; elapsed = 00:01:26 . Memory (MB): peak = 1054.723 ; gain = 55.398
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:30 ; elapsed = 00:00:35 . Memory (MB): peak = 1051.227 ; gain = 51.660
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:01:11 ; elapsed = 00:01:26 . Memory (MB): peak = 1054.723 ; gain = 55.398
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:30 ; elapsed = 00:00:35 . Memory (MB): peak = 1051.227 ; gain = 51.660
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -213,10 +213,10 @@ Report Cell Usage:
 +------+-------+------+
 |1     |BUFG   |     1|
 |2     |CARRY4 |    32|
-|3     |LUT1   |     4|
-|4     |LUT2   |    64|
-|5     |LUT3   |    49|
-|6     |LUT4   |    67|
+|3     |LUT1   |     3|
+|4     |LUT2   |    66|
+|5     |LUT3   |    48|
+|6     |LUT4   |    69|
 |7     |LUT5   |   113|
 |8     |LUT6   |   512|
 |9     |MUXF7  |     6|
@@ -226,25 +226,25 @@ Report Cell Usage:
 |13    |OBUF   |    18|
 +------+-------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:01:11 ; elapsed = 00:01:26 . Memory (MB): peak = 1054.723 ; gain = 55.398
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:30 ; elapsed = 00:00:35 . Memory (MB): peak = 1051.227 ; gain = 51.660
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 0 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:54 ; elapsed = 00:01:20 . Memory (MB): peak = 1054.723 ; gain = 53.133
-Synthesis Optimization Complete : Time (s): cpu = 00:01:12 ; elapsed = 00:01:26 . Memory (MB): peak = 1054.723 ; gain = 55.398
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:24 ; elapsed = 00:00:34 . Memory (MB): peak = 1051.227 ; gain = 51.414
+Synthesis Optimization Complete : Time (s): cpu = 00:00:31 ; elapsed = 00:00:36 . Memory (MB): peak = 1051.227 ; gain = 51.660
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.028 . Memory (MB): peak = 1066.785 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.012 . Memory (MB): peak = 1063.348 ; gain = 0.000
 INFO: [Netlist 29-17] Analyzing 39 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1066.785 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1063.348 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
 INFO: [Common 17-83] Releasing license: Synthesis
 27 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:01:22 ; elapsed = 00:01:44 . Memory (MB): peak = 1066.785 ; gain = 67.461
-INFO: [Common 17-1381] The checkpoint 'C:/Users/Gady-NTB/Documents/SynologyDrive/Gady_Soubory/Gadas_VUT_FEKT/4. Semestr/DE1/GIT/BPC-DE1-project/morse_transmitter/morse_transmitter.runs/synth_1/top.dcp' has been generated.
+synth_design: Time (s): cpu = 00:00:36 ; elapsed = 00:00:43 . Memory (MB): peak = 1063.348 ; gain = 63.781
+INFO: [Common 17-1381] The checkpoint 'P:/DE1/Cviceni/BPC-DE1-project/morse_transmitter/morse_transmitter.runs/synth_1/top.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file top_utilization_synth.rpt -pb top_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Wed Apr 26 19:25:11 2023...
+INFO: [Common 17-206] Exiting Vivado at Wed May  3 13:31:31 2023...
